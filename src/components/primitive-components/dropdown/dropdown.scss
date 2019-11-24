@@ -1,0 +1,106 @@
+@import "../../../styles/colors.scss";
+
+$borderRadiusUp: 4px 4px 0px 0px;
+$borderRadiusDown: 0px 0px 4px 4px;
+$width: 320px;
+
+.dropdown {
+  font-family: "Montserrat", sans-serif;
+  width: $width;
+}
+
+.dropdown__title {
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding-bottom: 5px;
+}
+
+.dropdown__label {
+  border-radius: $borderRadiusUp;
+  border: 1px solid $color_Dark_Shade_25;
+  padding: 12px 15px;
+  font-weight: normal;
+  cursor: pointer;
+}
+
+.dropdown__label::after {
+  float: right;
+  content: url(/src/img/arrow.png);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+}
+
+.dropdown__menu {
+  display: none;
+  border-radius: $borderRadiusDown;
+  border: 1px solid $color_Dark_Shade_25;
+  border-top: 0px;
+  padding: 0px 7px 0px 15px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}
+
+.dropdown__item {
+  display: flex;
+  text-transform: uppercase;
+  align-items: center;
+  padding-top: 7px;
+}
+
+.dropdown__item:last-child {
+  margin-bottom: 13px;
+  margin-top: 13px;
+}
+
+.dropdown__item__edit {
+  display: flex;
+  float: right;
+  margin-left: auto;
+}
+
+.dropdown__item__change {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color_Dark_Shade_25;
+  border-radius: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $color_Dark_Shade_50;
+}
+
+.dropdown__item__change:hover {
+  background: $color_Dark_Shade_5;
+}
+
+.dropdown__item__change:active {
+  background: $color_Dark_Shade_25;
+}
+
+.dropdown__item__value {
+  width: 32px;
+  margin-top: 8px;
+  text-align: center;
+}
+
+.dropdown__apply {
+  float: right;
+  margin-left: auto;
+  color: $color_Purple;
+  cursor: pointer;
+}
+
+.dropdown__clear {
+  color: $color_Dark_Shade_50;
+  cursor: pointer;
+}

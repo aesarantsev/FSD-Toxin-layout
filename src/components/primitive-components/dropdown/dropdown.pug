@@ -1,0 +1,27 @@
+- 
+  let titles = ['Взрослые', 'Дети', 'Младенцы'];
+  let clearButtonLabel="Очистить";
+  let applyButtonLabel="Применить";
+
+mixin dropdown(name="Dropdown", adults_count=1, children_count=2,babies=3)
+  .dropdown
+    .dropdown__title=name
+    .dropdown__label(id="dropdown")
+    .dropdown__menu
+      -let counts = [adults_count,children_count,babies];  
+      -for(let i = 0;i<3;i++)
+        .dropdown__item
+          .dropdown__item__label=titles[i]
+          .dropdown__item__edit
+            a.dropdown__item__change(id="item_"+i+"_dec")="-"
+            .dropdown__item__value(id="item_"+i+"_count")=counts[i]
+            a.dropdown__item__change(id="item_"+i+"_inc")="+"
+      .dropdown__item
+        .dropdown__clear=clearButtonLabel
+        .dropdown__apply=applyButtonLabel
+
+
+
+
+      
+    

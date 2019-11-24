@@ -1,0 +1,19 @@
+
+include ./components/primitive-components/text-field/text-field
+include ./components/primitive-components/dropdown/dropdown
+
+doctype html
+html(lang="en")
+  head
+    meta(charset="UTF-8")
+    title Пример страницы
+    link(rel="stylesheet" type="text/css" href="main.css")
+    link(href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet")
+    
+
+  body
+    //+textField("Email","Email")
+    +dropdown("Dropdown",1,2,3)
+    
+
+
