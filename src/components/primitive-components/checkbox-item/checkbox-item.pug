@@ -1,0 +1,9 @@
+mixin checkBoxItem(title="Title", checked=false)
+  label.container=title
+    if checked
+      input(type="checkbox")
+      span.checkmark.checked
+    else
+      input(type="checkbox")
+      span.checkmark
+    

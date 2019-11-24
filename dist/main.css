@@ -2,6 +2,7 @@
   color: rgba(31, 32, 65, 0.25); }
 
 .text-field {
+  font-family: Montserrat;
   border-radius: 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
@@ -52,6 +53,7 @@
   font-size: 12px; }
 
 .dropdown__menu {
+  position: relative;
   display: none;
   border-radius: 0px 0px 4px 4px;
   border: 1px solid rgba(31, 32, 65, 0.25);
@@ -111,4 +113,86 @@
 .dropdown__clear {
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer; }
+
+.container {
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  margin-bottom: 10px;
+  padding-top: 3px;
+  cursor: pointer;
+  font-family: Montserrat;
+  color: rgba(31, 32, 65, 0.5);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px; }
+
+.container input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0; }
+
+.checkmark {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 20px;
+  width: 20px;
+  background-color: #ffffff;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: 4px; }
+
+.container:hover input ~ .checkmark {
+  border-color: #bc9cff; }
+
+.container input:checked ~ .checkmark {
+  background-color: #ffffff; }
+
+.checkmark:after {
+  content: "";
+  position: absolute;
+  display: none; }
+
+.container input:checked ~ .checkmark:after {
+  display: block; }
+
+.container .checkmark:after {
+  left: 6px;
+  top: 3px;
+  width: 5px;
+  height: 8px;
+  border: solid #bc9cff;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg); }
+
+.checked {
+  border: 1px solid #bc9cff; }
+
+.checkBoxList {
+  width: 222px; }
+
+.checkBoxTitle {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  padding-bottom: 16px; }
+
+.checkBoxList.expandable {
+  cursor: pointer; }
+
+.listItems.expandable {
+  display: none; }
+
+.checkBoxTitle.expandable::after {
+  float: right;
+  content: url(/src/img/arrow.png);
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px; }
 

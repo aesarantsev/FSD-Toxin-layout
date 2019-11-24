@@ -1,6 +1,13 @@
 
 include ./components/primitive-components/text-field/text-field
 include ./components/primitive-components/dropdown/dropdown
+include ./components/primitive-components/checkbox-list/checkbox-list
+
+-let checkBoxListValues = [
+-{title:"Можно курить", checked:false},
+-{title:"Можно с питомцами", checked:false},
+-{title:"Можно пригласить гостей (до 10 человек)", checked:false}
+-];
 
 doctype html
 html(lang="en")
@@ -12,8 +19,10 @@ html(lang="en")
     
 
   body
-    //+textField("Email","Email")
+    +textField("Email","Email")
     +dropdown("Dropdown",1,2,3)
+    +checkBoxList("CheckboxButtons", checkBoxListValues, false)
+    +checkBoxList("CheckboxButtonsExp", checkBoxListValues, true)
     
 
 

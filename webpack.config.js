@@ -6,7 +6,11 @@ const webpack = require("webpack");
 module.exports = {
   entry: {
     main: "./src/index.js",
-    dropwownScript: "./src/components/primitive-components/dropdown/script.js"
+    dropwownScript: "./src/components/primitive-components/dropdown/script.js",
+    checkboxItem:
+      "./src/components/primitive-components/checkbox-item/script.js",
+    checkboxList:
+      "./src/components/primitive-components/checkbox-list/script.js"
   },
   output: {
     path: path.resolve(__dirname, "dist")

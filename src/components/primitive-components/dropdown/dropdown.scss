@@ -35,6 +35,7 @@ $width: 320px;
 }
 
 .dropdown__menu {
+  position: relative;
   display: none;
   border-radius: $borderRadiusDown;
   border: 1px solid $color_Dark_Shade_25;
