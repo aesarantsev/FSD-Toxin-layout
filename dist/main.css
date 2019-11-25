@@ -1,5 +1,24 @@
+body {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px; }
+
 ::placeholder {
   color: rgba(31, 32, 65, 0.25); }
+
+h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1f2041;
+  margin: 0px;
+  padding: 0px;
+  padding-bottom: 5px; }
 
 .text-field {
   font-family: Montserrat;
@@ -8,35 +27,16 @@
   box-sizing: border-box;
   padding: 13px 15px;
   width: 320px; }
-
-.text-field:hover {
-  outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.5); }
-
-.text-field:focus {
-  outline: none;
-  border: 1px solid rgba(31, 32, 65, 0.5); }
-
-.label-text-field {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  color: #1f2041; }
+  .text-field:hover {
+    outline: none;
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field:focus {
+    outline: none;
+    border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .dropdown {
   font-family: "Montserrat", sans-serif;
   width: 320px; }
-
-.dropdown__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  padding-bottom: 5px; }
 
 .dropdown__label {
   border-radius: 4px 4px 0px 0px;
@@ -198,4 +198,58 @@
   font-style: normal;
   font-weight: normal;
   font-size: 12px; }
+
+.rate-button {
+  display: flex; }
+
+.rate-item {
+  padding-right: 4px; }
+
+
+.btn {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: #bc9cff;
+  padding: 15px 20px;
+  position: relative; }
+  .btn:active.btn--label {
+    color: rgba(31, 32, 65, 0.5); }
+
+.btn--border {
+  background: #fff;
+  border-radius: 22px; }
+  .btn--border:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -2px;
+    border-radius: inherit;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); }
+  .btn--border:active:before {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5)); }
+
+.btn--fill {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+  color: #ffffff; }
+  .btn--fill:active {
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5)); }
+
+.bnt--label--arrow {
+  width: 280px;
+  text-align: center;
+  padding: 15px 17px 9px 0px; }
+  .bnt--label--arrow:after {
+    float: right;
+    content: url(/src/img/button/arrow_forward.svg); }
 

@@ -5,7 +5,7 @@
 
 mixin dropdown(name="Dropdown", adults_count=1, children_count=2,babies=3)
   .dropdown
-    .dropdown__title=name
+    h3=name
     .dropdown__label(id="dropdown")
     .dropdown__menu
       -let counts = [adults_count,children_count,babies];  

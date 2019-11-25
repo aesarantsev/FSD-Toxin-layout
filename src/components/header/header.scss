@@ -1,0 +1,22 @@
+.container {
+  float: right;
+
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+.header__innder {
+  display: flex;
+  padding: 35px 0;
+  justify-content: space-between;
+  border-bottom: 1px solid #515369;
+  align-items: center;
+}
+.nav {
+  float: right;
+}
+
+.nav__link {
+  padding-right: 30px;
+}

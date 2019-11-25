@@ -2,6 +2,10 @@
 include ./components/primitive-components/text-field/text-field
 include ./components/primitive-components/dropdown/dropdown
 include ./components/primitive-components/checkbox-list/checkbox-list
+include ./components/primitive-components/button/button
+include ./components/primitive-components/rate-button/rate-button
+include ./components/primitive-components/bullet-list/bullet-list
+include ./components/header/header
 
 -let checkBoxListValues = [
 -{title:"Можно курить", checked:false},
@@ -19,6 +23,15 @@ html(lang="en")
     
 
   body
+    //+header()
+    +rateButton(4)
+    +bulletList()
+    +button("Я просто кнопка", "labelButton","#")
+    +button("Я обычная кнопка", "borerButton","#")
+    +button("Я закрашенная кнопка", "fillButton","#")
+    +button("А я кнопка со стрелочкой", "arrowButton","#")
+
+    br
     +textField("Email","Email")
     +dropdown("Dropdown",1,2,3)
     +checkBoxList("CheckboxButtons", checkBoxListValues, false)

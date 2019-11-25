@@ -9,15 +9,6 @@ $width: 320px;
   width: $width;
 }
 
-.dropdown__title {
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-  padding-bottom: 5px;
-}
-
 .dropdown__label {
   border-radius: $borderRadiusUp;
   border: 1px solid $color_Dark_Shade_25;

@@ -10,7 +10,11 @@ module.exports = {
     checkboxItem:
       "./src/components/primitive-components/checkbox-item/script.js",
     checkboxList:
-      "./src/components/primitive-components/checkbox-list/script.js"
+      "./src/components/primitive-components/checkbox-list/script.js",
+    rateButton: "./src/components/primitive-components/rate-button/script.js",
+    button: "./src/components/primitive-components/button/script.js",
+    button: "./src/components/primitive-components/bullet-list/script.js",
+    header: "./src/components/header/script.js"
   },
   output: {
     path: path.resolve(__dirname, "dist")

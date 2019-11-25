@@ -1,5 +1,7 @@
 import $ from "jquery";
 
+let defaultStrLabel = "Сколько гостей";
+
 //маскси id-шников
 let _idItemValue = "#item_" + "*#*" + "_count";
 let _idItemChangeDec = "#item_" + "*#*" + "_dec";
@@ -93,8 +95,14 @@ let countGuests = () => {
   $(classItemValue).each(function() {
     res += $(this).text() * 1;
   });
-  $(idDropdown).text(getTextForLabel(res));
+  if (res != 0) setTextToLabel(getTextForLabel(res));
+  else setTextToLabel(defaultStrLabel);
 };
+
+//Задать текст в лейбл
+function setTextToLabel(text) {
+  $(idDropdown).text(text);
+}
 
 //Показать меню
 function showMenu() {
@@ -103,7 +111,7 @@ function showMenu() {
 
 //Скрыть меню
 function hideMenu() {
-  $(classMenu).hide( 150);
+  $(classMenu).hide(150);
 }
 
 //Возвращаем строку со словом "гость" в корректном склонении
