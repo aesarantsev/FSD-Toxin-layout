@@ -20,7 +20,7 @@ $color_gradient_opacity: linear-gradient(
   text-decoration: none;
   text-transform: uppercase;
   color: $color_Purple;
-  padding: 15px 20px;
+  padding: 10px 20px;
   position: relative;
 
   &:active.btn--label {
@@ -48,6 +48,10 @@ $color_gradient_opacity: linear-gradient(
       background: $color_gradient_opacity;
     }
   }
+
+  &:hover {
+    color: $color_Purple;
+  }
 }
 
 .btn--fill {
@@ -57,6 +61,11 @@ $color_gradient_opacity: linear-gradient(
 
   &:active {
     background: $color_gradient_opacity;
+    color: #ffffff;
+  }
+
+  &:hover {
+    color: #ffffff;
   }
 }
 

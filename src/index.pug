@@ -6,6 +6,8 @@ include ./components/primitive-components/button/button
 include ./components/primitive-components/rate-button/rate-button
 include ./components/primitive-components/bullet-list/bullet-list
 include ./components/header/header
+include ./components/footer/footer
+include ./components/intro/intro
 
 -let checkBoxListValues = [
 -{title:"Можно курить", checked:false},
@@ -23,19 +25,26 @@ html(lang="en")
     
 
   body
-    //+header()
-    +rateButton(4)
-    +bulletList()
-    +button("Я просто кнопка", "labelButton","#")
-    +button("Я обычная кнопка", "borerButton","#")
-    +button("Я закрашенная кнопка", "fillButton","#")
-    +button("А я кнопка со стрелочкой", "arrowButton","#")
-
-    br
-    +textField("Email","Email")
-    +dropdown("Dropdown",1,2,3)
-    +checkBoxList("CheckboxButtons", checkBoxListValues, false)
-    +checkBoxList("CheckboxButtonsExp", checkBoxListValues, true)
+    +header()
+    //+intro()
+    h1 text
+    h2 text
+  
+    //- +textField("Email","Email")
+    //- +textField("Email","Email",true)
+    //- +dropdown("Dropdown",1,2,3)
     
+    //- +rateButton(4)
+    //- +bulletList()
+    //- +button("Я просто кнопка", "labelButton","#")
+    //- +button("Я обычная кнопка", "borerButton","#")
+    //- +button("Я закрашенная кнопка", "fillButton","#")
+    //- +button("А я кнопка со стрелочкой", "arrowButton","#")
+
+    //- br
+    //- +textField("Email","Email")
+    //- +checkBoxList("CheckboxButtons", checkBoxListValues, false)
+    //- +checkBoxList("CheckboxButtonsExp", checkBoxListValues, true)
+    +footer()
 
 

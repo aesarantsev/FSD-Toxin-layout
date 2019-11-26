@@ -3,7 +3,8 @@ body {
   font-style: normal;
   font-weight: normal;
   font-size: 14px;
-  line-height: 24px; }
+  line-height: 24px;
+  margin: 0; }
 
 ::placeholder {
   color: rgba(31, 32, 65, 0.25); }
@@ -20,6 +21,18 @@ h3 {
   padding: 0px;
   padding-bottom: 5px; }
 
+.container {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 30px; }
+
+a {
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5); }
+  a:hover {
+    color: rgba(31, 32, 65, 0.75);
+    transition: color 0.1s linear; }
+
 .text-field {
   font-family: Montserrat;
   border-radius: 4px;
@@ -33,6 +46,9 @@ h3 {
   .text-field:focus {
     outline: none;
     border: 1px solid rgba(31, 32, 65, 0.5); }
+
+.text-field.arrow {
+  background: url(/src/img/text-field/arrow_forward.svg) no-repeat 290px 12px; }
 
 .dropdown {
   font-family: "Montserrat", sans-serif;
@@ -117,7 +133,7 @@ h3 {
   color: rgba(31, 32, 65, 0.5);
   cursor: pointer; }
 
-.container {
+.containerr {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -131,7 +147,7 @@ h3 {
   font-size: 14px;
   line-height: 18px; }
 
-.container input {
+.containerr input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -148,10 +164,10 @@ h3 {
   border: 1px solid rgba(31, 32, 65, 0.25);
   border-radius: 4px; }
 
-.container:hover input ~ .checkmark {
+.containerr:hover input ~ .checkmark {
   border-color: #bc9cff; }
 
-.container input:checked ~ .checkmark {
+.containerr input:checked ~ .checkmark {
   background-color: #ffffff; }
 
 .checkmark:after {
@@ -159,10 +175,10 @@ h3 {
   position: absolute;
   display: none; }
 
-.container input:checked ~ .checkmark:after {
+.containerr input:checked ~ .checkmark:after {
   display: block; }
 
-.container .checkmark:after {
+.containerr .checkmark:after {
   left: 6px;
   top: 3px;
   width: 5px;
@@ -216,7 +232,7 @@ h3 {
   text-decoration: none;
   text-transform: uppercase;
   color: #bc9cff;
-  padding: 15px 20px;
+  padding: 10px 20px;
   position: relative; }
   .btn:active.btn--label {
     color: rgba(31, 32, 65, 0.5); }
@@ -237,13 +253,18 @@ h3 {
     background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); }
   .btn--border:active:before {
     background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5)); }
+  .btn--border:hover {
+    color: #bc9cff; }
 
 .btn--fill {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
   color: #ffffff; }
   .btn--fill:active {
-    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5)); }
+    background: linear-gradient(180deg, rgba(188, 156, 255, 0.5), rgba(139, 164, 249, 0.5));
+    color: #ffffff; }
+  .btn--fill:hover {
+    color: #ffffff; }
 
 .bnt--label--arrow {
   width: 280px;
@@ -252,4 +273,77 @@ h3 {
   .bnt--label--arrow:after {
     float: right;
     content: url(/src/img/button/arrow_forward.svg); }
+
+.header {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px; }
+
+.header__inner {
+  display: flex;
+  cursor: default;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px; }
+
+.nav {
+  display: flex;
+  line-height: 17px;
+  font-weight: 700px; }
+
+.nav__account__link {
+  float: right;
+  margin-right: 20px; }
+  .nav__account__link:last-child {
+    margin-right: 0px; }
+
+.nav__link {
+  padding-right: 30px;
+  text-decoration: none;
+  color: rgba(31, 32, 65, 0.5);
+  margin-top: 10px;
+  white-space: nowrap; }
+  .nav__link:hover {
+    color: rgba(31, 32, 65, 0.75); }
+
+.header__logo {
+  padding-right: 50px;
+  cursor: pointer; }
+
+@charset "UTF-8";
+.footer__content {
+  display: flex;
+  margin-top: 100px;
+  cursor: default; }
+
+footer.footer {
+  border-top: 1px solid rgba(31, 32, 65, 0.25);
+  border-bottom: 1px solid rgba(31, 32, 65, 0.25); }
+
+.footer__content__item {
+  width: 20%;
+  margin-right: 40px; }
+
+ul {
+  padding: 0;
+  margin: 0; }
+
+li {
+  list-style-type: none;
+  /* Убираем маркеры */
+  padding-top: 20px; }
+
+.footer__copyright {
+  margin-top: 100px; }
+
+.intro {
+  width: 1920px;
+  height: 900px;
+  background: url("/src/img/background.jpg") center no-repeat/cover;
+  z-index: -1; }
 

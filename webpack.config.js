@@ -14,7 +14,8 @@ module.exports = {
     rateButton: "./src/components/primitive-components/rate-button/script.js",
     button: "./src/components/primitive-components/button/script.js",
     button: "./src/components/primitive-components/bullet-list/script.js",
-    header: "./src/components/header/script.js"
+    header: "./src/components/header/script.js",
+    footer: "./src/components/footer/script.js"
   },
   output: {
     path: path.resolve(__dirname, "dist")

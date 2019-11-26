@@ -1,22 +1,51 @@
-.container {
-  float: right;
+@import "../../styles/colors.scss";
 
+.header {
   width: 100%;
-  max-width: 1200px;
-  margin: 0 auto;
-  padding: 0 15px;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  background-color: #ffffff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  height: 70px;
 }
-.header__innder {
+
+.header__inner {
   display: flex;
-  padding: 35px 0;
+  cursor: default;
   justify-content: space-between;
-  border-bottom: 1px solid #515369;
+
   align-items: center;
+  margin-top: 10px;
 }
 .nav {
+  
+  display: flex;
+  line-height: 17px;
+  font-weight: 700px;
+}
+
+.nav__account__link {
   float: right;
+  margin-right: 20px;
+  &:last-child {
+    margin-right: 0px;
+  }
 }
 
 .nav__link {
   padding-right: 30px;
+  text-decoration: none;
+  color: $color_Dark_Shade_50;
+  margin-top: 10px;
+  white-space: nowrap;
+  &:hover {
+    color: $color_Dark_Shade_75;
+  }
+}
+
+.header__logo {
+  padding-right: 50px;
+  cursor: pointer;
 }

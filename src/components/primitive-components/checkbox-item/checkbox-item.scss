@@ -1,6 +1,6 @@
 @import "../../../styles/colors.scss";
 
-.container {
+.containerr {
   display: block;
   position: relative;
   padding-left: 30px;
@@ -15,7 +15,7 @@
   line-height: 18px;
 }
 
-.container input {
+.containerr input {
   position: absolute;
   opacity: 0;
   cursor: pointer;
@@ -34,11 +34,11 @@
   border-radius: 4px;
 }
 
-.container:hover input ~ .checkmark {
+.containerr:hover input ~ .checkmark {
   border-color: $color_Purple;
 }
 
-.container input:checked ~ .checkmark {
+.containerr input:checked ~ .checkmark {
   background-color: #ffffff;
 }
 
@@ -48,11 +48,11 @@
   display: none;
 }
 
-.container input:checked ~ .checkmark:after {
+.containerr input:checked ~ .checkmark:after {
   display: block;
 }
 
-.container .checkmark:after {
+.containerr .checkmark:after {
   left: 6px;
   top: 3px;
   width: 5px;
