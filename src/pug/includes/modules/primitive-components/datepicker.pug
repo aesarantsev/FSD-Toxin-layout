@@ -1,0 +1,5 @@
+mixin datepicker(inputsCount=1)
+  if inputsCount==1
+    input(type='text' data-range="true" class="datepicker-here text-field" inline="true" )
+  else
+    input(type='text' data-range="true" class="datepicker-here text-field" dateFormat="d MM")
