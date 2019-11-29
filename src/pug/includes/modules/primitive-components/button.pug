@@ -1,6 +1,5 @@
-////
-//Types buttons - fillButton, borerButton, labelButton, arrowButton
-////
+
+
 mixin button (text = "Click Me please", type = "fillButton",link="#",className = "")
   case type
     when "labelButton"
@@ -12,4 +11,4 @@ mixin button (text = "Click Me please", type = "fillButton",link="#",className =
     when "arrowButton"
       a.btn.btn--fill.bnt--label--arrow(href=link, class = className)=text
     
-    
+    //Types buttons - fillButton, borerButton, labelButton, arrowButton

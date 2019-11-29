@@ -1,16 +1,18 @@
 .my-custom-datepicker {
   //color: red;
-  padding-top: 12px;
+  padding-top: 19px;
   //padding: 20px;
-  margin: 20px;
+  //margin: 20px;
 }
 .datepicker {
-  width: 290px;
+  width: 320px;
+  //border: none;
 }
 .datepicker--nav {
   border: none;
+  padding: 19px;
   padding-top: 0px;
-  padding-bottom: 15px;
+  padding-bottom: 21px;
 }
 
 .datepicker--nav-title {
@@ -27,8 +29,13 @@
 
 .datepicker--content {
   padding-top: 0;
+  padding: 0px 20px;
 }
 
+.datepicker--days-names {
+  margin: 8px 0 0;
+}
+//Название дня
 .datepicker--day-name {
   color: $color_Purple;
   font-family: Montserrat;
@@ -39,6 +46,7 @@
   text-transform: none;
   height: 40px;
   width: 40px;
+  //border: 1px solid red;
 }
 
 //Все дни текущего месяца
@@ -80,7 +88,8 @@
     left: 50%;
     z-index: -1;
   }
-
+  color: #ffffff;
+  font-weight: bold;
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
   border-radius: 22px;
 }
@@ -110,4 +119,34 @@
     rgba(188, 156, 255, 0.25) 0%,
     rgba(139, 164, 249, 0.25) 100%
   );
+}
+
+.wrapper-datepicker {
+  //border: 1px solid red;
+  display: flex;
+}
+
+.datepicker--content--buttons {
+  padding: 20px 0 15px;
+
+  button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    //color: $color_Dark_Shade_50;
+    cursor: pointer;
+    background: none;
+    padding: 0px;
+    &.datepicker__clear {
+      color: $color_Dark_Shade_50;
+    }
+
+    &.datepicker__apply {
+      color: $color_Purple;
+      float: right;
+    }
+  }
 }

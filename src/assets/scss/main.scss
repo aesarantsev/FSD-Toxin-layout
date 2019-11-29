@@ -47,6 +47,22 @@ h6 {
   margin: 0;
 }
 
+h1 {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 24px;
+  line-height: 30px;
+}
+h3 {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+}
+
 a {
   text-decoration: none;
 }
@@ -61,7 +77,7 @@ li {
 section,
 .section {
   position: relative;
-  padding: 40px 0;
+  padding: 0px 0;
   @media screen and (max-width: $desktopWidth) {
     padding: 36px 0;
   }
@@ -91,6 +107,7 @@ section,
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
+  padding: 0px 40px;
   max-width: $desktopWidth;
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
@@ -115,3 +132,4 @@ section,
 @import "modules/primitive-components/dropdown.scss";
 @import "modules/primitive-components/rate-button.scss";
 @import "modules/primitive-components/datepicker.scss";
+@import "modules/intro-search-panel.scss";

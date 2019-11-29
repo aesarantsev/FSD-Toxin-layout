@@ -17,6 +17,15 @@ $widthTextField: 320px;
 }
 
 .text-field.arrow {
-  background: url(/src/img/text-field/arrow_forward.svg) no-repeat
-    $widthTextField - 30px 12px;
+  background: url(/src/assets/img/) no-repeat $widthTextField - 30px 12px;
+}
+
+.text-field.date {
+  width: 150px;
+  font-size: 14px;
+  margin-right: 20px;
+  margin-top: 5px;
+  background: url(/src/assets/img/text-field/expand_more.svg) no-repeat 10px
+    20px;
+  background-size: auto 90%;
 }
