@@ -6,7 +6,12 @@ header.header
         .header__logo
           include ../../assets/img/logo.svg
         nav.nav
-          each item in ["О нас","Услуги","Вакансии","Новости","Соглашения"]
-            a.nav__link(href="#")= item
+          a.nav__link(href="#")= "О нас"
+          a.nav__link(href="#")= "Услуги"
+
+          a.nav__link(href="#")= "Вакансии"
+          a.nav__link(href="#")= "Новости"
+          a.nav__link(href="#")= "Соглашения"
           +button("Войти", "borerButton", "#", className="nav__account__link")
           +button("Зарегистрироваться", "fillButton", "#", className="nav__account__link")
+          
