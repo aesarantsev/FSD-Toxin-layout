@@ -1,0 +1,12 @@
+include ../primitive-modules/button/button
+
+header.header
+    .container
+      .header__inner
+        .header__logo
+          include ../../assets/img/logo.svg
+        nav.nav
+          each item in ["О нас","Услуги","Вакансии","Новости","Соглашения"]
+            a.nav__link(href="#")= item
+          +button("Войти", "borerButton", "#", className="nav__account__link")
+          +button("Зарегистрироваться", "fillButton", "#", className="nav__account__link")

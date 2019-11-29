@@ -1,0 +1,13 @@
+include ../text-field/text-field
+mixin datepicker(inputsCount=2)
+  if inputsCount==1
+    .wrapper-datepicker
+      input(type='text' data-range="true" class="datepicker-here text-field" inline="true" )
+  else if inputsCount==2
+    .wrapper-datepicker
+      .wrapper-datepicker-item
+        h3 Прибытие
+        input(type='text' data-range="true" class="datepicker-here text-field date" id="start_one" placeholder="ДД.ММ.ГГГГ")
+      .wrapper-datepicker-item
+        h3 Выезд
+        input(type='text' data-range="true" class="text-field date" id="end_one" placeholder="ДД.ММ.ГГГГ")

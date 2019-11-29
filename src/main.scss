@@ -1,10 +1,10 @@
-@import "utils/libs";
-@import "utils/vars";
-@import "utils/mixins";
-@import "utils/fonts";
-@import "utils/reset";
+@import "./assets/scss/utils/libs";
+@import "./assets/scss/utils/vars";
+@import "./assets/scss/utils/mixins";
+@import "./assets/scss/utils/fonts";
+@import "./assets/scss/utils/reset";
 
-@import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
+@import "../node_modules/air-datepicker/dist/css/datepicker.min.css";
 
 html {
   line-height: $mainLineHeight;
@@ -78,15 +78,15 @@ section,
 .section {
   position: relative;
   padding: 0px 0;
-  @media screen and (max-width: $desktopWidth) {
-    padding: 36px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 28px 0;
-  }
-  @media screen and (max-width: $desktopWidth) {
-    padding: 20px 0;
-  }
+  // @media screen and (max-width: $desktopWidth) {
+  //   padding: 36px 0;
+  // }
+  // @media screen and (max-width: $desktopWidth) {
+  //   padding: 28px 0;
+  // }
+  // @media screen and (max-width: $desktopWidth) {
+  //   padding: 20px 0;
+  // }
 }
 
 .wrapper {
@@ -97,9 +97,9 @@ section,
 }
 
 .content-wrapper {
-  display: flex;
-  flex-direction: column;
-  min-height: 100vh;
+  // display: flex;
+  // flex-direction: column;
+  // min-height: 100vh;
 }
 
 .container {
@@ -107,7 +107,7 @@ section,
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  padding: 0px 40px;
+  padding: 0px 100px;
   max-width: $desktopWidth;
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
@@ -121,15 +121,13 @@ section,
 }
 
 //Modules
-@import "modules/header.scss";
-@import "modules/footer.scss";
-
-//  PrimitiveComponents
-@import "modules/primitive-components/text-field.scss";
-@import "modules/primitive-components/button.scss";
-@import "modules/primitive-components/checkbox-item.scss";
-@import "modules/primitive-components/checkbox-list.scss";
-@import "modules/primitive-components/dropdown.scss";
-@import "modules/primitive-components/rate-button.scss";
-@import "modules/primitive-components/datepicker.scss";
-@import "modules/intro-search-panel.scss";
+@import "./modules/header/header.scss";
+@import "./modules/footer/footer.scss";
+@import "./modules/intro-search-panel/intro-search-panel.scss";
+@import "./modules/primitive-modules/button/button.scss";
+@import "./modules/primitive-modules/checkbox-item/checkbox-item.scss";
+@import "./modules/primitive-modules/checkbox-list/checkbox-list.scss";
+@import "./modules/primitive-modules/datepicker/datepicker.scss";
+@import "./modules/primitive-modules/dropdown/dropdown.scss";
+@import "./modules/primitive-modules/rate-button/rate-button.scss";
+@import "./modules/primitive-modules/text-field/text-field.scss";
