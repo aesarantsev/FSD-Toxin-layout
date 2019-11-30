@@ -20,7 +20,7 @@ $color_gradient_opacity: linear-gradient(
   color: $color_Purple;
   padding: 10px 20px;
   position: relative;
-
+  height: 34px;
   &:active.btn--label {
     color: $color_Dark_Shade_50;
   }
@@ -72,7 +72,7 @@ $color_gradient_opacity: linear-gradient(
   @extend .btn--border;
   width: 100%;
   text-align: center;
-  padding: 15px 17px 9px 0px;
+  padding: 10px 17px 9px 0px;
   &:after {
     content: $arrowSvg;
     float: right;

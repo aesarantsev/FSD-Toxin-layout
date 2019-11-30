@@ -17,10 +17,19 @@
   align-items: center;
   margin-top: 15px;
 }
+
 .nav {
   display: flex;
   line-height: 17px;
   font-weight: 700px;
+
+  ul {
+    display: flex;
+  }
+
+  li {
+    padding-top: 10px;
+  }
 }
 
 .nav__account__link {
@@ -50,4 +59,15 @@
 .header__logo {
   padding-right: 50px;
   cursor: pointer;
+  position: relative;
+}
+
+ul.nav__dropdown__items {
+  display: block;
+  li {
+    display: list-item;
+    background: #ffffff;
+    padding: 15px 0px;
+    z-index: 33;
+  }
 }

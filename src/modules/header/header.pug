@@ -4,14 +4,17 @@ header.header
     .container
       .header__inner
         .header__logo
-          include ../../assets/img/logo.svg
+          a(href="/"): include ../../assets/img/logo.svg
         nav.nav
-          a.nav__link(href="#")= "О нас"
-          a.nav__link(href="#")= "Услуги"
-
-          a.nav__link(href="#")= "Вакансии"
-          a.nav__link(href="#")= "Новости"
-          a.nav__link(href="#")= "Соглашения"
-          +button("Войти", "borerButton", "#", className="nav__account__link")
-          +button("Зарегистрироваться", "fillButton", "#", className="nav__account__link")
+          ul
+            li: a.nav__link(href="#")= "О нас"
+            li.nav__dropdown: a.nav__link(href="#")= "Услуги"
+              //- ul.nav__dropdown__items
+              //-   li: a.nav__link(href="#")= "Punk1"
+              //-   li: a.nav__link(href="#")= "Punk2"
+            li: a.nav__link(href="#")= "Вакансии"
+            li: a.nav__link(href="#")= "Новости"
+            li: a.nav__link(href="#")= "Соглашения"
+          +button("Войти", "borerButton", "/autorization.html", className="nav__account__link")
+          +button("Зарегистрироваться", "fillButton", "/registration.html", className="nav__account__link")
           
