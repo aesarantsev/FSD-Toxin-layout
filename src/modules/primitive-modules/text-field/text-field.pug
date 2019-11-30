@@ -1,7 +1,8 @@
 mixin textField(title="textField", placeholder="textField", arrow=false, classes="", attributes="")
-  
-  if arrow
-    input(type="text" id="text-field1" class="text-field arrow "+classes placeholder=placeholder attributes)
-  else
-    h3(for="text-field1")=title
-    input(type="text" id="text-field1" class="text-field "+classes placeholder=placeholder attributes)
+  .text-field(class=classes)
+    if arrow
+      input(type="text" class="text-field__input text-field__input_arrow"  placeholder=placeholder attributes)
+      input(type="submit" value="" class = "text-field__submit"  )
+    else
+      h3.text-field__title=title
+      input(type="text" class="text-field__input"  placeholder=placeholder attributes)

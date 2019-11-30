@@ -1,10 +1,27 @@
 $widthTextField: 320px;
+$heightTextField: 44px;
+$borderRadius: 4px;
+
 .text-field {
+  width: $widthTextField;
+  &:hover {
+    .text-field__submit {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      border-left: none;
+    }
+  }
+}
+
+.text-field__title {
+}
+
+.text-field__input {
   font-family: Montserrat;
-  border-radius: 4px;
+  border-radius: $borderRadius;
   border: 1px solid rgba(31, 32, 65, 0.25);
   box-sizing: border-box;
   padding: 13px 15px;
+  height: $heightTextField;
   width: $widthTextField;
   &:hover {
     outline: none;
@@ -16,12 +33,41 @@ $widthTextField: 320px;
   }
 }
 
-.text-field.arrow {
+.text-field__input_arrow {
+  width: $widthTextField - $heightTextField;
+  border-radius: $borderRadius 0 0 $borderRadius;
+  border-right: none;
   background: url(/assets/img/text-field/arrow_forward.svg) no-repeat
     $widthTextField - 35px 15px;
+
+  &:hover {
+    border-right: none;
+  }
+
+  &:focus {
+    border-right: none;
+    .text-field__submit {
+      border: 1px solid rgba(31, 32, 65, 0.5);
+      border-left: none;
+    }
+  }
 }
 
-.text-field.date {
+.text-field__submit {
+  float: right;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  width: $heightTextField;
+  height: $heightTextField;
+  border-left: none;
+  border-radius: 0 $borderRadius $borderRadius 0;
+  vertical-align: middle;
+  background-color: #ffffff;
+  cursor: pointer;
+  background: url(/assets/img/text-field/arrow_forward.svg) no-repeat 50% 50%;
+}
+
+.text-field__input_date {
+  @extend .text-field__input;
   width: 150px;
   font-size: 14px;
   margin-right: 20px;
