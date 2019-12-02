@@ -1,0 +1,48 @@
+.registration-form {
+  background: #ffffff;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 380px;
+}
+
+.registration-form__inner {
+  padding: 40px 30px 30px 30px;
+}
+
+.registration-form__title {
+  padding-bottom: 20px;
+}
+
+.registration-form__first-name {
+  padding-bottom: 10px;
+}
+
+.registration-form__last-name {
+  padding-bottom: 10px;
+}
+
+.registration-form__man-wooman {
+  padding-bottom: 20px;
+}
+
+.registration-form__birthday {
+  padding-bottom: 20px;
+}
+
+.registration-form__email {
+  padding-bottom: 10px;
+}
+
+.registration-form__password {
+  padding-bottom: 10px;
+}
+
+.registration-form__subscribe {
+  padding-bottom: 20px;
+}
+
+.registration-form__go-to-pay {
+  padding-bottom: 30px;
+}

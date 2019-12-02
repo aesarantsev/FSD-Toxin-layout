@@ -75,7 +75,11 @@ $(document).ready(function() {
 
   //Клик по Применить
   $(classApplyButton).click(() => {
-    hideMenu();
+    let menu = $(this)
+      .parent()
+      .parent()
+      .find(classMenu);
+    hideMenu(menu);
   });
 
   //Клик по Очистить

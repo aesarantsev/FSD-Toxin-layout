@@ -1,12 +1,24 @@
-$widthTextField: 320px;
-$heightTextField: 44px;
-$borderRadius: 4px;
+//params
+$width_text-field: 320px;
+$height_text-field: 44px;
+
+//border
+$borderRadius_text-field: 4px;
+$border_text-field: 1px solid rgba(31, 32, 65, 0.25);
+$borderActive_text-field: 1px solid rgba(31, 32, 65, 0.5);
+
+//others
+$submitBackgound: url(/assets/img/text-field/arrow_forward.svg) no-repeat 50%
+  50%;
+$dateBackgound: url(/assets/img/text-field/expand_more.svg) no-repeat 125px 16px;
+
+//===========
 
 .text-field {
-  width: $widthTextField;
+  width: $width_text-field;
   &:hover {
     .text-field__submit {
-      border: 1px solid rgba(31, 32, 65, 0.5);
+      border: 1$borderActive_text-field;
       border-left: none;
     }
   }
@@ -17,28 +29,28 @@ $borderRadius: 4px;
 
 .text-field__input {
   font-family: Montserrat;
-  border-radius: $borderRadius;
-  border: 1px solid rgba(31, 32, 65, 0.25);
+  border-radius: $borderRadius_text-field;
+  border: $border_text-field;
   box-sizing: border-box;
   padding: 13px 15px;
-  height: $heightTextField;
-  width: $widthTextField;
+  height: $height_text-field;
+  width: $width_text-field;
   &:hover {
     outline: none;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: $borderActive_text-field;
   }
   &:focus {
     outline: none;
-    border: 1px solid rgba(31, 32, 65, 0.5);
+    border: $borderActive_text-field;
   }
 }
 
 .text-field__input_arrow {
-  width: $widthTextField - $heightTextField;
-  border-radius: $borderRadius 0 0 $borderRadius;
+  width: $width_text-field - $height_text-field;
+  border-radius: $borderRadius_text-field 0 0 $borderRadius_text-field;
   border-right: none;
   background: url(/assets/img/text-field/arrow_forward.svg) no-repeat
-    $widthTextField - 35px 15px;
+    $width_text-field - 35px 15px;
 
   &:hover {
     border-right: none;
@@ -47,7 +59,7 @@ $borderRadius: 4px;
   &:focus {
     border-right: none;
     .text-field__submit {
-      border: 1px solid rgba(31, 32, 65, 0.5);
+      border: $borderActive_text-field;
       border-left: none;
     }
   }
@@ -55,15 +67,15 @@ $borderRadius: 4px;
 
 .text-field__submit {
   float: right;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  width: $heightTextField;
-  height: $heightTextField;
+  border: $border_text-field;
+  width: $height_text-field;
+  height: $height_text-field;
   border-left: none;
-  border-radius: 0 $borderRadius $borderRadius 0;
+  border-radius: 0 $borderRadius_text-field $borderRadius_text-field 0;
   vertical-align: middle;
   background-color: #ffffff;
   cursor: pointer;
-  background: url(/assets/img/text-field/arrow_forward.svg) no-repeat 50% 50%;
+  background: $submitBackgound;
 }
 
 .text-field__input_date {
@@ -72,7 +84,5 @@ $borderRadius: 4px;
   font-size: 14px;
   margin-right: 20px;
   margin-top: 5px;
-  background: url(/src/assets/img/text-field/expand_more.svg) no-repeat 10px
-    20px;
-  background-size: auto 90%;
+  background: $dateBackgound;
 }
