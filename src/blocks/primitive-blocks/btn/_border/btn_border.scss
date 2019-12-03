@@ -1,0 +1,34 @@
+$borerRadius: 22px;
+$border: 2px;
+$color_gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$color_gradient_opacity: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5),
+  rgba(139, 164, 249, 0.5)
+);
+
+.btn_border {
+  background: #fff;
+  border-radius: $borerRadius;
+  &:before {
+    content: "";
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -$border;
+    border-radius: inherit;
+    background: $color_gradient;
+  }
+  &:active {
+    &:before {
+      background: $color_gradient_opacity;
+    }
+  }
+
+  &:hover {
+    color: $color_Purple;
+  }
+}

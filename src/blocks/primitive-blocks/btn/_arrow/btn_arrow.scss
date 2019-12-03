@@ -1,0 +1,11 @@
+$arrowSvg: url(/assets/img/button/arrow_forward.svg);
+
+.bnt_arrow {
+  width: 100%;
+  text-align: center;
+
+  &:after {
+    content: $arrowSvg;
+    float: right;
+  }
+}

@@ -1,0 +1,10 @@
+mixin btn (text = "Click Me please", type = "fillButton",link="#",className = "")
+  case type
+    when "labelButton"
+      a.btn.btn_label(href=link, class = className)=text
+    when "borerButton"
+      a.btn.btn_border(href=link, class = className)=text
+    when "fillButton"
+      a.btn.btn_fill(href=link, class = className)=text
+    when "arrowButton"
+      a.btn.btn_fill.bnt_arrow(href=link, class = className)=text

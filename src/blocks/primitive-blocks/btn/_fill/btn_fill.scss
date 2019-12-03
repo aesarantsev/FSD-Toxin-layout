@@ -1,0 +1,22 @@
+$color_gradient: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+$color_gradient_opacity: linear-gradient(
+  180deg,
+  rgba(188, 156, 255, 0.5),
+  rgba(139, 164, 249, 0.5)
+);
+$borerRadius: 22px;
+
+.btn_fill {
+  background: $color_gradient;
+  border-radius: $borerRadius;
+  color: #ffffff;
+
+  &:active {
+    background: $color_gradient_opacity;
+    color: #ffffff;
+  }
+
+  &:hover {
+    color: #ffffff;
+  }
+}

@@ -1,6 +1,7 @@
 extends ../layout/main
 
 include ../blocks/primitive-blocks/text-field/text-field
+include ../blocks/primitive-blocks/btn/btn
 
 block variables
   -var title = 'Toxin - Бронирование номеров'
@@ -21,5 +22,9 @@ block content
     +textField(["Прибытие","Выезд"],"ДД.ММ.ГГГГ", "date")
     br
     +textField(["filterDate"],"filterDate", "filterDate")
+    +btn("Click me","labelButton")
+    +btn("Click me","borerButton")
+    +btn("Click me","fillButton")
+    +btn("Click me","arrowButton")
 //- +textField(["Email","Email2"],"Email",false, false,true)
 

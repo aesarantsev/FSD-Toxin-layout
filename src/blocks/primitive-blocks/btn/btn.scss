@@ -1,0 +1,19 @@
+.btn {
+  display: inline-block;
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-decoration: none;
+  text-transform: uppercase;
+  color: $color_Purple;
+  padding: 10px 20px;
+  position: relative;
+  height: 34px;
+}
+
+@import "./_label/btn_label.scss";
+@import "./_border/btn_border.scss";
+@import "./_fill/btn_fill.scss";
+@import "./_arrow/btn_arrow.scss";
