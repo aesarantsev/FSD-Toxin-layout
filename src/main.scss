@@ -4,7 +4,6 @@
 @import "./assets/scss/utils/fonts";
 @import "./assets/scss/utils/reset";
 
-
 //Packages
 @import "../node_modules/air-datepicker/dist/css/datepicker.min.css";
 
@@ -19,7 +18,8 @@
 @import "./modules/primitive-modules/datepicker/datepicker.scss";
 @import "./modules/primitive-modules/dropdown/dropdown.scss";
 @import "./modules/primitive-modules/rate-button/rate-button.scss";
-@import "./modules/primitive-modules/text-field/text-field.scss";
+//@import "./modules/primitive-modules/text-field/text-field.scss";
+@import "./blocks/primitive-blocks/text-field/text-field.scss";
 
 html {
   line-height: $mainLineHeight;

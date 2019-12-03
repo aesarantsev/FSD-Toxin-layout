@@ -1,0 +1,41 @@
+//- Типы TextField:
+    -'subscription'
+    -'date'
+    -'filterDate'
+    -''
+//- Пример исопльзования:
+    +textField(["Email"],"Placeholder") - text Field
+    +textField(["Email"],"Placeholder", "subscription") - subscription text field
+    +textField(["Email"],"Placeholder", "subscription")
+
+mixin textField(title=[], placeholder="textField", type="", classes="", attributes="")
+  .text-field(class=classes)
+
+    if type=="subscription"
+      .text-field__subscription
+        input(type="text" class="text-field__input text-field_subscription"  placeholder=placeholder attributes)
+        input(type="submit" value="" class = "text-field__submit")
+      
+    else if type=="date"
+      .text-field__date
+        .text-field__date__item
+          if title[0] !=""
+            h3.text-field__title=title[0]
+          input(type="text" class="text-field__input text-field_date datepicker-here" data-range="true" placeholder=placeholder attributes)
+        .text-field__date__item
+          if title[1] !=""
+            h3.text-field__title=title[1]
+          input(type="text" class="text-field__input text-field_date"  placeholder=placeholder attributes)
+      
+    else if type=="filterDate"
+      if title[0] !=""
+        h3.text-field__title=title[0]
+      input(type="text" class="text-field__input text-field_filter-date datepicker-here"  data-range="true" placeholder=placeholder attributes)
+      
+    else
+      if title[0] !=""
+        h3.text-field__title=title[0]
+      input(type="text" class="text-field__input"  placeholder=placeholder attributes)
+
+      
+

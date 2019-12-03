@@ -1,0 +1,22 @@
+//border
+$borderRadius_text-field: 4px;
+$border_text-field: 1px solid rgba(31, 32, 65, 0.25);
+$borderActive_text-field: 1px solid rgba(31, 32, 65, 0.5);
+
+.text-field__input {
+  font-family: Montserrat;
+  font-size: 14px;
+  border-radius: $borderRadius_text-field;
+  border: $border_text-field;
+  box-sizing: border-box;
+  padding: 13px 15px;
+  //width: inherit;
+  &:hover {
+    outline: none;
+    border: $borderActive_text-field;
+  }
+  &:focus {
+    outline: none;
+    border: $borderActive_text-field;
+  }
+}

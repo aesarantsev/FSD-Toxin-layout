@@ -1,5 +1,25 @@
-include ../modules/primitive-modules/text-field/text-field
-include ../modules/primitive-modules/dropdown/dropdown
-include ../modules/registration-panel/registration-panel
+extends ../layout/main
 
-+registrationPanel("1")
+include ../blocks/primitive-blocks/text-field/text-field
+
+block variables
+  -var title = 'Toxin - Бронирование номеров'
+  -var desc = 'Webpack + Pug'
+  -var pageClass = 'index-page'
+  -let checkBoxListValues = [{title:"Можно курить", checked:false},{title:"Можно с питомцами", checked:false},{title:"Можно пригласить гостей (до 10 человек)", checked:false}];
+  
+block content
+  section
+    h1 h
+    h1 h
+    h1 h
+    +textField(["Default"],"Default")
+    br
+    +textField(["subscription"],"subscription", "subscription")
+    br
+    br
+    +textField(["Прибытие","Выезд"],"ДД.ММ.ГГГГ", "date")
+    br
+    +textField(["filterDate"],"filterDate", "filterDate")
+//- +textField(["Email","Email2"],"Email",false, false,true)
+
