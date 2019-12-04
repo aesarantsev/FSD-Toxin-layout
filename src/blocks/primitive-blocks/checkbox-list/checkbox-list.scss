@@ -1,0 +1,10 @@
+.checkbox-list {
+  width: 222px;
+}
+
+@import "./__items/checkbox-list__items.scss";
+@import "./__item/checkbox-list__item.scss";
+@import "./__items/_expandable/checkbox-list__items_expandable.scss";
+@import "./__title/checkbox-list__title.scss";
+@import "./__title/_expandable/checkbox-list__title_expandable.scss";
+@import "./_expandable/checkbox-list_expandable.scss";

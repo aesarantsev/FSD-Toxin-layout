@@ -1,0 +1,9 @@
+.checkbox-list__title_expandable {
+  &:after {
+    float: right;
+    content: url(/assets/img/checkbox-list/arrow.svg);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}

@@ -1,0 +1,16 @@
+include ../checkbox-item/checkbox-item
+
+mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true)
+  if expandable
+    .checkbox-list.checkbox-list_expandable
+      .checkbox-list__title.checkbox-list__title_expandable=title
+      .checkbox-list__items.checkbox-list__items_expandable
+        each item in items
+          .checkbox-list__item
+            +checkBoxItem(item.title, item.checked)
+  else
+    .chcheckbox-list
+      .checkbox-list__title=title
+      each item in items
+        .checkbox-list__item
+          +checkBoxItem(item.title, item.ecked)
