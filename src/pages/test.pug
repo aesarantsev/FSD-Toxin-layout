@@ -2,6 +2,7 @@ extends ../layout/main
 
 include ../blocks/primitive-blocks/text-field/text-field
 include ../blocks/primitive-blocks/btn/btn
+include ../blocks/primitive-blocks/checkbox-item/checkbox-item
 
 block variables
   -var title = 'Toxin - Бронирование номеров'
@@ -26,5 +27,8 @@ block content
     +btn("Click me","borerButton")
     +btn("Click me","fillButton")
     +btn("Click me","arrowButton")
+    +checkBoxItem()
+    +checkBoxItem()
+    +checkBoxItem()
 //- +textField(["Email","Email2"],"Email",false, false,true)
 

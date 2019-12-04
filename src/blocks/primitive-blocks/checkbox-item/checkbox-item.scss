@@ -1,0 +1,41 @@
+/* The container */
+.checkbox-item {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 18px;
+
+  display: block;
+  position: relative;
+  padding-left: 30px;
+  padding-top: 2px;
+
+  cursor: pointer;
+
+  -webkit-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+}
+
+/* Hide the browser's default checkbox */
+.checkbox-item input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+  height: 0;
+  width: 0;
+}
+
+/* On mouse-over, add a grey background color */
+.checkbox-item:hover input ~ .checkbox-item__mark {
+  background-color: #ffffff;
+}
+
+/* When the checkbox is checked, add a blue background */
+.checkbox-item input:checked ~ .checkbox-item__mark {
+  background-color: #ffffff;
+}
+
+@import "./__mark/checkbox-item__mark.scss";
