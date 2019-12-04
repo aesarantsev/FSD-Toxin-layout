@@ -1,0 +1,22 @@
+.dropdown__item__change {
+  width: 30px;
+  height: 30px;
+  border: 1px solid $color_Dark_Shade_25;
+  border-radius: 100%;
+  cursor: pointer;
+  text-decoration: none;
+  text-align: center;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 18px;
+  line-height: 30px;
+  color: $color_Dark_Shade_50;
+  &:hover {
+    background: $color_Dark_Shade_5;
+  }
+  &:active {
+    background: $color_Dark_Shade_25;
+  }
+}
+
+@import "./_disabled/dropdown__item__change_disabled.scss";

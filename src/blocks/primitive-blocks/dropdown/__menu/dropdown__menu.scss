@@ -1,0 +1,14 @@
+.dropdown__menu {
+  display: none;
+  position: absolute;
+  background-color: #ffffff;
+  z-index: 10;
+  width: $width;
+  border-radius: $borderRadiusDown;
+  border: 1px solid $color_Dark_Shade_25;
+  border-top: 0px;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+}

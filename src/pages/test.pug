@@ -4,6 +4,7 @@ include ../blocks/primitive-blocks/text-field/text-field
 include ../blocks/primitive-blocks/btn/btn
 include ../blocks/primitive-blocks/checkbox-item/checkbox-item
 include ../blocks/primitive-blocks/checkbox-list/checkbox-list
+include ../blocks/primitive-blocks/dropdown/dropdown
 
 block variables
   -var title = 'Toxin - Бронирование номеров'
@@ -33,5 +34,11 @@ block content
     +checkBoxItem()
     +checkBoxList("expandable", ["1","2","3","4"])
     +checkBoxList("Test", ["1","2","3","4"],false)
+    +dropdown("Dropdown1",1,1,1)
+    +dropdown("Dropdown2",0,1,0)
+    +dropdown("Dropdown2",0,1,0)
+    +dropdown("Dropdown2",0,1,0)
+    +dropdown("Dropdown2",0,1,0)
+    
 //- +textField(["Email","Email2"],"Email",false, false,true)
 

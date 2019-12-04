@@ -1,0 +1,21 @@
+mixin dropdown(name="Dropdown", adults_count=1, children_count=2, babies_count=3)
+
+  -let titles = ['Взрослые', 'Дети', 'Младенцы'];
+  -let clearButtonLabel="Очистить";
+  -let applyButtonLabel="Применить";
+  -let counts = [adults_count,children_count,babies_count];
+
+  .dropdown
+    h3.dropdown__title=name
+    .dropdown__label
+    .dropdown__menu
+      -for(let i = 0;i<3;i++)
+        .dropdown__item
+          .dropdown__item__label=titles[i]
+          .dropdown__item__edit
+            a.dropdown__item__change="-"
+            .dropdown__item__value=counts[i]
+            a.dropdown__item__change="+"
+      .dropdown__item
+        .dropdown__btn_clear=clearButtonLabel
+        .dropdown__btn_apply=applyButtonLabel

@@ -1,0 +1,19 @@
+$borderRadiusUp: 4px 4px 0px 0px;
+$borderRadiusDown: 0px 0px 4px 4px;
+
+.dropdown__label {
+  width: $width;
+  border-radius: $borderRadiusUp;
+  border: 1px solid $color_Dark_Shade_25;
+  padding: 12px 15px;
+  font-weight: normal;
+  cursor: pointer;
+
+  &::after {
+    float: right;
+    content: url(/src/img/arrow.png);
+    font-style: normal;
+    font-weight: normal;
+    font-size: 12px;
+  }
+}

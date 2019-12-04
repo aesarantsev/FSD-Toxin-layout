@@ -1,0 +1,12 @@
+$width: 320px;
+
+.dropdown {
+  font-family: "Montserrat", sans-serif;
+  width: $width;
+}
+
+@import "./__title/dropdown__title.scss";
+@import "./__label/dropdown__label.scss";
+@import "./__menu/dropdown__menu.scss";
+@import "./__item/dropdown__item.scss";
+@import "./__btn/dropdown__btn.scss";
