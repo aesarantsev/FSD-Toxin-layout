@@ -1,4 +1,5 @@
 .checkbox-list__title_expandable {
+  cursor: pointer;
   &:after {
     float: right;
     content: url(/assets/img/checkbox-list/arrow.svg);

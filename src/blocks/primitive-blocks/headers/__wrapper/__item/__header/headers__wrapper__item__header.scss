@@ -1,0 +1,11 @@
+.headers__wrapper__item__header {
+  display: inline-block;
+  margin-right: 30px;
+  width: 50px;
+  text-align: right;
+  & span {
+    color: $color_Dark_Shade_25;
+    font-size: 19px;
+    line-height: 23px;
+  }
+}

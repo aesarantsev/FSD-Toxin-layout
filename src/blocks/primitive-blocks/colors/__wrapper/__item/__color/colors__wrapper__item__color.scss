@@ -1,0 +1,15 @@
+.colors__wrapper__item__color {
+  width: 70px;
+  height: 70px;
+  display: inline-block;
+  margin-right: 40px;
+  border-radius: 6px;
+}
+
+@import "./_dark100/colors__wrapper__item__color_dark100.scss";
+@import "./_dark75/colors__wrapper__item__color_dark75.scss";
+@import "./_dark50/colors__wrapper__item__color_dark50.scss";
+@import "./_dark25/colors__wrapper__item__color_dark25.scss";
+@import "./_dark5/colors__wrapper__item__color_dark5.scss";
+@import "./_green/colors__wrapper__item__color_green.scss";
+@import "./_purple/colors__wrapper__item__color_purple.scss";

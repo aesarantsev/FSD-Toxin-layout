@@ -10,5 +10,6 @@ import "air-datepicker";
 // import "./modules/header/header";
 
 import "./blocks/primitive-blocks/dropdown/dropdown";
+import "./blocks/primitive-blocks/checkbox-list/checkbox-list"
 // SCSS
 import "./main.scss";

@@ -28,6 +28,13 @@ body {
   font-weight: $mainFontWeight;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+
+  font-family: "Montserrat", sans-serif;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 14px;
+  line-height: 24px;
+  color: $color_Dark_Shade_75;
 }
 
 *,
@@ -43,6 +50,7 @@ h4,
 h5,
 h6 {
   margin: 0;
+  color: $color_Dark_Shade_100;
 }
 
 h1 {
@@ -52,8 +60,17 @@ h1 {
   font-size: 24px;
   line-height: 30px;
 }
+
+h2 {
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+}
+
 h3 {
-  font-family: Montserrat;
+  font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
@@ -140,3 +157,10 @@ section,
 @import "./blocks/primitive-blocks/rate-button/rate-button.scss";
 //@import "./modules/primitive-modules/text-field/text-field.scss";
 @import "./blocks/primitive-blocks/text-field/text-field.scss";
+
+//UI kit
+@import "./blocks/primitive-blocks/colors/colors.scss";
+@import "./blocks/primitive-blocks/headers/headers.scss";
+
+//Pages
+@import "./pages/colors_type.scss";
