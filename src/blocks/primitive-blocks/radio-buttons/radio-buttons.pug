@@ -1,0 +1,11 @@
+mixin radioButtons(values = ["Мужчина", "Женщина"])
+  -var name = "11111"
+  .radio-buttons
+    form
+      -for(let i=0;i<values.length;i++)
+        label.radio_item=values[i]
+          if(i==0)
+            input(type="radio" name = name)
+          else
+            input(type="radio" name = name)
+          span.checkmark
