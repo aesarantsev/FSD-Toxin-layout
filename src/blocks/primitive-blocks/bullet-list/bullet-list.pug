@@ -1,0 +1,7 @@
+mixin bulletList(title = "Bullet list", items = ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00, а выезд до 12:00"])
+  .bullet-list
+    h3.bullet-list__title=title
+    -for(let i=0;i<items.length;i++)
+      .bullet-list__item
+        .bullet-list__item__marker
+        .bullet-list__item__title=items[i]
