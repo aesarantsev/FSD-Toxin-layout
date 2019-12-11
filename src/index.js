@@ -15,6 +15,7 @@ import "./blocks/primitive-blocks/radio-buttons/radio-button";
 import "./blocks/primitive-blocks/bullet-list/bullet-list";
 import "./blocks/primitive-blocks/range-slider/range-slider";
 import "./blocks/primitive-blocks/pagination/pagination";
+import "./blocks/primitive-blocks/img-slider/img-slider";
 
 // SCSS
 import "./main.scss";

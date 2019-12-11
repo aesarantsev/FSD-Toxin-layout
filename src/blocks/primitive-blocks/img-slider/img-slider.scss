@@ -1,0 +1,16 @@
+.img-slider {
+  width: 270px;
+  height: 150px;
+  position: relative;
+}
+
+.img-slider:hover {
+  .img-slider__toggle_prev,
+  .img-slider__toggle_next {
+    display: block;
+  }
+}
+
+@import "./__item/img-slider__item.scss";
+@import "./__toggle/img-slider__toggle.scss";
+@import "./__buttons/img-slider__buttons.scss";

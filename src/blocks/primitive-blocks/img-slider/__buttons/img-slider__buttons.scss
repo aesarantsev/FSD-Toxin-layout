@@ -1,0 +1,10 @@
+.img-slider__buttons {
+  position: absolute;
+  display: inline-block;
+  right: 0;
+  bottom: 0;
+  margin-right: 15px;
+  margin-bottom: 8px;
+}
+
+@import "./__dot/img-slider__buttons__dot.scss";

@@ -1,0 +1,25 @@
+.img-slider__toggle_prev{
+  display: none;
+  position: absolute;
+  cursor: pointer;
+  color: white;
+  height: 150px;
+  width: 42px;
+  padding-top: 60px;
+  text-align: center;
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.5) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}
+
+.img-slider__toggle_prev:hover{
+  background: linear-gradient(
+    90deg,
+    rgba(0, 0, 0, 0.55) 0%,
+    rgba(0, 0, 0, 0) 99.99%,
+    rgba(255, 255, 255, 0) 100%
+  );
+}

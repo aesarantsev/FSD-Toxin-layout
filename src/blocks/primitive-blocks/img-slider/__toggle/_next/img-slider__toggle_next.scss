@@ -1,0 +1,9 @@
+.img-slider__toggle_next {
+  @extend .img-slider__toggle_prev;
+  right: 0;
+  transform: matrix(-1, 0, 0, 1, 0, 0);
+}
+
+img-slider__toggle_next:hover {
+  @extend .img-slider__toggle_prev:hover;
+}
