@@ -1,0 +1,12 @@
+.pagination__nav__item {
+  height: 40px;
+  width: 40px;
+  cursor: pointer;
+
+  padding-top: 8px;
+  color: $color_Dark_Shade_50;
+  font-size: 12px;
+  text-align: center;
+}
+
+@import "./_selected/pagination__nav__item_selected.scss";

@@ -1,0 +1,4 @@
+.pagination__nav__next-button {
+  @extend .pagination__nav__item_selected;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}

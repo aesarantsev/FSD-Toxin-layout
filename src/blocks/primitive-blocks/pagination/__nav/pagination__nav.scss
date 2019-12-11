@@ -1,0 +1,6 @@
+.pagination__nav {
+  display: flex;
+}
+
+@import "./__item/pagination__nav__item.scss";
+@import "./__next-button/pagination__nav__next-button.scss";

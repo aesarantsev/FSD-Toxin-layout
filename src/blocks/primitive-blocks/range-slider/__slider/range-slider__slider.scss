@@ -1,0 +1,32 @@
+.range-slider__slider {
+  margin-top: 20px;
+}
+
+.ui-slider-handle {
+}
+.ui-slider-horizontal .ui-slider-handle {
+  top: -0.45em;
+  margin-left: -0.6em;
+}
+
+.ui-state-default,
+.ui-widget-content .ui-state-default {
+  border: 2px solid #ffffff;
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+.ui-slider-range {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+}
+.ui-state-default {
+  border-radius: 50%;
+}
+.ui-widget-content {
+}
+.ui-widget-content {
+}
+.ui-corner-all {
+}
+
+.ui-slider-horizontal {
+  height: 6px;
+}
