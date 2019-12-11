@@ -12,6 +12,7 @@ include ../blocks/primitive-blocks/range-slider/range-slider
 include ../blocks/primitive-blocks/pagination/pagination
 include ../blocks/primitive-blocks/img-slider/img-slider
 
+include ../blocks/building-blocks/room-item/room-item
 
 block variables
   -var title = 'Toxin - Бронирование номеров'
@@ -58,9 +59,12 @@ block content
     //- +pagination(4,55)
     //- br
     //- +pagination(4,70)
-    +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg","https://sun9-10.userapi.com/c858428/v858428913/109d68/lNAC8-GT8eU.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg"])
+    //- +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg","https://sun9-10.userapi.com/c858428/v858428913/109d68/lNAC8-GT8eU.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg"])
 
-    +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"])
-    +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg"])
+    //- +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"])
+    //- +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg"])
+
+    +roomItem(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],888,true,9900,5,145)
+    +roomItem(["https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],840,false,9900,4,65)
 //- +textField(["Email","Email2"],"Email",false, false,true)
 

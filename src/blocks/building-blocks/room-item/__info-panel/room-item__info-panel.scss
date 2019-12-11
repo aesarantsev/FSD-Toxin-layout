@@ -1,0 +1,12 @@
+.room-item__info-panel {
+  display: flex;
+  position: relative;
+  margin-left: 20px;
+  margin-right: 20px;
+  margin-top: 20px;
+  margin-bottom: 4px;
+}
+
+@import "./__cost/room-item__info-panel__cost.scss";
+@import "./__number/room-item__info-panel__number.scss";
+@import "./__state/room-item__info-panel__state.scss";
