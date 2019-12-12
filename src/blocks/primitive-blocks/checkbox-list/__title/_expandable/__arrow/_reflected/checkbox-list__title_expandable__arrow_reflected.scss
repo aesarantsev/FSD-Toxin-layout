@@ -1,0 +1,5 @@
+.checkbox-list__title_expandable__arrow_reflected {
+  @extend .checkbox-list__title_expandable__arrow;
+
+  transform: rotate(180deg);
+}
