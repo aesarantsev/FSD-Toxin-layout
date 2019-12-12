@@ -1,9 +1,8 @@
-mixin dropdown(name="Dropdown", adults_count=1, children_count=2, babies_count=3)
+mixin dropdown(name="Dropdown", params = [], paramsCount = [])
 
   -let titles = ['Взрослые', 'Дети', 'Младенцы'];
   -let clearButtonLabel="Очистить";
   -let applyButtonLabel="Применить";
-  -let counts = [adults_count,children_count,babies_count];
 
   .dropdown
     h3.dropdown__title=name
@@ -11,10 +10,10 @@ mixin dropdown(name="Dropdown", adults_count=1, children_count=2, babies_count=3
     .dropdown__menu
       -for(let i = 0;i<3;i++)
         .dropdown__item
-          .dropdown__item__label=titles[i]
+          .dropdown__item__label=params[i].title
           .dropdown__item__edit
             a.dropdown__item__change="-"
-            .dropdown__item__value=counts[i]
+            .dropdown__item__value=paramsCount[i]
             a.dropdown__item__change="+"
       .dropdown__item
         .dropdown__btn_clear=clearButtonLabel

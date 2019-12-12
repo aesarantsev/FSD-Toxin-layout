@@ -19,7 +19,13 @@ block variables
   -var desc = 'Webpack + Pug'
   -var pageClass = 'index-page'
   -let checkBoxListValues = [{title:"Можно курить", checked:false},{title:"Можно с питомцами", checked:false},{title:"Можно пригласить гостей (до 10 человек)", checked:false}];
-  
+  -
+    dropDownParams = [
+    {title:"Спальни", one:"Спальня", two:"Спальни", five:"Спален"},
+    {title:"Кровати", one:"Кровать", two:"Кровати", five:"Кроватей"},
+    {title:"Ванные комнаты", one:"Ванная комната", two:"Ванных комнаты", five:"Ванных комнат"}];
+    dropDownParamsCount = [1,1,0];
+
 block content
   section
     h1 h
@@ -37,9 +43,10 @@ block content
     //- +btn("Click me","borerButton")
     //- +btn("Click me","fillButton")
     //- +btn("Click me","arrowButton")
-    //- +checkBoxList("expandable", ["1","2","3","4"])
-    //- +checkBoxList("Test", ["1","2","3","4"],false)
-    //- +dropdown("Dropdown1",1,1,1)
+    +checkBoxList("expandable", ["1","2","3","4"])
+    +checkBoxList("expandable2", ["1","2","3","4"])
+    +checkBoxList("Test", ["1","2","3","4"],false)
+    +dropdown("Dropdown1",dropDownParams, dropDownParamsCount)
     //- +dropdown("Dropdown2",0,1,0)
     //- +rateButton(2)
     //- +rateButton()
@@ -64,7 +71,7 @@ block content
     //- +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"])
     //- +imgSlider(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg"])
 
-    +roomItem(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],888,true,9900,5,145)
-    +roomItem(["https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],840,false,9900,4,65)
+    //- +roomItem(["https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],888,true,9900,5,145)
+    //- +roomItem(["https://sun9-44.userapi.com/c858428/v858428913/109d56/52MQVoMyyiA.jpg","https://sun9-41.userapi.com/c857720/v857720083/123b6b/q3Wm8gtJL9A.jpg", "https://sun9-62.userapi.com/c858428/v858428913/109d5f/pznWVOeleC0.jpg"],840,false,9900,4,65)
 //- +textField(["Email","Email2"],"Email",false, false,true)
 

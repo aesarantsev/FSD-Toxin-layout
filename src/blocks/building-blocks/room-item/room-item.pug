@@ -11,11 +11,11 @@ mixin roomItem(images = [], numberRoom = 0, luxe=false, cost = 0, rating = 1, re
         if(luxe)
           span Люкс
       .room-item__info-panel__cost
-        b=`${cost}Р `
+        strong=`${cost}Р `
         span в сутки
     .room-item__reviews-panel
       .room-item__reviews-panel__rating
         +rateButton(rating)
       .room-item__reviews-panel__reviews
-        b=`${reviewsCount} `
+        strong=`${reviewsCount} `
         span Отзывов 

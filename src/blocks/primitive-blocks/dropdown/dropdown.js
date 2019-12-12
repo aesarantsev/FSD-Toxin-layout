@@ -135,6 +135,10 @@ function setTextToLabel(dropdown, text) {
     .text(text);
 }
 
+function dropdownn() {
+  console.log("its work!");
+}
+
 //Get the string with the word "гость" in the correct declension
 function getTextForLabel(n) {
   let res = "";
