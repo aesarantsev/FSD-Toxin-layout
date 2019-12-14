@@ -19,28 +19,13 @@ jQuery(document).ready(function(e) {
       checkBoxListExpanableArrowClass,
       currentCheckBoxList
     );
-
+    
+    //Reflect arrow
     $(currentCheckBoxArrow).toggleClass(
       checkBoxListExpanableArrowReflectedClass.slice(1),
       checkBoxListExpanableArrowClass.slice(1)
     );
 
-    // if (
-    //   $(currentCheckBoxArrow).hasClass(checkBoxListExpanableArrowClass.slice(1))
-    // ) {
-    //   $(currentCheckBoxArrow)
-    //     .removeClass(checkBoxListExpanableArrowClass.slice(1))
-    //     .addClass(checkBoxListExpanableArrowReflectedClass.slice(1));
-    // } else if (
-    //   $(currentCheckBoxArrow).hasClass(
-    //     checkBoxListExpanableArrowReflectedClass.slice(1)
-    //   )
-    // ) {
-    //   console.log("else");
-    //   $(currentCheckBoxArrow)
-    //     .removeClass(checkBoxListExpanableArrowReflectedClass.slice(1))
-    //     .addClass(checkBoxListExpanableArrowClass.slice(1));
-    // }
 
     if (currentCheckBoxItems.css("display") == "none")
       currentCheckBoxItems.show(timeoutAnimation);

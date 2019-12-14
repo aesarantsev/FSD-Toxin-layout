@@ -7,6 +7,9 @@ mixin dropdown(name="Dropdown", params = [], paramsCount = [])
   .dropdown
     h3.dropdown__title=name
     .dropdown__label
+      .dropdown__label__text
+      .dropdown__label__arrow
+        i.material-icons.md-24 expand_more
     .dropdown__menu
       -for(let i = 0;i<3;i++)
         .dropdown__item

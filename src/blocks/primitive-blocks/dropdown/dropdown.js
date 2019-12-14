@@ -1,6 +1,11 @@
 //Classes
 let dropdownClass = ".dropdown";
+//Label
 let labelClass = ".dropdown__label";
+let labelTextClass = ".dropdown__label__text";
+let labelArrowClass = ".dropdown__label__arrow";
+let labelArrowReflectedClass = ".dropdown__label__arrow_reflected";
+//Menu
 let menuClass = ".dropdown__menu";
 let changeButtonClass = ".dropdown__item__change";
 let changeButtonDisabledClass = "dropdown__item__change_disabled";
@@ -14,26 +19,70 @@ let timeoutAnimation = 160;
 jQuery(document).ready(function(e) {
   updateLabel();
 
-  //Click on Label
-  $(labelClass).click(function() {
-    let menu = $(this)
-      .parent()
-      .find(menuClass);
+  //#region 'Show and Hide menu'
+  {
+    //Click on Label
+    $(labelClass).click(function() {
+      let currentMenu = $(this)
+        .parent()
+        .find(menuClass);
 
-    updateDecStyle(menu);
+      let currentDropdown = $(this).closest(dropdownClass);
 
-    //Hide all dropdowns except current
-    let currentDropdown = $(this).parent();
-    $(dropdownClass).each(function() {
-      if ($(this) != currentDropdown) hideMenu($(this).find(menuClass));
+      updateDecStyle(currentMenu);
+
+      //Close all opened menues
+      $(menuClass + ":visible").each(function() {
+        if (!$(this).is($(currentMenu))) {
+          hideMenu($(this).closest(dropdownClass));
+        }
+      });
+
+      if (currentMenu.css("display") == "none") {
+        showMenu(currentDropdown);
+      } else {
+        hideMenu(currentDropdown);
+      }
     });
 
-    if (menu.css("display") == "none") {
-      showMenu(menu);
-    } else {
-      hideMenu(menu);
+    //Click outside Dropdown
+    $(document).click(function(e) {
+      if (
+        !$(dropdownClass).is(e.target) &&
+        $(dropdownClass).has(e.target).length == 0
+      ) {
+        hideAllMenues();
+      }
+    });
+
+    function showMenu(dropdown) {
+      reflectArrow(dropdown);
+      $(dropdown)
+        .find(menuClass)
+        .show(timeoutAnimation);
     }
-  });
+
+    function hideMenu(dropdown) {
+      reflectArrow(dropdown);
+      $(dropdown)
+        .find(menuClass)
+        .hide(timeoutAnimation);
+    }
+
+    function reflectArrow(dropdown) {
+      console.log("REF");
+      let currentDropdownArrow = $(labelArrowClass, dropdown);
+      $(currentDropdownArrow).toggleClass(labelArrowReflectedClass.slice(1));
+    }
+
+    function hideAllMenues() {
+      console.log("hide all");
+      $(menuClass + ":visible").each(function() {
+        hideMenu($(this).closest(dropdownClass));
+      });
+    }
+  }
+  //#endregion
 
   //Click on change
   $(changeButtonClass).click(function() {
@@ -75,32 +124,10 @@ jQuery(document).ready(function(e) {
 
   //Click on apply
   $(applyButtonClass).click(function() {
-    let menu = $(this).closest(menuClass);
-    hideMenu(menu);
-  });
-
-  //Click outside Dropdown
-  $(document).click(function(e) {
-    if (
-      !$(dropdownClass).is(e.target) &&
-      $(dropdownClass).has(e.target).length == 0
-    ) {
-      hideAllMenues();
-    }
+    let currentDropDown = $(this).closest(dropdownClass);
+    hideMenu(currentDropDown);
   });
 });
-
-function showMenu(menu) {
-  menu.show(timeoutAnimation);
-}
-
-function hideMenu(menu) {
-  menu.hide(timeoutAnimation);
-}
-
-function hideAllMenues() {
-  $(menuClass).hide(timeoutAnimation);
-}
 
 function showClearButton(clearButton) {
   $(clearButton).show(timeoutAnimation);
@@ -131,12 +158,8 @@ function updateLabel() {
 
 function setTextToLabel(dropdown, text) {
   $(dropdown)
-    .find(labelClass)
+    .find(labelTextClass)
     .text(text);
-}
-
-function dropdownn() {
-  console.log("its work!");
 }
 
 //Get the string with the word "гость" in the correct declension
