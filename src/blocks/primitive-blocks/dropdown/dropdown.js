@@ -1,9 +1,10 @@
-//Classes
-let dropdownClass = ".dropdown";
-//--Types dropdown
+//Types dropdown
 let dropdownTypeAttr = "type";
 let dropdownGuestType = "guests";
 let dropdownRoomAmenitiesType = "roomAmenities";
+
+//Classes
+let dropdownClass = ".dropdown";
 //--Label
 let labelClass = ".dropdown__label";
 let labelTextClass = ".dropdown__label__text";
