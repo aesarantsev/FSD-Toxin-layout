@@ -204,7 +204,8 @@ function getTextForGuestLabel(n) {
     res = declensionWord[2];
   }
 
-  return count + " " + res;
+  if (count != 0) return count + " " + res;
+  else return "Сколько гостей";
 }
 
 function getTextForRoomAmenitiesLabel(values = []) {

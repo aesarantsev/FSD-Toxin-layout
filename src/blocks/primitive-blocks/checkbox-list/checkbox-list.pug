@@ -10,11 +10,11 @@ mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true)
       .checkbox-list__items.checkbox-list__items_expandable
         each item in items
           .checkbox-list__item
-            +checkBoxItem(item.title, item.checked)
+            +checkBoxItem(item, item.checked)
   else
     .chcheckbox-list
       .checkbox-list__title
         span=title
       each item in items
         .checkbox-list__item
-          +checkBoxItem(item.title, item.ecked)
+          +checkBoxItem(item, item.ecked)

@@ -1,7 +1,56 @@
+include ../blocks/primitive-blocks/text-field/text-field
+include ../blocks/primitive-blocks/dropdown/dropdown
+include ../blocks/primitive-blocks/checkbox-list/checkbox-list
+include ../blocks/primitive-blocks/radio-buttons/radio-buttons
+include ../blocks/primitive-blocks/toggle/toggle
+include ../blocks/primitive-blocks/like-button/like-button
+include ../blocks/primitive-blocks/rate-button/rate-button
+include ../blocks/primitive-blocks/range-slider/range-slider
+
 html
   body
     header.uikit-logo
       img(src="../assets/img/uikit/Logo.svg")
     .container
-      .form-element__wrapper
+      .form-elements
+        .form-elements__items
+          .form-elements__items_item
+            +textField(["Text Field"],"Email")
+          .form-elements__items_item
+            +dropdown("Dropdown","guests",[0,0,0])
+          .form-elements__items_item
+            +textField(["Masked text field"],"ДД.ММ.ГГГГ")
+          .form-elements__items_item
+            +textField(["date Dropdown","date Dropdown"],"ДД.ММ.ГГГГ", "date")
+          .form-elements__items_item
+            +textField(["filter date dropdown"],"filterDate", "filterDate")
+          .form-elements__items_item
+            h3 subscription text field
+            +textField(["subscription"],"subscription", "subscription")
+        .form-elements__items
+          .form-elements__items_item
+            +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false)
+          .form-elements__items_item
+            +radioButtons(["Мужчина","Женщина"])
+          .form-elements__items_item
+            h3 toggle
+            +toggle("Получать спецпредложения")
+            +toggle("Получать спецпредложения")
+          .form-elements__items_item
+            h3 like button
+            +likeButton(2,false)
+            +likeButton(12,true)
+          .form-elements__items_item
+            h3 rate button
+            +rateButton(4)
+            +rateButton(5)
+          .form-elements__items_item
+        .form-elements__items
+          .form-elements__items_item
+            +rangeSlider()
+        .form-elements__items
+        .form-elements__items
+        .form-elements__items
+
+
       
