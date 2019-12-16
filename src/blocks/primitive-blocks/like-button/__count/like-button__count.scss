@@ -1,0 +1,10 @@
+.like-button__count {
+  color: $color_Dark_Shade_25;
+  font-size: 10px;
+  line-height: 20px;
+  & span {
+    bottom: 0;
+  }
+}
+
+@import "./_liked/like-button__count_liked.scss";

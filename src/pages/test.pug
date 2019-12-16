@@ -12,6 +12,7 @@ include ../blocks/primitive-blocks/range-slider/range-slider
 include ../blocks/primitive-blocks/pagination/pagination
 include ../blocks/primitive-blocks/img-slider/img-slider
 include ../blocks/primitive-blocks/toggle/toggle
+include ../blocks/primitive-blocks/like-button/like-button
 
 include ../blocks/building-blocks/room-item/room-item
 
@@ -70,6 +71,9 @@ block content
     +rangeSlider()
     +rangeSlider("Slider 2")
     +toggle("Получать спецпредложения")
+    +toggle("Получать спецпредложения")
+    +likeButton(1,false)
+    +likeButton(2,true)
     //- br
     //- +pagination(1,1)
     //- br

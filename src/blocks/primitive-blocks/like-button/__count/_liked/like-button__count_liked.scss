@@ -1,0 +1,4 @@
+.like-button__count_liked {
+  @extend .like-button__count;
+  color: $color_Purple;
+}

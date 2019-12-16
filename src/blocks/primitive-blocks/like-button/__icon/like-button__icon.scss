@@ -1,0 +1,11 @@
+.like-button__icon {
+  width: 50%;
+  color: $color_Dark_Shade_25;
+  text-align: center;
+
+  & i {
+    vertical-align: 20%;
+  }
+}
+
+@import "./_liked/like-button__icon_liked.scss";

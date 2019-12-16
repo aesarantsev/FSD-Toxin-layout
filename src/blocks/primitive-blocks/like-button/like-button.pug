@@ -1,0 +1,15 @@
+mixin likeButton(count = 1, isLiked = false)
+  if(isLiked)
+    .like-button_liked
+      .like-button__icon_liked
+         i.material-icons.md-10.md-purple favorite
+      .like-button__count_liked
+          span=count
+  else
+    .like-button
+      .like-button__icon
+        i.material-icons.md-10 favorite_border
+      .like-button__count
+          span=count
+
+
