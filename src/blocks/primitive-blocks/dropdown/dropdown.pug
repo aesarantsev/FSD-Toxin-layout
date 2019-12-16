@@ -1,10 +1,24 @@
-mixin dropdown(name="Dropdown", params = [], paramsCount = [])
+//- types: guests, roomAmenities
 
-  -let titles = ['Взрослые', 'Дети', 'Младенцы'];
-  -let clearButtonLabel="Очистить";
-  -let applyButtonLabel="Применить";
+mixin dropdown(name="Dropdown", type="guests", paramsCount = [])
+  -
+    let titles_1 = ['Взрослые', 'Дети', 'Младенцы'];
+    let titles_2 = ['Спальни', 'Кровати', 'Ванные комнаты'];
+    let titles = []
+    switch(type){
+      case "guests":
+        titles = titles_1;
+        break;
+      case "roomAmenities":
+        titles = titles_2;
+        break;
+    }
+    
+    let clearButtonLabel="Очистить";
+    let applyButtonLabel="Применить";
+    var rererer="1";
 
-  .dropdown
+  .dropdown(type=type)
     h3.dropdown__title=name
     .dropdown__label
       .dropdown__label__text
@@ -13,11 +27,12 @@ mixin dropdown(name="Dropdown", params = [], paramsCount = [])
     .dropdown__menu
       -for(let i = 0;i<3;i++)
         .dropdown__item
-          .dropdown__item__label=params[i].title
+          .dropdown__item__label=titles[i]
           .dropdown__item__edit
             a.dropdown__item__change="-"
             .dropdown__item__value=paramsCount[i]
             a.dropdown__item__change="+"
-      .dropdown__item
-        .dropdown__btn_clear=clearButtonLabel
-        .dropdown__btn_apply=applyButtonLabel
+      if(type!="roomAmenities")
+        .dropdown__item_btn
+          .dropdown__btn_clear=clearButtonLabel
+          .dropdown__btn_apply=applyButtonLabel

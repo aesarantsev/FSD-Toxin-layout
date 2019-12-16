@@ -1,6 +1,10 @@
 // Bibl
+
 import "jquery";
+import "webpack-jquery-ui";
+import "webpack-jquery-ui/css";
 import "air-datepicker";
+
 
 //Modules
 // import "./modules/primitive-modules/checkbox-item/checkbox-item";
@@ -16,9 +20,7 @@ import "./blocks/primitive-blocks/bullet-list/bullet-list";
 import "./blocks/primitive-blocks/range-slider/range-slider";
 import "./blocks/primitive-blocks/pagination/pagination";
 import "./blocks/primitive-blocks/img-slider/img-slider";
+import "./blocks/primitive-blocks/datepicker/datepicker";
 
 // SCSS
 import "./main.scss";
-
-require("webpack-jquery-ui");
-require("webpack-jquery-ui/css");

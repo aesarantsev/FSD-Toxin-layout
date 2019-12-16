@@ -8,12 +8,12 @@
     +textField(["Email"],"Placeholder", "subscription") - subscription text field
     +textField(["Email"],"Placeholder", "subscription")
 
-mixin textField(title=[], placeholder="textField", type="", classes="", attributes="")
-  .text-field(class=classes)
+mixin textField(title=[], placeholder="textField", type="")
+  .text-field
 
     if type=="subscription"
       .text-field__subscription
-        input(type="text" class="text-field__input text-field_subscription"  placeholder=placeholder attributes)
+        input(type="text" class="text-field__input text-field_subscription"  placeholder=placeholder)
         input(type="submit" value="" class = "text-field__submit")
       
     else if type=="date"
@@ -21,21 +21,21 @@ mixin textField(title=[], placeholder="textField", type="", classes="", attribut
         .text-field__date__item
           if title[0] !=""
             h3.text-field__title=title[0]
-          input(type="text" class="text-field__input text-field_date datepicker-here" data-range="true" placeholder=placeholder attributes)
+          input(type="text" class="text-field__input text-field_date datepicker-here" data-range="true" placeholder=placeholder)
         .text-field__date__item
           if title[1] !=""
             h3.text-field__title=title[1]
-          input(type="text" class="text-field__input text-field_date"  placeholder=placeholder attributes)
+          input(type="text" class="text-field__input text-field_date"  placeholder=placeholder)
       
     else if type=="filterDate"
       if title[0] !=""
         h3.text-field__title=title[0]
-      input(type="text" class="text-field__input text-field_filter-date datepicker-here"  data-range="true" placeholder=placeholder attributes)
+      input(type="text" class="text-field__input text-field_filter-date datepicker-here" data-range="true" placeholder=placeholder)
       
     else
       if title[0] !=""
         h3.text-field__title=title[0]
-      input(type="text" class="text-field__input"  placeholder=placeholder attributes)
+      input(type="text" class="text-field__input"  placeholder=placeholder)
 
       
 

@@ -142,15 +142,15 @@ section,
 //Modules
 @import "./modules/header/header.scss";
 @import "./modules/footer/footer.scss";
-@import "./modules/registration-panel/registration-panel.scss";
-@import "./modules/intro-search-panel/intro-search-panel.scss";
+// @import "./modules/registration-panel/registration-panel.scss";
+// @import "./modules/intro-search-panel/intro-search-panel.scss";
 //@import "./modules/primitive-modules/button/button.scss";
 @import "./blocks/primitive-blocks/btn/btn.scss";
 // @import "./modules/primitive-modules/checkbox-item/checkbox-item.scss";
 @import "./blocks/primitive-blocks/checkbox-item/checkbox-item.scss";
 // @import "./modules/primitive-modules/checkbox-list/checkbox-list.scss";
 @import "./blocks/primitive-blocks/checkbox-list/checkbox-list.scss";
-@import "./modules/primitive-modules/datepicker/datepicker.scss";
+//@import "./modules/primitive-modules/datepicker/datepicker.scss";
 // @import "./modules/primitive-modules/dropdown/dropdown.scss";\
 @import "./blocks/primitive-blocks/dropdown/dropdown.scss";
 // @import "./modules/primitive-modules/rate-button/rate-button.scss";
@@ -163,6 +163,7 @@ section,
 @import "./blocks/primitive-blocks/pagination/pagination.scss";
 @import "./blocks/primitive-blocks/img-slider/img-slider.scss";
 @import "./blocks/building-blocks/room-item/room-item.scss";
+@import "./blocks/primitive-blocks/datepicker/datepicker.scss";
 
 //UI kit
 @import "./blocks/primitive-blocks/colors/colors.scss";

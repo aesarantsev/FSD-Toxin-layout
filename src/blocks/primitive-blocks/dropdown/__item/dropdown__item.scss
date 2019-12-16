@@ -5,11 +5,11 @@
   padding: 7px 7px 0px 15px;
 
   &:last-child {
-    margin-bottom: 13px;
-    margin-top: 13px;
+    margin-bottom: 7px;
   }
 }
 @import "./__label/dropdown__item__label.scss";
 @import "./__edit/dropdown__item__edit.scss";
 @import "./__change/dropdown__item__change.scss";
 @import "./__value/dropdown__item__value.scss";
+@import "./_btn/dropdown__item_btn.scss";

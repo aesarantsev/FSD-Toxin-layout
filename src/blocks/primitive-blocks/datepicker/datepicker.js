@@ -1,0 +1,74 @@
+//Classes
+let datePickerClass = ".datepicker-here";
+
+let generalSettings = {
+  classes: "my-custom-datepicker",
+  navTitles: {
+    days: "MM <i>yyyy</i>"
+  },
+  prevHtml: "<i class='material-icons md-24 md-purple'>arrow_back</i>",
+  nextHtml: "<i class='material-icons md-24 md-purple'>arrow_forward</i>"
+};
+
+let oneInputSettings = {
+  dateFormat: "d M",
+  multipleDatesSeparator: " - ",
+  inline: false
+};
+
+var myDatepicker = $(".datepicker-here")
+  .datepicker()
+  .data("datepicker");
+
+var DatePickers = [];
+$(".datepicker-here").each(function() {
+  DatePickers.push(
+    $(this)
+      .datepicker()
+      .data("datepicker")
+  );
+});
+
+//Общие настройки датапикера
+$(".datepicker-here").datepicker(generalSettings);
+
+//Настройки датапикера c одним инпутом
+$(".datepicker-here")
+  .not("#start_one")
+  .datepicker(oneInputSettings);
+
+//Вставляем кнопки Очистить и Применить
+$(".datepicker--content").append(`
+<div class = 'datepicker--content--buttons'>
+  <button class='datepicker__clear'>Очистить</button>
+  <button class='datepicker__apply'>Применить</button>
+</div>
+
+`);
+
+$(".datepicker__apply").click(function() {
+  currenDatePicker(this).hide();
+});
+
+$(".datepicker__clear").click(function() {
+  myDatepicker.clear();
+});
+
+$("#start_one").datepicker({
+  onSelect: function(fd, d, picker) {
+    $("#start_one").val(fd.split(",")[0]);
+    $("#end_one").val(fd.split(",")[1]);
+  }
+});
+
+$("#end_one").click(function() {
+  myDatepicker.show();
+});
+
+function currenDatePicker(value) {
+  let a = $(value).closest(datePickerClass.slice(1));
+  let b = a.datepicker().data("datepicker");
+
+  console.log(DatePickers);
+  return b;
+}

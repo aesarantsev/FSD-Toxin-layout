@@ -1,0 +1,152 @@
+.my-custom-datepicker {
+  //color: red;
+  padding-top: 19px;
+  //padding: 20px;
+  //margin: 20px;
+}
+.datepicker {
+  width: 320px;
+  //border: none;
+}
+.datepicker--nav {
+  border: none;
+  padding: 19px;
+  padding-top: 0px;
+  padding-bottom: 21px;
+}
+
+.datepicker--nav-title {
+  color: black;
+  font-family: "Quicksand", sans-serif;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 19px;
+  line-height: 24px;
+  i {
+    @extend .datepicker--nav-title;
+  }
+}
+
+.datepicker--content {
+  padding-top: 0;
+  padding: 0px 20px;
+}
+
+.datepicker--days-names {
+  margin: 8px 0 0;
+}
+//Название дня
+.datepicker--day-name {
+  color: $color_Purple;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: none;
+  height: 40px;
+  width: 40px;
+  //border: 1px solid red;
+}
+
+//Все дни текущего месяца
+.datepicker--cell.datepicker--cell-day {
+  font-family: Montserrat;
+  color: $color_Dark_Shade_50;
+  font-style: normal;
+  font-weight: normal;
+  font-size: 12px;
+  line-height: 15px;
+  height: 40px;
+  width: 40px;
+}
+
+//Все дни предыдущего месяца
+.datepicker--cell.datepicker--cell-day.-other-month- {
+  color: $color_Dark_Shade_25;
+}
+
+//Текущая дата
+.datepicker--cell.-current- {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  color: #ffffff;
+}
+
+//Первая выбранная дата
+.datepicker--cell.datepicker--cell-day.-range-from-.-selected- {
+  &::before {
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(188, 156, 255, 0.25) 0%,
+      rgba(139, 164, 249, 0.25) 100%
+    );
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 50%;
+    z-index: -1;
+  }
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+}
+
+//Вторая выбранная дата
+.datepicker--cell.datepicker--cell-day.-range-to-.-selected- {
+  @extend .datepicker--cell.datepicker--cell-day.-range-from-.-selected-;
+  &::before {
+    content: "";
+    background: linear-gradient(
+      180deg,
+      rgba(188, 156, 255, 0.25) 0%,
+      rgba(139, 164, 249, 0.25) 100%
+    );
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    left: 0;
+    z-index: -1;
+  }
+}
+
+//Ячейки, находящиеся в интервале
+.datepicker--cell.datepicker--cell-day.-in-range- {
+  background: linear-gradient(
+    180deg,
+    rgba(188, 156, 255, 0.25) 0%,
+    rgba(139, 164, 249, 0.25) 100%
+  );
+}
+
+.wrapper-datepicker {
+  //border: 1px solid red;
+  display: flex;
+}
+
+.datepicker--content--buttons {
+  padding: 20px 0 15px;
+
+  button {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    //color: $color_Dark_Shade_50;
+    cursor: pointer;
+    background: none;
+    padding: 0px;
+    &.datepicker__clear {
+      color: $color_Dark_Shade_50;
+    }
+
+    &.datepicker__apply {
+      color: $color_Purple;
+      float: right;
+    }
+  }
+}
