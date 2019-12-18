@@ -21,6 +21,6 @@ import "./blocks/primitive-blocks/pagination/pagination";
 import "./blocks/primitive-blocks/img-slider/img-slider";
 import "./blocks/primitive-blocks/datepicker/datepicker";
 import "./blocks/primitive-blocks/like-button/like-button";
-
+import "./blocks/primitive-blocks/checkbox-item/checkbox-item";
 // SCSS
 import "./main.scss";

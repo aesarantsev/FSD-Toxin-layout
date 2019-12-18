@@ -85,7 +85,6 @@ jQuery(document).ready(function(e) {
   }
 
   function hideAllMenues() {
-    console.log("hide all");
     $(menuClass + ":visible").each(function() {
       hideMenu($(this).closest(dropdownClass));
     });

@@ -1,8 +1,8 @@
-mixin checkBoxItem(title="Title", checked=false)
-  label.checkbox-item=title
+mixin checkBoxItem(title="Title", checked=true)
+  .checkbox-item=title
     if checked
       input(type="checkbox" checked="checked")
-      span.checkbox-item__mark
+      span.checkbox-item__mark_check
     else
       input(type="checkbox")
       span.checkbox-item__mark
