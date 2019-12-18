@@ -4,7 +4,7 @@ mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true)
   if expandable
     .checkbox-list.checkbox-list_expandable
       .checkbox-list__title.checkbox-list__title_expandable
-        span=title
+        h3=title
         .checkbox-list__title_expandable__arrow
           i.material-icons.md-24 expand_more
       .checkbox-list__items.checkbox-list__items_expandable
@@ -14,7 +14,7 @@ mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true)
   else
     .chcheckbox-list
       .checkbox-list__title
-        span=title
+        h3=title
       each item in items
         .checkbox-list__item
           +checkBoxItem(item, item.ecked)

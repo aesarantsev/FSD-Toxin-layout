@@ -1,6 +1,8 @@
 //Classes
 let datePickerClass = ".datepicker-here";
 
+let currentDatePicker;
+
 let generalSettings = {
   classes: "my-custom-datepicker",
   navTitles: {
@@ -34,7 +36,7 @@ $(".datepicker-here").datepicker(generalSettings);
 
 //Настройки датапикера c одним инпутом
 $(".datepicker-here")
-  .not("#start_one")
+  .not(".start_one")
   .datepicker(oneInputSettings);
 
 //Вставляем кнопки Очистить и Применить
@@ -46,29 +48,28 @@ $(".datepicker--content").append(`
 
 `);
 
+$(datePickerClass).click(function() {
+  currentDatePicker = $(this)
+    .datepicker()
+    .data("datepicker");
+});
+
 $(".datepicker__apply").click(function() {
-  currenDatePicker(this).hide();
+  currentDatePicker.hide();
 });
 
 $(".datepicker__clear").click(function() {
-  myDatepicker.clear();
+  currentDatePicker.clear();
 });
 
-$("#start_one").datepicker({
+$(".start_one").datepicker({
   onSelect: function(fd, d, picker) {
-    $("#start_one").val(fd.split(",")[0]);
-    $("#end_one").val(fd.split(",")[1]);
+    $(".start_one").val(fd.split(",")[0]);
+    $(".end_one").val(fd.split(",")[1]);
   }
 });
 
-$("#end_one").click(function() {
+$(".end_one").click(function() {
   myDatepicker.show();
 });
 
-function currenDatePicker(value) {
-  let a = $(value).closest(datePickerClass.slice(1));
-  let b = a.datepicker().data("datepicker");
-
-  console.log(DatePickers);
-  return b;
-}

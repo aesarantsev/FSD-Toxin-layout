@@ -16,41 +16,48 @@ html
     .container
       .form-elements
         .form-elements__items
-          .form-elements__items_item
+          .form-elements__items__item_text-field
             +textField(["Text Field"],"Email")
-          .form-elements__items_item
+          .form-elements__items__item_text-field
             +textField(["Text Field"],"Email","","This is pretty awesome")
-          .form-elements__items_item
+          .form-elements__items__item_text-field
             +dropdown("Dropdown","guests",[0,0,0])
-          .form-elements__items_item
+          .form-elements__items__item_text-field
             +textField(["Masked text field"],"ДД.ММ.ГГГГ")
-          .form-elements__items_item
+          .form-elements__items__item_date-dropdown
             +textField(["date Dropdown","date Dropdown"],"ДД.ММ.ГГГГ", "date")
-          .form-elements__items_item
+          .form-elements__items__item_filter-date-dropdown
             +textField(["filter date dropdown"],"filterDate", "filterDate")
-          .form-elements__items_item
-            h3 subscription text field
+          .form-elements__items__item_sub-text-field
+            h3.form-elements__items__item_tittle subscription text field
             +textField(["subscription"],"subscription", "subscription")
         .form-elements__items
-          .form-elements__items_item
+          .form-elements__items__item
             +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false)
-          .form-elements__items_item
+          .form-elements__items__item
+            h3.form-elements__items__item_tittle Radio Buttons
             +radioButtons(["Мужчина","Женщина"])
-          .form-elements__items_item
-            h3 toggle
+          .form-elements__items__item
+            h3.form-elements__items__item_tittle toggle
             +toggle("Получать спецпредложения")
             +toggle("Получать спецпредложения")
-          .form-elements__items_item
-            h3 like button
-            +likeButton(2,false)
-            +likeButton(12,true)
-          .form-elements__items_item
-            h3 rate button
-            +rateButton(4)
-            +rateButton(5)
-          .form-elements__items_item
+          .form-elements__items__item
+            h3.form-elements__items__item_tittle like button
+            .form-elements_inline-block
+              .form-elements_inline-block_item
+                +likeButton(2,false)
+              .form-elements_inline-block_item
+                +likeButton(12,true)
+          .form-elements__items__item
+            h3.form-elements__items__item_tittle rate button
+            .form-elements_inline-block
+              .form-elements_inline-block_item
+                +rateButton(4)
+              .form-elements_inline-block_item
+                +rateButton(5)
+          .form-elements__items__item
         .form-elements__items
-          .form-elements__items_item
+          .form-elements__items__item
             +rangeSlider()
         .form-elements__items
         .form-elements__items

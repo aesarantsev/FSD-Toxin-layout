@@ -6,9 +6,10 @@ $borderRadiusDown: 0px 0px 4px 4px;
   display: flex;
   max-width: $DropDownMaxWidth;
   min-width: $DropDownMinWidth;
+  height: $textFieldHigth;
   border-radius: $borderRadiusUp;
   border: 1px solid $color_Dark_Shade_25;
-  padding: 12px 15px;
+  padding: 10px 15px;
   font-weight: normal;
   cursor: pointer;
 }

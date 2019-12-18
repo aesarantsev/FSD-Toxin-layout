@@ -21,11 +21,11 @@ mixin textField(title=[], placeholder="textField", type="", textValue = "")
         .text-field__date__item
           if title[0] !=""
             h3.text-field__title=title[0]
-          input(type="text" class="text-field__input text-field_date datepicker-here" data-range="true" placeholder=placeholder)
+          input(type="text" class="text-field__input text-field_date datepicker-here start_one" data-range="true" placeholder=placeholder)
         .text-field__date__item
           if title[1] !=""
             h3.text-field__title=title[1]
-          input(type="text" class="text-field__input text-field_date"  placeholder=placeholder)
+          input(type="text" class="text-field__input text-field_date end_one"  placeholder=placeholder)
       
     else if type=="filterDate"
       if title[0] !=""
