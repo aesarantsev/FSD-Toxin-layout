@@ -1,8 +1,10 @@
-$width: 320px;
+$DropDownMaxWidth: 320px;
+$DropDownMinWidth: 220px;
 
 .dropdown {
   font-family: "Montserrat", sans-serif;
-  width: $width;
+  max-width: $DropDownMaxWidth;
+  min-width: $DropDownMinWidth;
 }
 
 @import "./__title/dropdown__title.scss";

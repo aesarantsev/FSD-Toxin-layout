@@ -4,7 +4,8 @@ $borderRadiusDown: 0px 0px 4px 4px;
 .dropdown__label {
   position: relative;
   display: flex;
-  width: $width;
+  max-width: $DropDownMaxWidth;
+  min-width: $DropDownMinWidth;
   border-radius: $borderRadiusUp;
   border: 1px solid $color_Dark_Shade_25;
   padding: 12px 15px;

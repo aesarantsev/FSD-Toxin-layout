@@ -8,7 +8,7 @@
     +textField(["Email"],"Placeholder", "subscription") - subscription text field
     +textField(["Email"],"Placeholder", "subscription")
 
-mixin textField(title=[], placeholder="textField", type="")
+mixin textField(title=[], placeholder="textField", type="", textValue = "")
   .text-field
 
     if type=="subscription"
@@ -35,7 +35,7 @@ mixin textField(title=[], placeholder="textField", type="")
     else
       if title[0] !=""
         h3.text-field__title=title[0]
-      input(type="text" class="text-field__input"  placeholder=placeholder)
+      input(type="text" class="text-field__input"  placeholder=placeholder value=textValue)
 
       
 

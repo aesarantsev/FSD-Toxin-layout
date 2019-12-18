@@ -1,6 +1,7 @@
 .text-field_subscription {
   border: none;
-
+  width: 100%;
+  max-width: 220px;
   &:hover {
     border: none;
   }
@@ -12,5 +13,4 @@
   &:focus {
     border: none;
   }
-
 }

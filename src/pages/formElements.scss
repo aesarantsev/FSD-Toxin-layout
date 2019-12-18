@@ -1,11 +1,14 @@
 .form-elements {
   display: flex;
-  justify-content: space-between;
-  flex-flow: row wrap;
+  //justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .form-elements__items {
-  //margin-right: 20px;
+  border: 1px solid red;
+  position: relative;
+  width: 33.3333%;
+  min-width: 220px;
 }
 
 .form-elements__items_item {

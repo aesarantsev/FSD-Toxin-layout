@@ -8,6 +8,8 @@ include ../blocks/primitive-blocks/rate-button/rate-button
 include ../blocks/primitive-blocks/range-slider/range-slider
 
 html
+  head
+    meta(name="viewport" content="width=device-width")
   body
     header.uikit-logo
       img(src="../assets/img/uikit/Logo.svg")
@@ -16,6 +18,8 @@ html
         .form-elements__items
           .form-elements__items_item
             +textField(["Text Field"],"Email")
+          .form-elements__items_item
+            +textField(["Text Field"],"Email","","This is pretty awesome")
           .form-elements__items_item
             +dropdown("Dropdown","guests",[0,0,0])
           .form-elements__items_item
