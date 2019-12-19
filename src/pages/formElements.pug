@@ -32,30 +32,26 @@ html
             h3.form-elements__items__item_tittle subscription text field
             +textField(["subscription"],"subscription", "subscription")
         .form-elements__items
-          .form-elements__items__item
+          .form-elements__items__item_check-box-buttons
             +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false, [1,2])
-          .form-elements__items__item
+          .form-elements__items__item_radio-buttons
             h3.form-elements__items__item_tittle Radio Buttons
             +radioButtons(["Мужчина","Женщина"])
-          .form-elements__items__item
+          .form-elements__items__item_toggle
             h3.form-elements__items__item_tittle toggle
             +toggle("Получать спецпредложения")
             +toggle("Получать спецпредложения")
-          .form-elements__items__item
+          .form-elements__items__item_like-button
             h3.form-elements__items__item_tittle like button
-            .form-elements_inline-block
-              .form-elements_inline-block_item
-                +likeButton(2,false)
-              .form-elements_inline-block_item
-                +likeButton(12,true)
-          .form-elements__items__item
+            +likeButton(2,false)
+            +likeButton(12,true)
+          .form-elements__items__item_rate-button
             h3.form-elements__items__item_tittle rate button
-            .form-elements_inline-block
-              .form-elements_inline-block_item
+            .form-elements__items__item_rate-button__block
+              .form-elements__items__item_rate-button__block__item
                 +rateButton(4)
-              .form-elements_inline-block_item
+              .form-elements__items__item_rate-button__block__item
                 +rateButton(5)
-          .form-elements__items__item
         .form-elements__items
           .form-elements__items__item
             +rangeSlider()
