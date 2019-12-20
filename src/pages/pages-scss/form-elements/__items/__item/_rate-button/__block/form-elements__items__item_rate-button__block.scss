@@ -1,5 +1,6 @@
 .form-elements__items__item_rate-button__block {
   display: flex;
+  flex-wrap: wrap;
 }
 
 @import "./__item/form-elements__items__item_rate-button__block__item.scss";

@@ -1,3 +1,8 @@
-.btn_label:active {
-  color: $color_Dark_Shade_50;
+.btn_label {
+  //padding: 0;
+  height: fit-content;
+  padding: 0;
+  &:active {
+    color: $color_Dark_Shade_50;
+  }
 }

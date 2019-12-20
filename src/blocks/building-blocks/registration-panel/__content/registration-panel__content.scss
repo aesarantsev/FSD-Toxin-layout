@@ -1,0 +1,17 @@
+.registration-panel__content {
+  margin-top: 40px;
+  margin-left: 30px;
+  margin-right: 30px;
+  margin-bottom: 30px;
+}
+
+@import "./__title/registration-panel__content__title.scss";
+@import "./__first-name/registration-panel__content__first-name.scss";
+@import "./__last-name/registration-panel__content__last-name.scss";
+@import "./__gender/registration-panel__content__gender.scss";
+@import "./__date-birth/registration-panel__content__date-birth.scss";
+@import "./__email/registration-panel__content__email.scss";
+@import "./__password/registration-panel__content__password.scss";
+@import "./__toggle/registration-panel__content__toggle.scss";
+@import "./__btn-pay/registration-panel__content__btn-pay.scss";
+@import "./__login/registration-panel__content__login.scss";

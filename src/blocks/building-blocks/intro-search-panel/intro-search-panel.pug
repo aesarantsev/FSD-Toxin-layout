@@ -1,0 +1,18 @@
+
+//- include ../primitive-modules/dropdown/dropdown
+//- include ../primitive-modules/button/button
+include ../../primitive-blocks/text-field/text-field
+include ../../primitive-blocks/dropdown/dropdown
+include ../../primitive-blocks/btn/btn
+mixin introSearchPanel()
+  .search__panel
+    .search__panel__content
+      .search__panel__title
+        h1 Найдем номера под ваши пожелания
+      .search__panel__datepicker
+        +textField(["Прибытие","Выезд"],"ДД.ММ.ГГГГ", "date")
+      .search__panel__guests
+        +dropdown("Гости","guests",[0,0,0])
+      .search__panel__button
+        +btn("Подобрать номер", "arrowButton")
+

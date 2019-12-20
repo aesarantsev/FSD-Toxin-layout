@@ -35,6 +35,10 @@ body {
   font-size: 14px;
   line-height: 24px;
   color: $color_Dark_Shade_75;
+
+  &.cards_body {
+    background-color: #e5e5e5;
+  }
 }
 
 *,
@@ -142,30 +146,28 @@ section,
 //Modules
 @import "./modules/header/header.scss";
 @import "./modules/footer/footer.scss";
-// @import "./modules/registration-panel/registration-panel.scss";
-// @import "./modules/intro-search-panel/intro-search-panel.scss";
-//@import "./modules/primitive-modules/button/button.scss";
+
 @import "./blocks/primitive-blocks/btn/btn.scss";
-// @import "./modules/primitive-modules/checkbox-item/checkbox-item.scss";
 @import "./blocks/primitive-blocks/checkbox-item/checkbox-item.scss";
-// @import "./modules/primitive-modules/checkbox-list/checkbox-list.scss";
 @import "./blocks/primitive-blocks/checkbox-list/checkbox-list.scss";
-//@import "./modules/primitive-modules/datepicker/datepicker.scss";
-// @import "./modules/primitive-modules/dropdown/dropdown.scss";\
 @import "./blocks/primitive-blocks/dropdown/dropdown.scss";
-// @import "./modules/primitive-modules/rate-button/rate-button.scss";
 @import "./blocks/primitive-blocks/rate-button/rate-button.scss";
-//@import "./modules/primitive-modules/text-field/text-field.scss";
 @import "./blocks/primitive-blocks/text-field/text-field.scss";
 @import "./blocks/primitive-blocks/radio-buttons/radio-buttons.scss";
 @import "./blocks/primitive-blocks/bullet-list/bullet-list.scss";
 @import "./blocks/primitive-blocks/range-slider/range-slider.scss";
 @import "./blocks/primitive-blocks/pagination/pagination.scss";
 @import "./blocks/primitive-blocks/img-slider/img-slider.scss";
-@import "./blocks/building-blocks/room-item/room-item.scss";
 @import "./blocks/primitive-blocks/datepicker/datepicker.scss";
 @import "./blocks/primitive-blocks/toggle/toggle.scss";
 @import "./blocks/primitive-blocks/like-button/like-button.scss";
+
+@import "./blocks/building-blocks/intro-search-panel/intro-search-panel.scss";
+@import "./blocks/building-blocks/registration-panel/registration-panel.scss";
+@import "./blocks/building-blocks/room-item/room-item.scss";
+
+@import "./blocks/primitive-blocks/buttons/buttons.scss";
+
 //UI kit
 @import "./blocks/primitive-blocks/colors/colors.scss";
 @import "./blocks/primitive-blocks/headers/headers.scss";
@@ -173,3 +175,4 @@ section,
 //Pages
 @import "./pages/colors_type.scss";
 @import "./pages/pages-scss/form-elements/form-elements.scss";
+@import "./pages/pages-scss/cards/cards.scss";

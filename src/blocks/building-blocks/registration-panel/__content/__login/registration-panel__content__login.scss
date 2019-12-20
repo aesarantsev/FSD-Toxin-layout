@@ -1,0 +1,7 @@
+.registration-panel__content__login {
+  display: flex;
+  justify-content: space-between;
+}
+
+@import "./__btn-auth/registration-panel__content__login__btn-auth.scss";
+@import "./__label/registration-panel__content__login__label.scss";

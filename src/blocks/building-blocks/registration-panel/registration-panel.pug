@@ -1,0 +1,31 @@
+include ../../primitive-blocks/text-field/text-field
+include ../../primitive-blocks/radio-buttons/radio-buttons
+include ../../primitive-blocks/toggle/toggle
+include ../../primitive-blocks/btn/btn
+
+mixin registrationPanel()
+  .registration-panel
+    .registration-panel__content
+      .registration-panel__content__title
+        h2 Регистрация аккаунта
+      .registration-panel__content__first-name
+        +textField([],"Имя")
+      .registration-panel__content__last-name
+        +textField([],"Фамилия")
+      .registration-panel__content__gender
+        +radioButtons()
+      .registration-panel__content__date-birth
+        +textField(["дата рождения"],"ДД.ММ.ГГГГ")
+      .registration-panel__content__email
+        +textField(["данные для входа в сервис"],"Email")
+      .registration-panel__content__password
+        +textField([],"Пароль")
+      .registration-panel__content__toggle
+        +toggle("Получать спецпредложения")
+      .registration-panel__content__btn-pay
+        +btn("перейти к оплате", "arrowButton")
+      .registration-panel__content__login
+        .registration-panel__content__login__label
+          span Уже есть аккаунт на Toxin
+        .registration-panel__content__login__btn-auth
+          +btn("войти", "borerButton")

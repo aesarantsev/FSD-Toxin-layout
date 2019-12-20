@@ -1,0 +1,22 @@
+include ../blocks/building-blocks/intro-search-panel/intro-search-panel
+include ../blocks/building-blocks/registration-panel/registration-panel
+html
+  head
+    meta(name="viewport" content="width=device-width")
+  body(class='cards_body')
+    header.uikit-logo
+      img(src="../assets/img/uikit/Logo.svg")
+    .container
+      .cards
+        .cards__column
+          .cards__column__item
+            +introSearchPanel()
+          .cards__column__item
+            +registrationPanel()
+        .cards__column
+          .cards__column__item
+          .cards__column__item
+        .cards__column
+          .cards__column__item
+          .cards__column__item
+          .cards__column__item

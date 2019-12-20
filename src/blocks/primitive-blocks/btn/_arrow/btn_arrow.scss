@@ -2,6 +2,7 @@ $arrowSvg: url(/assets/img/button/arrow_forward.svg);
 
 .bnt_arrow {
   width: 100%;
+  max-width: 320px;
   text-align: center;
 
   &:after {
