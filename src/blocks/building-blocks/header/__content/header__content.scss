@@ -1,0 +1,7 @@
+.header__content {
+  display: flex;
+  justify-content: space-between;
+}
+
+@import "./__logo/header__content__logo.scss";
+@import "./__navigation/header__content__navigation.scss";

@@ -1,0 +1,13 @@
+.header__content__navigation {
+  display: inline-flex;
+  padding-top: 18px;
+  & ul {
+    display: inline-flex;
+    margin-top: 5px;
+    white-space: nowrap;
+  }
+}
+
+@import "./__link/header__content__navigation__link.scss";
+@import "./__auth/header__content__navigation__auth.scss";
+@import "./__profile/header__content__navigation__profile.scss";

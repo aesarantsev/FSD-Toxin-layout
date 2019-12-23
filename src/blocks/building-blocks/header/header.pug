@@ -1,0 +1,41 @@
+include ../../primitive-blocks/btn/btn
+-
+  let links_default = [
+    {title:"Home", link:"#", isActive:true, subLinks:[]},
+    {title:"About Us", link:"#", isActive:false, subLinks:[]},
+    {title:"Services", link:"#", isActive:false, subLinks:[{title:"Search rooms", link:"#"},{title:"Add room", link:"#"}]},
+    {title:"Careers", link:"#", isActive:false, subLinks:[]},
+    {title:"News", link:"#", isActive:false, subLinks:[]},
+    {title:"Documentation", link:"#", isActive:false, subLinks:[]}
+    ];
+
+mixin header(links = links_default, auth=true, userName = "Cosmin Negoita")
+  header.header
+      .container
+        .header__content
+          .header__content__logo
+            a(href="/"): include ../../../assets/img/logo.svg
+          nav.header__content__navigation
+            ul
+              each item in links
+                li
+                  span
+                    if(item.isActive)
+                      a.header__content__navigation__link_bold(href=item.link)=item.title
+                    else
+                      a.header__content__navigation__link(href=item.link)=item.title
+                        if(item.subLinks.length!=0)
+                          i.material-icons.md-24="expand_more"
+            if(auth)
+              .header__content__navigation__auth
+                .header__content__navigation__auth__btn
+                  +btn("Login", "borderButton", "/autorization.html",true)
+                .header__content__navigation__auth__btn
+                  +btn("Register", "fillButton", "/registration.html",true)
+            else
+              .header__content__navigation__profile
+                a(href="#")=userName
+              
+
+
+          

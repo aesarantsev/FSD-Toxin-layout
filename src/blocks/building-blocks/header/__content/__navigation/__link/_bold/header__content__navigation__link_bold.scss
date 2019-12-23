@@ -1,0 +1,5 @@
+.header__content__navigation__link_bold {
+  @extend .header__content__navigation__link;
+  font-weight: bold;
+  color: $color_Dark_Shade_75;
+}
