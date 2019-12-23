@@ -4,7 +4,7 @@ $arrowSvg: url(/assets/img/button/arrow_forward.svg);
   width: 100%;
   max-width: 320px;
   text-align: center;
-
+  line-height: 15px;
   &:after {
     content: $arrowSvg;
     float: right;

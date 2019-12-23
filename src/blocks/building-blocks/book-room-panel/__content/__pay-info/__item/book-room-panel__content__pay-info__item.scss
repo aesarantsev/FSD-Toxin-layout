@@ -1,0 +1,10 @@
+.book-room-panel__content__pay-info__item {
+  display: flex;
+  justify-content: space-between;
+
+  margin-bottom: 10px;
+
+  &:last-child {
+    margin-bottom: 30px;
+  }
+}

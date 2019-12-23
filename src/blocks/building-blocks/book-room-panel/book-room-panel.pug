@@ -1,0 +1,41 @@
+include ../../primitive-blocks/text-field/text-field
+include ../../primitive-blocks/dropdown/dropdown
+include ../../primitive-blocks/btn/btn
+
+mixin bookRoomPanel(numberRoom="888", isLuxe = true, cost = "9 900")
+  .book-room-panel
+    .book-room-panel__content
+      .book-room-panel__content__room-info
+        .book-room-panel__content__room-info__number
+          .book-room-panel__content__room-info__number__num
+            span
+              strong="№ " +numberRoom
+          if (isLuxe)
+            .book-room-panel__content__room-info__number__luxe
+              span="Люкс"
+        .book-room-panel__content__room-info__cost
+          span
+            strong= cost + "₽ "
+          span="в сутки"
+      .book-room-panel__content__date
+        +textField(["прибытие","выезд"], "ДД.ММ.ГГГГ", "date")
+      .book-room-panel__content__guests
+        +dropdown("гости")
+      .book-room-panel__content__pay-info
+        .book-room-panel__content__pay-info__item
+          span="9 990₽ х 4 суток"
+          span="39 960₽"
+        .book-room-panel__content__pay-info__item
+          span="Сбор за услуги: скидка 2 179₽"
+          span="0₽"
+        .book-room-panel__content__pay-info__item
+          span="Сбор за дополнительные услуги"
+          span="300₽"
+      .book-room-panel__content__total
+        h2="Итого"
+        .book-room-panel__content__total__tab
+        h2="38 081₽"
+      .book-room-panel__content__btn
+        +btn("забронировать", "arrowButton")
+
+      

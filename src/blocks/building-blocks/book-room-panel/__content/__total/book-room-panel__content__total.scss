@@ -1,0 +1,16 @@
+.book-room-panel__content__total {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 25px;
+  & h2 {
+    white-space: nowrap;
+    &:first-child {
+      margin-right: 5px;
+    }
+    &:last-child {
+      margin-left: 5px;
+    }
+  }
+}
+
+@import "./__tab/book-room-panel__content__total__tab.scss";

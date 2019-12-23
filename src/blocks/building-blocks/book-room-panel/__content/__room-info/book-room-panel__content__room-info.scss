@@ -1,0 +1,8 @@
+.book-room-panel__content__room-info {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+}
+
+@import './__number/book-room-panel__content__room-info__number.scss';
+@import './__cost/book-room-panel__content__room-info__cost.scss';

@@ -1,0 +1,5 @@
+.book-room-panel {
+  @extend .base-cards;
+}
+
+@import "./__content/book-room-panel__content.scss";

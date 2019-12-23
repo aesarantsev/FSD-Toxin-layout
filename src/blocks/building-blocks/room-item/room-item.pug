@@ -1,7 +1,7 @@
 include ../../primitive-blocks/img-slider/img-slider
 include ../../primitive-blocks/rate-button/rate-button
 
-mixin roomItem(images = [], numberRoom = 0, luxe=false, cost = 0, rating = 1, reviewsCount=1)
+mixin roomItem(images = [], numberRoom = "0", luxe=false, cost = "0", rating = 1, reviewsCount=1)
   .room-item
     .room-item__slider
       +imgSlider(images)

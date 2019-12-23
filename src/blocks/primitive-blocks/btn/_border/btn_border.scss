@@ -8,24 +8,14 @@ $color_gradient_opacity: linear-gradient(
 );
 
 .btn_border {
-  background: #fff;
+  background-image: linear-gradient(180deg, #bc9cff, #8ba4f9);
+  background-origin: border-box;
+  border: 2px solid transparent;
+  box-shadow: inset 0 3.125rem #fff;
   border-radius: $borerRadius;
-  &:before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    z-index: -1;
-    margin: -$border;
-    border-radius: inherit;
-    background: $color_gradient;
-  }
+
   &:active {
-    &:before {
-      background: $color_gradient_opacity;
-    }
+    background-image: $color_gradient_opacity;
   }
 
   &:hover {

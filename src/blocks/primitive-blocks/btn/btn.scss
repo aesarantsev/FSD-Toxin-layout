@@ -1,10 +1,11 @@
 .btn {
   display: inline-block;
+  cursor: pointer;
   font-family: "Montserrat", sans-serif;
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 15px;
+  line-height: 12px;
   text-decoration: none;
   text-transform: uppercase;
   color: $color_Purple;

@@ -1,0 +1,5 @@
+.authorization-panel {
+  @extend .base-cards;
+}
+
+@import "./__content/authorization-panel__content.scss";

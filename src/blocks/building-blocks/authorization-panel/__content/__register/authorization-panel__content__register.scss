@@ -1,0 +1,6 @@
+.authorization-panel__content__register {
+  display: flex;
+  justify-content: space-between;
+}
+@import "./__label/authorization-panel__content__register__label.scss";
+@import "./__btn-register/authorization-panel__content__register__btn-register.scss";
