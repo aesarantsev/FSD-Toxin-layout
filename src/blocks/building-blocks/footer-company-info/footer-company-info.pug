@@ -1,0 +1,12 @@
+include ../../primitive-blocks/social-section/social-section
+
+mixin footerCompanyInfo()
+  footer.footer-company-info
+    .container
+       .footer-company-info__content
+        .footer-company-info__content__logo
+          img(src="../../../assets/img/logo.svg")
+        .footer-company-info__content__text
+          span="Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis."
+        .footer-company-info__content__social
+          +socialSection()

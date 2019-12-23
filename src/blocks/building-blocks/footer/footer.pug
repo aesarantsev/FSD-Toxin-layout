@@ -1,39 +1,46 @@
-footer.footer
-    .container 
+include ../../primitive-blocks/text-field/text-field
+include ../../primitive-blocks/social-section/social-section
+
+mixin footer()
+  footer.footer
+    .container
       .footer__content
-        .footer__content__item
-          img(src="../../assets/img/Logo.svg")
-          p Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»
-        .footer__content__item
-          h3 Навигация
+        .footer__content__column
+          .footer__content__column__logo
+            img(src="../../../assets/img/logo.svg")
+          span Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.
+        .footer__content__column
+          h3 Navigation
           ul
-            li: a(href="#") О нас
-            li: a(href="#") Новости
-            li: a(href="#") Служба поддержки
-            li: a(href="#") Услуги
-        .footer__content__item
-          h3 О нас
+            li
+              a.footer__content__column__item_link(href="#") About Us
+              a.footer__content__column__item_link(href="#") News
+              a.footer__content__column__item_link(href="#") Support
+              a.footer__content__column__item_link(href="#") Products
+        .footer__content__column
+          h3 ABOUT US
           ul
-            li: a(href="#") О сервисе
-            li: a(href="#") Наша команда
-            li: a(href="#") Вакансии
-            li: a(href="#") Инвесторы
-        .footer__content__item
-          h3 Служба поддержки
+            li
+              a.footer__content__column__item_link(href="#") Who we are
+              a.footer__content__column__item_link(href="#") Our team
+              a.footer__content__column__item_link(href="#") Careers
+              a.footer__content__column__item_link(href="#") Investors
+        .footer__content__column
+          h3 Support
           ul
-            li: a(href="#") Соглашения
-            li: a(href="#") Сообщества
-            li: a(href="#") Связь с нами
-        .footer__content__item
-          h3 Подписка
-          p Получайте специальные предложения и новости сервиса
-          //- +textField("Email","Email",true, "footer_subscribe_input")
-    .footer__copyright
-      .footer__copyright__inner
-        .container
-          p Copyright © 2020 Toxin отель. Все права защищены.
-          .social
-            a(href="https://twitter.com/" target="_blank"): img(src="../../assets/img/footer/twitter.svg")
-            a(href="https://www.facebook.com/" target="_blank"): img(src="../../assets/img/footer/facebook.svg")
-            a(href="https://www.instagram.com/" target="_blank"): img(src="../../assets/img/footer/instagram.svg")
-    
+            li
+              a.footer__content__column__item_link(href="#") Documentation
+              a.footer__content__column__item_link(href="#") Community
+              a.footer__content__column__item_link(href="#") Get in Touch
+
+        .footer__content__column
+          h3 Subscribe to our newsletter
+          span.footer__content__column__item="Receive our latest news and promotions in your inbox!" 
+          .footer__content__column__item
+            +textField([],"Your email address","subscription")
+    .container
+      .footer__copyright
+        .footer__copyright__item
+          span Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .footer__copyright__item
+          +socialSection()

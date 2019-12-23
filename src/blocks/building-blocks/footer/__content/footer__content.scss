@@ -1,0 +1,7 @@
+.footer__content {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: nowrap;
+  padding: 100px 0;
+}
+@import "./__column/footer__content__column.scss";

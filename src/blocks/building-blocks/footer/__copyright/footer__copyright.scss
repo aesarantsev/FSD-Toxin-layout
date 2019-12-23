@@ -1,0 +1,7 @@
+.footer__copyright {
+  display: flex;
+  justify-content: space-between;
+  padding: 27px 0;
+  border-top: 1px solid $color_Dark_Shade_25;
+}
+@import "./__item/footer__copyright__item.scss";

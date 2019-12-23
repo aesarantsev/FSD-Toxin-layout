@@ -1,6 +1,7 @@
 
 include ../blocks/building-blocks/header/header
-//- include ../blocks/building-blocks/footer/footer
+include ../blocks/building-blocks/footer/footer
+include ../blocks/building-blocks/footer-company-info/footer-company-info
 -
   let header_links = [
     {title:"Home", link:"#", isActive:true, subLinks:[]},
@@ -22,4 +23,6 @@ html
       .headers-and-footers__item
         +header(header_links,false)
       .headers-and-footers__item
+        +footer()
       .headers-and-footers__item
+        +footerCompanyInfo()

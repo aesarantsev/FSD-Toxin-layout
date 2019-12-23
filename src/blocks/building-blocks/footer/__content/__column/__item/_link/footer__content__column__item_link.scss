@@ -1,0 +1,11 @@
+.footer__content__column__item_link {
+  @extend .footer__content__column__item;
+
+  text-decoration: none;
+  color: $color_Dark_Shade_50;
+
+  &:hover {
+    color: $color_Dark_Shade_75;
+    transition: 0.3s;
+  }
+}
