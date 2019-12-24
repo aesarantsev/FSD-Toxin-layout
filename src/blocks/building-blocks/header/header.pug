@@ -9,7 +9,7 @@ include ../../primitive-blocks/btn/btn
     {title:"Documentation", link:"#", isActive:false, subLinks:[]}
     ];
 
-mixin header(links = links_default, auth=true, userName = "Cosmin Negoita")
+mixin header(links = links_default, auth=false, userName = "Cosmin Negoita", authButtons= ["Login", "Register"])
   header.header
       .container
         .header__content
@@ -26,12 +26,12 @@ mixin header(links = links_default, auth=true, userName = "Cosmin Negoita")
                       a.header__content__navigation__link(href=item.link)=item.title
                         if(item.subLinks.length!=0)
                           i.material-icons.md-24="expand_more"
-            if(auth)
+            if(!auth)
               .header__content__navigation__auth
                 .header__content__navigation__auth__btn
-                  +btn("Login", "borderButton", "/autorization.html",true)
+                  +btn(authButtons[0], "borderButton", "/autorization.html",true)
                 .header__content__navigation__auth__btn
-                  +btn("Register", "fillButton", "/registration.html",true)
+                  +btn(authButtons[1], "fillButton", "/registration.html",true)
             else
               .header__content__navigation__profile
                 a(href="#")=userName

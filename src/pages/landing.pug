@@ -1,0 +1,24 @@
+extends ../layout/main
+
+include ../blocks/building-blocks/intro-search-panel/intro-search-panel
+
+block variables
+  -
+    var title = 'Toxin - Бронирование номеров'
+    var desc = 'Webpack + Pug'
+    var pageClass = 'index-page'
+    let checkBoxListValues = [{title:"Можно курить", checked:false},{title:"Можно с питомцами", checked:false},{title:"Можно пригласить гостей (до 10 человек)", checked:false}];
+
+
+block content 
+  section
+    .intro
+      .intro__panel
+        +introSearchPanel()
+      .intro__image
+        img(src="../../assets/img/intro/background.jpg")
+      
+
+
+      
+        
