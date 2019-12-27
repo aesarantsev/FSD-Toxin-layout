@@ -1,7 +1,9 @@
 .checkbox-list__title_expandable {
   cursor: pointer;
-  display: flex;
   position: relative;
+  display: inline-flex;
+  justify-content: space-between;
+
   span {
     vertical-align: middle;
   }

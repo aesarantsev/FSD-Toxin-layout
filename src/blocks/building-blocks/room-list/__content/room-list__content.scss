@@ -1,0 +1,9 @@
+.room-list__content {
+  // display: flex;
+  // flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, 270px);
+  grid-gap: 20px;
+}
+
+@import "./__room-item/room-list__content__room-item.scss";

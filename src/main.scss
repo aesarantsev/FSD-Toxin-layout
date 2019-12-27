@@ -175,12 +175,15 @@ section,
 @import "./blocks/primitive-blocks/datepicker/datepicker.scss";
 @import "./blocks/primitive-blocks/toggle/toggle.scss";
 @import "./blocks/primitive-blocks/like-button/like-button.scss";
+@import "./blocks/primitive-blocks/checkbox-list-rich/checkbox-list-rich.scss";
 
 @import "./blocks/building-blocks/intro-search-panel/intro-search-panel.scss";
 @import "./blocks/building-blocks/registration-panel/registration-panel.scss";
 @import "./blocks/building-blocks/book-room-panel/book-room-panel.scss";
 @import "./blocks/building-blocks/authorization-panel/authorization-panel.scss";
 @import "./blocks/building-blocks/room-item/room-item.scss";
+@import "./blocks/building-blocks/filter-panel/filter-panel.scss";
+@import "./blocks/building-blocks/room-list/room-list.scss";
 
 @import "./blocks/primitive-blocks/buttons/buttons.scss";
 @import "./blocks/primitive-blocks/social-section/social-section.scss";
@@ -195,3 +198,4 @@ section,
 @import "./pages/pages-scss/cards/cards.scss";
 @import "./pages/pages-scss/headers-and-footers/headers-and-footers.scss";
 @import "./pages/pages-scss/landing/landing.scss";
+@import "./pages/pages-scss/search-room/search-room.scss";

@@ -1,5 +1,7 @@
-mixin rangeSlider(title = "Range slider")
+mixin rangeSlider(title = "Range slider", text="")
   .range-slider
     h3.range-slider__title=title
     .range-slider__range
     .range-slider__slider
+    if(text.length!=0)
+      .range-slider__text=text

@@ -8,9 +8,12 @@ mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true, checke
         .checkbox-list__title_expandable__arrow
           i.material-icons.md-24 expand_more
       .checkbox-list__items.checkbox-list__items_expandable
-        each item in items
+        -for(let i=0;i<items.length;i++)
           .checkbox-list__item
-            +checkBoxItem(item, item.checked)
+            if(checkedItems.includes(i))
+              +checkBoxItem(items[i], true)
+            else
+              +checkBoxItem(items[i], false)
   else
     .chcheckbox-list
       .checkbox-list__title

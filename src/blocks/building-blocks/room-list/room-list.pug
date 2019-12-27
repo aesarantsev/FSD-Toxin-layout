@@ -1,0 +1,37 @@
+//- 
+  items = [
+    {
+      images: ["1.jpg", "2.jpg"],
+      numberRoom: 888,
+      luxe: false,
+      cost: "15 990",
+      rating: 4,
+      reviewsCount: 22
+    },
+    {
+      images: ["4.jpg", "4.jpg"],
+      numberRoom: 123,
+      luxe: false,
+      cost: "11 990",
+      rating: 2,
+      reviewsCount: 21
+    }
+  ]
+
+//- 
+//- 
+//- 
+//- 
+
+include ../room-item/room-item
+
+mixin roomList(items = [])
+  .room-list
+    .room-list__header
+      h1 Номера, которые мы для вас подобрали
+    .room-list__content
+      each item, id in items
+        .room-list__content__room-item
+          +roomItem(item.images, item.numberRoom, item.luxe, item.cost, item.rating, item.reviewsCount)
+
+

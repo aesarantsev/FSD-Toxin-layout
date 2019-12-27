@@ -1,0 +1,15 @@
+include ../checkbox-item/checkbox-item
+
+mixin checkboxListRich(title="", items = [], checkedItems = [])
+  .checkbox-list-rich
+    .checkbox-list-rich__title
+      h3=title
+    -for(let i=0;i<items.length;i++)
+      .checkbox-list-rich__item
+        .checkbox-list-rich__item__check
+        if(checkedItems.includes(i))
+          +checkBoxItem(items[i].title, true, true)
+        else
+          +checkBoxItem(items[i].title, false, true)
+        .checkbox-list-rich__item__desc
+          span=items[i].desc

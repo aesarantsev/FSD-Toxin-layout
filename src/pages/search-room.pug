@@ -1,0 +1,117 @@
+extends ../layout/main
+
+include ../blocks/building-blocks/filter-panel/filter-panel
+include ../blocks/building-blocks/room-list/room-list
+
+block variables
+  -
+    
+  -
+    let roomItems = [
+      {
+        images: ["../assets/img/rooms/1.jpg","../assets/img/rooms/11.jpg","../assets/img/rooms/4.jpg","../assets/img/rooms/6.jpg"],
+        numberRoom: 888,
+        luxe: true,
+        cost: "9 990",
+        rating: 5,
+        reviewsCount: 145
+      },
+      {
+        images: ["../assets/img/rooms/2.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 840,
+        luxe: false,
+        cost: "9 900",
+        rating: 4,
+        reviewsCount: 65
+      },
+      {
+        images: ["../assets/img/rooms/3.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 980,
+        luxe: true,
+        cost: "8 500",
+        rating: 3,
+        reviewsCount: 35
+      },
+      {
+        images: ["../assets/img/rooms/4.jpg","../assets/img/rooms/11.jpg","../assets/img/rooms/4.jpg","../assets/img/rooms/6.jpg"],
+        numberRoom: 888,
+        luxe: false,
+        cost: "15 990",
+        rating: 4,
+        reviewsCount: 22
+      },
+      {
+        images: ["../assets/img/rooms/5.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      },
+      {
+        images: ["../assets/img/rooms/6.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      },
+      {
+        images: ["../assets/img/rooms/7.jpg","../assets/img/rooms/11.jpg","../assets/img/rooms/4.jpg","../assets/img/rooms/6.jpg"],
+        numberRoom: 888,
+        luxe: false,
+        cost: "15 990",
+        rating: 4,
+        reviewsCount: 22
+      },
+      {
+        images: ["../assets/img/rooms/8.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      },
+      {
+        images: ["../assets/img/rooms/9.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      },
+      {
+        images: ["../assets/img/rooms/10.jpg","../assets/img/rooms/11.jpg","../assets/img/rooms/4.jpg","../assets/img/rooms/6.jpg"],
+        numberRoom: 888,
+        luxe: false,
+        cost: "15 990",
+        rating: 4,
+        reviewsCount: 22
+      },
+      {
+        images: ["../assets/img/rooms/11.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      },
+      {
+        images: ["../assets/img/rooms/12.jpg","../assets/img/rooms/10.jpg","../assets/img/rooms/7.jpg","../assets/img/rooms/4.jpg"],
+        numberRoom: 123,
+        luxe: false,
+        cost: "11 990",
+        rating: 2,
+        reviewsCount: 21
+      }
+      
+    ];
+
+block content
+  .search-room
+    .container
+      .search-room__content
+        .search-room__content__filter
+          +filterPanel()
+        .search-room__content__room-list
+          +roomList(roomItems)

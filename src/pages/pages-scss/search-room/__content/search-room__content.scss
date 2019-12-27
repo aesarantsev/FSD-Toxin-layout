@@ -1,0 +1,7 @@
+.search-room__content {
+  display: flex;
+  //flex-wrap: wrap;
+  margin-top: 30px;
+}
+@import "./__filter/search-room__content__filter.scss";
+@import "./__room-list/search-room__content__room-list.scss";

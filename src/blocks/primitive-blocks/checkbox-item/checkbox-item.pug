@@ -1,9 +1,27 @@
-mixin checkBoxItem(title="Title", checked=true)
-  .checkbox-item=title
-    if checked
-      input(type="checkbox" checked="checked")
-      span.checkbox-item__mark_check
-    else
-      input(type="checkbox")
-      span.checkbox-item__mark
+mixin checkBoxItem(title="Title", checked=true, textBold = false)
+  if(textBold)
+    .checkbox-item_bold=title
+      if checked
+        input(type="checkbox" checked="checked")
+        span.checkbox-item__mark_check
+      else
+        input(type="checkbox")
+        span.checkbox-item__mark
+  else
+    .checkbox-item=title
+      if checked
+        input(type="checkbox" checked="checked")
+        span.checkbox-item__mark_check
+      else
+        input(type="checkbox")
+        span.checkbox-item__mark
+
+  //- if(textBold)
+  //-   .checkbox-item_bold=title
+  //-     if checked
+  //-       input(type="checkbox" checked="checked")
+  //-       span.checkbox-item__mark_check
+  //-     else
+  //-       input(type="checkbox")
+  //-       span.checkbox-item__mark
     

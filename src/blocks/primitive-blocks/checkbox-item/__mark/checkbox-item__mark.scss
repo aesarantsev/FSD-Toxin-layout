@@ -19,7 +19,9 @@
 .checkbox-item input:checked ~ .checkbox-item__mark:after {
   display: block;
 }
-
+.checkbox-item_bold input:checked ~ .checkbox-item__mark:after {
+  display: block;
+}
 .checkbox-item__mark_check::before {
   position: absolute;
   height: 8px;

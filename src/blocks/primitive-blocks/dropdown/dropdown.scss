@@ -2,6 +2,7 @@ $DropDownMaxWidth: 320px;
 $DropDownMinWidth: 220px;
 
 .dropdown {
+  position: relative;
   font-family: "Montserrat", sans-serif;
   max-width: $DropDownMaxWidth;
   min-width: $DropDownMinWidth;
