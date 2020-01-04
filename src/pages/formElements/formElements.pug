@@ -70,7 +70,10 @@ html
               h3 pagination
               +pagination()
         .form-elements__items
-          //- +dropdown("Dropdown","guests",[0,0,0])
+          .form-elements__items__item_dropdown-amenities
+          +dropdown("Dropdown","roomAmenities",[2,2,2])
+          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
+          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
           //- +dropdown("Dropdown","guests",[0,0,0])
         .form-elements__items
         .form-elements__items
