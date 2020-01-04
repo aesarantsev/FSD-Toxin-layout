@@ -1,0 +1,26 @@
+//
+//  Global SCSS
+//
+@import "../../theme/global.scss";
+
+//
+//  Import components SCSS
+//
+@import "../../blocks/colors/colors";
+@import "../../blocks/headers/headers";
+
+.colors-type__wrapper {
+  & .colors {
+    display: inline-block;
+  }
+
+  & .headers {
+    display: inline-block;
+    float: right;
+  }
+}
+
+.uikit-logo {
+  padding: 30px;
+  height: 145px;
+}

@@ -1,0 +1,9 @@
+.book-room-panel {
+  @extend .base-cards;
+}
+
+@import "./__content/book-room-panel__content.scss";
+
+@import '../text-field/text-field';
+@import '../dropdown/dropdown';
+@import '../btn/btn';

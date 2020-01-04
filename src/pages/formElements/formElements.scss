@@ -1,0 +1,54 @@
+//
+//  Global SCSS
+//
+@import "../../theme/global.scss";
+
+//
+//  Packages
+//
+@import "../../../node_modules/air-datepicker/dist/css/datepicker.min.css";
+
+//
+//  Import components SCSS
+//
+@import "../../blocks/text-field/text-field";
+@import "../../blocks/dropdown/dropdown";
+@import "../../blocks/checkbox-list/checkbox-list";
+@import "../../blocks/radio-buttons/radio-buttons";
+@import "../../blocks/toggle/toggle";
+@import "../../blocks/like-button/like-button";
+@import "../../blocks/rate-button/rate-button";
+@import "../../blocks/range-slider/range-slider";
+@import "../../blocks/btn/btn";
+@import "../../blocks/pagination/pagination";
+
+.form-elements {
+  display: flex;
+  //justify-content: space-between;
+  flex-wrap: wrap;
+}
+
+// .form-elements__items__item_tittle {
+//   padding-bottom: 15px;
+// }
+
+// .form-elements__items__item_rate {
+//   display: flex;
+//   flex-wrap: wrap;
+//   padding: 20px;
+//   &:first {
+//     padding-right: 20px;
+//   }
+// }
+// .form-elements_inline-block {
+//   display: flex;
+//   flex-wrap: wrap;
+// }
+
+// .form-elements_inline-block_item {
+//   &:first-child {
+//     padding-right: 20px;
+//   }
+// }
+
+@import "./__items/form-elements__items.scss";

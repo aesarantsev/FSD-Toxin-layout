@@ -1,0 +1,11 @@
+include ../../blocks/colors/colors
+include ../../blocks/headers/headers
+html
+  body
+    header.uikit-logo
+      img(src=require("./images/Logo.svg"))
+    .container
+      .colors-type__wrapper
+        +colors()
+        +headers()
+    

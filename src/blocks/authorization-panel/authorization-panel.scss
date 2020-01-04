@@ -1,0 +1,8 @@
+.authorization-panel {
+  @extend .base-cards;
+}
+
+@import "./__content/authorization-panel__content.scss";
+
+@import '../text-field/text-field';
+@import '../btn/btn';

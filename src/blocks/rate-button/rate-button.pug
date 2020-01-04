@@ -1,0 +1,9 @@
+mixin rateButton(count=4)
+  .rate-button
+    -for(let i=0;i<count;i++)
+      .rate-button__item
+        include ./images/star.svg
+    -for(let i=0;i<(5-count);i++)
+      .rate-button__item
+        include ./images/star_border.svg
+    

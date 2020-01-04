@@ -1,0 +1,24 @@
+include ../../blocks/header/header
+include ../../blocks/footer/footer
+
+block variables
+-
+  let header_links = [
+  {title:"О нас", link:"#", isActive:true, subLinks:[]},
+  {title:"Услуги", link:"#", isActive:false, subLinks:[]},
+  {title:"Вакансии", link:"#", isActive:false, subLinks:[{title:"Search rooms", link:"#"},{title:"Add room", link:"#"}]},
+  {title:"Новости", link:"#", isActive:false, subLinks:[]},
+  {title:"Соглашения", link:"#", isActive:false, subLinks:[]}
+  ];
+doctype html
+html(lang="en")
+  head
+    title #{title}
+  body
+    .wrapper
+      +header(header_links, false, "", ["войти", "зарегистрироваться"])
+      .content-wrapper
+        block content
+      +footer()
+      
+

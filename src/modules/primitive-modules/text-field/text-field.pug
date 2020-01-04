@@ -1,9 +1,0 @@
-mixin textField(title="", placeholder="textField", arrow=false, classes="", attributes="")
-  .text-field(class=classes)
-    if arrow
-      input(type="text" class="text-field__input text-field__input_arrow"  placeholder=placeholder attributes)
-      input(type="submit" value="" class = "text-field__submit"  )
-    else
-      if title !=""
-        h3.text-field__title=title
-      input(type="text" class="text-field__input"  placeholder=placeholder attributes)

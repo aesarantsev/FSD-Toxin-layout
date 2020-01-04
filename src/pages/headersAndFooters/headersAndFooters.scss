@@ -1,0 +1,15 @@
+//
+//  Global SCSS
+//
+@import "../../theme/global.scss";
+
+//
+//  Import components SCSS
+//
+@import '../../blocks/header/header';
+@import '../../blocks/footer/footer';
+@import '../../blocks/footer-company-info/footer-company-info';
+
+.headers-and-footers {
+}
+@import "./__item/headers-and-footers__item.scss";

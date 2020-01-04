@@ -1,0 +1,22 @@
+include ../text-field/text-field
+include ../btn/btn
+
+mixin authorizationPanel()
+  .authorization-panel
+    .authorization-panel__content
+      .authorization-panel__content__tittle
+        h1 Войти
+      .authorization-panel__content__email
+        +textField("","Email")
+      .authorization-panel__content__password
+        +textField("","Password")
+      .authorization-panel__content__btn-auth
+        +btn("войти","arrowButton")
+      .authorization-panel__content__register
+        .authorization-panel__content__register__label
+          label Нет аккаунта на Toxin?
+        .authorization-panel__content__register__btn-register
+          +btn("создать", "borderButton")
+
+
+      

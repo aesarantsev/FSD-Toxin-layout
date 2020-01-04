@@ -1,0 +1,14 @@
+//
+//  Global SCSS
+//
+@import "../../theme/global.scss";
+
+//
+//  Import components SCSS
+//
+@import "../../layouts/main/main";
+@import "../../blocks/intro-search-panel/intro-search-panel";
+
+.landing {
+}
+@import "./intro/intro.scss";

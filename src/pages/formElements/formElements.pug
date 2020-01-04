@@ -1,0 +1,77 @@
+include ../../blocks/text-field/text-field
+include ../../blocks/dropdown/dropdown
+include ../../blocks/checkbox-list/checkbox-list
+include ../../blocks/radio-buttons/radio-buttons
+include ../../blocks/toggle/toggle
+include ../../blocks/like-button/like-button
+include ../../blocks/rate-button/rate-button
+include ../../blocks/range-slider/range-slider
+include ../../blocks/btn/btn
+include ../../blocks/pagination/pagination
+
+html
+  head
+    meta(name="viewport" content="width=device-width")
+  body
+    header.uikit-logo
+      img(src=require("./images/Logo.svg"))
+    .container
+      .form-elements
+        .form-elements__items
+          .form-elements__items__item_text-field
+            +textField(["Text Field"],"Email")
+          .form-elements__items__item_text-field
+            +textField(["Text Field"],"Email","","This is pretty awesome")
+          .form-elements__items__item_text-field
+            +dropdown("Dropdown","guests",[0,0,0])
+          .form-elements__items__item_text-field
+            +textField(["Masked text field"],"ДД.ММ.ГГГГ")
+          .form-elements__items__item_date-dropdown
+            +textField(["date Dropdown","date Dropdown"],"ДД.ММ.ГГГГ", "date")
+          .form-elements__items__item_filter-date-dropdown
+            +textField(["filter date dropdown"],"filterDate", "filterDate")
+          .form-elements__items__item_sub-text-field
+            h3.form-elements__items__item_tittle subscription text field
+            +textField(["subscription"],"subscription", "subscription")
+
+        .form-elements__items
+          .form-elements__items__item_check-box-buttons
+            +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false, [1,2])
+          .form-elements__items__item_radio-buttons
+            h3 Radio Buttons
+            +radioButtons(["Мужчина","Женщина"])
+          .form-elements__items__item_toggle
+            h3 toggle
+            +toggle("Получать спецпредложения")
+            +toggle("Получать спецпредложения")
+          .form-elements__items__item_like-button
+            h3 like button
+            +likeButton(2,false)
+            +likeButton(12,true)
+          .form-elements__items__item_rate-button
+            h3 rate button
+            .form-elements__items__item_rate-button__block
+              .form-elements__items__item_rate-button__block__item
+                +rateButton(4)
+              .form-elements__items__item_rate-button__block__item
+                +rateButton(5)
+
+        .form-elements__items
+          .form-elements__items__item_range-slider
+            +rangeSlider()
+          .form-elements__items__item_buttons
+            h3 Buttons
+            .buttons
+              +btn()
+              +btn("Click me", "borderButton")
+              +btn("Click me", "labelButton")
+              +btn("Click me", "arrowButton")
+            .form-elements__items__item_pagination
+              h3 pagination
+              +pagination()
+        .form-elements__items
+        .form-elements__items
+        .form-elements__items
+
+
+      

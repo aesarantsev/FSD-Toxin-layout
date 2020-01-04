@@ -1,0 +1,21 @@
+include ../img-slider/img-slider
+include ../rate-button/rate-button
+
+mixin roomItem(images = [], numberRoom = "0", luxe=false, cost = "0", rating = 1, reviewsCount=1)
+  .room-item
+    .room-item__slider
+      +imgSlider(images)
+    .room-item__info-panel
+      .room-item__info-panel__number=`№ ${numberRoom}`
+      .room-item__info-panel__state
+        if(luxe)
+          span Люкс
+      .room-item__info-panel__cost
+        strong=`${cost}Р `
+        span в сутки
+    .room-item__reviews-panel
+      .room-item__reviews-panel__rating
+        +rateButton(rating)
+      .room-item__reviews-panel__reviews
+        strong=`${reviewsCount} `
+        span Отзывов 

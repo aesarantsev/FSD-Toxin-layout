@@ -1,0 +1,11 @@
+.footer {
+  background-color: #fff;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+@import "./__content/footer__content.scss";
+@import "./__copyright/footer__copyright.scss";
+
+
+@import '../text-field/text-field';
+@import '../social-section/social-section';

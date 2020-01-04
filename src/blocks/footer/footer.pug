@@ -1,0 +1,66 @@
+include ../text-field/text-field
+include ../social-section/social-section
+-
+  var enTexts = {
+    toxinDesc:"Lorem ipsum dolor sit amet consectetur adipiscing elit aliquam eget nullam pellentesque aliquam curabitur cociis.",
+    column2:{title:"Navigation", links:["About Us","News","Support", "Products"]},
+    column3:{title:"ABOUT US", links:["Who we are","Our team","Careers", "Investors"]},
+    column4:{title:"Support", links:["Documentation","Community","Get in Touch"]},
+    column5:{title:"Subscribe to our newsletter", text:"Receive our latest news and promotions in your inbox!", emailPlaceholder:"Your email address"}
+    };
+
+  var ruTexts = {
+    toxinDesc:"Бронирование номеров в лучшем отеле 2019 года по версии ассоциации «Отельные взгляды»",
+    column2:{title:"навигация", links:["О нас","Новости","Служба поддержки", "Услуги"]},
+    column3:{title:"о нас", links:["О сервисе","Наша команда","Вакансии", "Инвесторы"]},
+    column4:{title:"Служба поддержки", links:["Соглашения","Сообщества","Связь с нами"]},
+    column5:{title:"Подписка", text:"Получайте специальные предложения и новости сервиса", emailPlaceholder:"Email"}
+    };
+mixin footer(en = false)
+  -
+    let texts= ruTexts;
+    if(en)
+      texts = enTexts;
+
+  footer.footer
+    .container
+      .footer__content
+        .footer__content__column
+          .footer__content__column__logo
+            img(src=require("blocksPath/footer/images/Logo.svg"))
+          span=texts.toxinDesc
+        .footer__content__column
+          h3=texts.column2.title
+          ul
+            li
+              a.footer__content__column__item_link(href="#")=texts.column2.links[0]
+              a.footer__content__column__item_link(href="#")=texts.column2.links[1]
+              a.footer__content__column__item_link(href="#")=texts.column2.links[2]
+              a.footer__content__column__item_link(href="#")=texts.column2.links[3]
+        .footer__content__column
+          h3=texts.column3.title
+          ul
+            li
+              a.footer__content__column__item_link(href="#")=texts.column3.links[0]
+              a.footer__content__column__item_link(href="#")=texts.column3.links[1]
+              a.footer__content__column__item_link(href="#")=texts.column3.links[2]
+              a.footer__content__column__item_link(href="#")=texts.column3.links[3]
+        .footer__content__column
+          h3=texts.column4.title
+          ul
+            li
+              a.footer__content__column__item_link(href="#")=texts.column4.links[0]
+              a.footer__content__column__item_link(href="#")=texts.column4.links[1]
+              a.footer__content__column__item_link(href="#")=texts.column4.links[2]
+
+        .footer__content__column
+          h3=texts.column5.title
+          span.footer__content__column__item=texts.column5.text
+          .footer__content__column__item
+            +textField([],texts.column5.emailPlaceholder,"subscription")
+    .container
+      .footer__copyright
+        .footer__copyright__item
+          span Copyright © 2018 Toxin UI Kit. All rights reserved.
+        .footer__copyright__item
+          +socialSection()

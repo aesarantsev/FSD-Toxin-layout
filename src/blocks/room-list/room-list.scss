@@ -1,0 +1,8 @@
+.room-list {
+  //width: 100%;
+}
+
+@import "./__header/room-list__header.scss";
+@import "./__content/room-list__content.scss";
+
+@import "../room-item/room-item";

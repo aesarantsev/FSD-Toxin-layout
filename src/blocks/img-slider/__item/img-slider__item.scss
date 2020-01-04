@@ -1,0 +1,10 @@
+.img-slider__item {
+  & img {
+    width: 270px;
+    height: 150px;
+  }
+  position: absolute;
+  width: 270px;
+  height: 150px;
+  display: none;
+}

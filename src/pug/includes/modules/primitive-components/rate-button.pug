@@ -1,9 +1,0 @@
-mixin rateButton(count=4)
-  .rate-button
-    -for(let i=0;i<count;i++)
-      .rate-item
-        include ../../../../assets/img/rate-button/star.svg
-    -for(let i=0;i<(5-count);i++)
-      .rate-item
-        include ../../../../assets/img/rate-button/star_border.svg
-    

@@ -1,0 +1,34 @@
+include ../../blocks/intro-search-panel/intro-search-panel
+include ../../blocks/registration-panel/registration-panel
+include ../../blocks/book-room-panel/book-room-panel
+include ../../blocks/authorization-panel/authorization-panel
+include ../../blocks/datepicker/datepicker
+include ../../blocks/room-item/room-item
+-
+  var images_src1 = [require("../../images/rooms/1.jpg"),require("../../images/rooms/11.jpg"),require("../../images/rooms/4.jpg"),require("../../images/rooms/6.jpg")];
+  var images_src2 = [require("../../images/rooms/2.jpg"),require("../../images/rooms/10.jpg"),require("../../images/rooms/7.jpg"),require("../../images/rooms/4.jpg")];
+html
+  head
+    meta(name="viewport" content="width=device-width")
+  body(class='grey_body')
+    header.uikit-logo
+      img(src=require("./images/Logo.svg"))
+    .container
+      .cards
+        .cards__column
+          .cards__column__item
+            +introSearchPanel()
+          .cards__column__item
+            +registrationPanel()
+        .cards__column
+          .cards__column__item
+            +bookRoomPanel()
+          .cards__column__item
+            +authorizationPanel()
+        .cards__column
+          .cards__column__item
+            +datePicker()
+          .cards__column__item
+            +roomItem(images_src1, "888", true, "9 990", 5, 145)
+          .cards__column__item
+            +roomItem(images_src2, "840", false, "9 900", 4, 65)
