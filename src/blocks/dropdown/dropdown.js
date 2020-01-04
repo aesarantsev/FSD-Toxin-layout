@@ -79,7 +79,6 @@ jQuery(document).ready(function(e) {
   }
 
   function reflectArrow(dropdown) {
-    console.log("REF");
     let currentDropdownArrow = $(labelArrowClass, dropdown);
     $(currentDropdownArrow).toggleClass(labelArrowReflectedClass.slice(1));
   }

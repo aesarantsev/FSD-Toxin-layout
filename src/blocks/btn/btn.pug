@@ -5,14 +5,14 @@ mixin btn (text = "Click Me", type = "fillButton",link="#", small=false)
         span=text
     when "borderButton"
       if(small)
-        button.btn.btn_small.btn_border(href=link)
+        button.btn.btn_border.btn_small(href=link)
           span=text
       else
         button.btn.btn_border(href=link)
           span=text
     when "fillButton"
       if(small)
-        button.btn.btn_small.btn_fill(href=link)
+        button.btn.btn_fill.btn_small(href=link)
           span=text
       else
         button.btn.btn_fill(href=link)

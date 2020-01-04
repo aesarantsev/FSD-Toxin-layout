@@ -1,5 +1,6 @@
 import "webpack-jquery-ui";
 import "webpack-jquery-ui/css";
+import "air-datepicker";
 
 import "../../blocks/text-field/text-field";
 import "../../blocks/dropdown/dropdown";
@@ -11,3 +12,4 @@ import "../../blocks/rate-button/rate-button";
 import "../../blocks/range-slider/range-slider";
 import "../../blocks/btn/btn";
 import "../../blocks/pagination/pagination";
+import "../../blocks/datepicker/datepicker";

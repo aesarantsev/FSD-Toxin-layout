@@ -14,7 +14,8 @@ mixin textField(title=[], placeholder="textField", type="", textValue = "")
     if type=="subscription"
       .text-field__subscription
         input(type="text" class="text-field__input text-field_subscription"  placeholder=placeholder)
-        input(type="submit" value="" class = "text-field__submit")
+        input(type="submit" value="arrow_forward" class = "text-field__submit material-icons md-purple")
+          //- i.material-icons.md-24 expand_more
       
     else if type=="date"
       .text-field__date
