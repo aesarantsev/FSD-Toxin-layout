@@ -1,0 +1,10 @@
+.comment__content {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  grid-column-gap: 14px;
+  margin-top: 12px;
+  margin-left: 3px;
+}
+
+@import "./__like-button/comment__content__like-button.scss";
+@import "./__text/comment__content__text.scss";

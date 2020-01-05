@@ -1,0 +1,6 @@
+.comment__person__info {
+  display: inline-block;
+  padding-left: 10px;
+}
+@import "./__name/comment__person__info__name.scss";
+@import "./__was-online/comment__person__info__was-online.scss";
