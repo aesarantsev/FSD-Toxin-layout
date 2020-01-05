@@ -36,7 +36,7 @@ html
 
         .form-elements__items
           .form-elements__items__item_check-box-buttons
-            +checkBoxList({title:"CHECKBOX BUTTONS", items:["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], expandable:false, checkedItems:[1,2]})
+            +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false, [1,2])
           .form-elements__items__item_radio-buttons
             h3 Radio Buttons
             +radioButtons(["Мужчина","Женщина"])
@@ -72,8 +72,8 @@ html
         .form-elements__items
           .form-elements__items__item_dropdown-amenities
           +dropdown("Dropdown","roomAmenities",[2,2,2])
-          +checkBoxList({title:"CHECKBOX BUTTONS", items:["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], expandable:false, checkedItems:[1,2]})
-          +checkBoxList({title:"CHECKBOX BUTTONS", items:["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], expandable:false, checkedItems:[1,2]})
+          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
+          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
           //- +dropdown("Dropdown","guests",[0,0,0])
         .form-elements__items
         .form-elements__items
