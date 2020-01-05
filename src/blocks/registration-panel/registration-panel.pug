@@ -23,9 +23,9 @@ mixin registrationPanel()
       .registration-panel__content__toggle
         +toggle("Получать спецпредложения")
       .registration-panel__content__btn-pay
-        +btn({text: "перейти к оплате", type: "arrowButton"})
+        +btn("перейти к оплате", "arrowButton")
       .registration-panel__content__login
         .registration-panel__content__login__label
           span Уже есть аккаунт на Toxin
         .registration-panel__content__login__btn-auth
-          +btn({text:"войти", type:"borderButton"})
+          +btn("войти", "borderButton")

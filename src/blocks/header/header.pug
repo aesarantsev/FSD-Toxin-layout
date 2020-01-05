@@ -29,9 +29,9 @@ mixin header(links = links_default, auth=false, userName = "Cosmin Negoita", aut
             if(!auth)
               .header__content__navigation__auth
                 .header__content__navigation__auth__btn
-                  +btn({text: authButtons[0], type: "borderButton", link: "/autorization.html", small: true})
+                  +btn(authButtons[0], "borderButton", "/autorization.html",true)
                 .header__content__navigation__auth__btn
-                  +btn({text: authButtons[1], type: "fillButton", link: "/registration.html", small: true})
+                  +btn(authButtons[1], "fillButton", "/registration.html",true)
             else
               .header__content__navigation__profile
                 a(href="#")=userName

@@ -2,20 +2,20 @@ include ../text-field/text-field
 include ../dropdown/dropdown
 include ../btn/btn
 
-mixin bookRoomPanel(params={numberRoom: "888", isLuxe: true, cost: "9 900"})
+mixin bookRoomPanel(numberRoom="888", isLuxe = true, cost = "9 900")
   .book-room-panel
     .book-room-panel__content
       .book-room-panel__content__room-info
         .book-room-panel__content__room-info__number
           .book-room-panel__content__room-info__number__num
             span
-              strong="№ " +params.numberRoom
-          if (params.isLuxe)
+              strong="№ " +numberRoom
+          if (isLuxe)
             .book-room-panel__content__room-info__number__luxe
               span="Люкс"
         .book-room-panel__content__room-info__cost
           span
-            strong= params.cost + "₽ "
+            strong= cost + "₽ "
           span="в сутки"
       .book-room-panel__content__date
         +textField(["прибытие","выезд"], "ДД.ММ.ГГГГ", "date")
@@ -36,6 +36,6 @@ mixin bookRoomPanel(params={numberRoom: "888", isLuxe: true, cost: "9 900"})
         .book-room-panel__content__total__tab
         h2="38 081₽"
       .book-room-panel__content__btn
-        +btn({text: "забронировать", type: "arrowButton"})
+        +btn("забронировать", "arrowButton")
 
       
