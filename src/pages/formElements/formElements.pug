@@ -38,7 +38,7 @@ html
 
         .form-elements__items
           .form-elements__items__item_check-box-buttons
-            +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], false, [1,2])
+            +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], [1,2], false)
           .form-elements__items__item_radio-buttons
             h3 Radio Buttons
             +radioButtons(["Мужчина","Женщина"])
@@ -73,11 +73,17 @@ html
               +pagination()
         .form-elements__items
           .form-elements__items__item_dropdown-amenities
-          +dropdown("Dropdown","roomAmenities",[2,2,2])
-          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
-          +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
-          +positiveRoom("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-          +positiveRoom("location_city", "Удобство", "Окно в каждой из спален")
+            +dropdown("Dropdown","roomAmenities",[2,2,2])
+          .form-elements__items__item_dropdown-amenities-expanded
+            +dropdown("Dropdown","roomAmenities",[2,2,2])
+          .form-elements__items__item_expandable_ch-list
+            +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], [1,2], true, false )
+          .form-elements__items__item_expandable_ch-list-expanded
+            +checkBoxList("expandable checkbox list", ["Завтрак","Письменный стол","Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"], [2,3,4], true, true)
+          .form-elements__items__item_positive-room-emoticon
+            +positiveRoom("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+          .form-elements__items__item_positive-room-city
+            +positiveRoom("location_city", "Удобство", "Окно в каждой из спален")
           //- +dropdown("Dropdown","guests",[0,0,0])
         .form-elements__items
         .form-elements__items

@@ -1,13 +1,13 @@
 include ../checkbox-item/checkbox-item
 
-mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true, checkedItems = [])
+mixin checkBoxList(title="Checkbox buttons", items = [], checkedItems = [], expandable=true, display_expandable=false )
   if expandable
     .checkbox-list.checkbox-list_expandable
       .checkbox-list__title.checkbox-list__title_expandable
-        h3=title
+        h3.checkbox-list__title__text=title
         .checkbox-list__title_expandable__arrow
-          i.material-icons.md-24 expand_more
-      .checkbox-list__items.checkbox-list__items_expandable
+          i.material-icons.md-24.md-dark-shade-50=display_expandable ? "expand_less" : "expand_more"
+      div(style=display_expandable ? "" : "display:none;").checkbox-list__items.checkbox-list__items_expandable
         -for(let i=0;i<items.length;i++)
           .checkbox-list__item
             if(checkedItems.includes(i))
@@ -18,7 +18,6 @@ mixin checkBoxList(title="Checkbox buttons", items = [], expandable=true, checke
     .chcheckbox-list
       .checkbox-list__title
         h3=title
-      //- each item in items
       -for(let i=0;i<items.length;i++)
         .checkbox-list__item
           if(checkedItems.includes(i))

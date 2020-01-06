@@ -2,11 +2,6 @@
   cursor: pointer;
   position: relative;
   display: inline-flex;
-  justify-content: space-between;
-
-  span {
-    vertical-align: middle;
-  }
 }
 
 @import "./__arrow/checkbox-list__title_expandable__arrow.scss";

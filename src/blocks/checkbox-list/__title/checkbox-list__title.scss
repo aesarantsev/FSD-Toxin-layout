@@ -4,6 +4,8 @@
   font-weight: bold;
   font-size: 12px;
   text-transform: uppercase;
-  //height: 24px;
-  padding-bottom: 16.5px;
+  margin-bottom: 15px;
 }
+
+@import "./_expandable/checkbox-list__title_expandable.scss";
+@import "./__text/checkbox-list__title__text.scss";

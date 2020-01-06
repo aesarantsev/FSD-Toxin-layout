@@ -1,9 +1,6 @@
 .checkbox-list__title_expandable__arrow {
-  display: inline-flex;
-  justify-content: space-between;
-  // right: 0;
-  // width: 24px;
-  // height: 24px;
+  display: inline;
+  margin-left: 40px;
 }
 
 @import "./_reflected/checkbox-list__title_expandable__arrow_reflected.scss";
