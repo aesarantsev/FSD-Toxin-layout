@@ -1,2 +1,5 @@
 .text-field_date {
+  &::placeholder {
+    color: $color_Dark_Shade_50;
+  }
 }

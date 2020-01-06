@@ -169,7 +169,7 @@ html {
   font-size: 18px;
   color: #101010;
   height: 100%; }
-  @media screen and (max-width: 1920px) {
+  @media screen and (max-width: 1440px) {
     html {
       font-size: 16px; } }
   @media screen and (max-width: 768px) {
@@ -259,7 +259,7 @@ section,
   position: relative;
   margin: 0 auto;
   padding: 0px 100px;
-  max-width: 1920px; }
+  max-width: 1440px; }
   @media screen and (max-width: 980px) {
     .container {
       max-width: tableWidth; } }
@@ -332,6 +332,14 @@ section,
 .material-icons.md-purple {
   color: #bc9cff; }
 
+.material-icons.md-dark-shade-50 {
+  color: rgba(31, 32, 65, 0.5); }
+
+.uikit-logo img {
+  padding-top: 40px;
+  padding-left: 40px;
+  padding-bottom: 65px; }
+
 .search__panel {
   border: 1px solid rgba(0, 0, 0, 0.12);
   box-sizing: border-box;
@@ -363,18 +371,19 @@ section,
   height: 44px; }
   .text-field__input:hover {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
   .text-field__input:focus {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field__input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 .text-field__submit {
   float: right;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
-  cursor: pointer;
-  background: url(/blocksPath/text-field/images/arrow_forward.svg) no-repeat 10px 14px; }
+  cursor: pointer; }
 
 .text-field__title {
   padding-bottom: 5px; }
@@ -390,17 +399,17 @@ section,
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .text-field__date {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .text-field__date__item {
-  width: 100%;
-  max-width: 150px; }
+  max-width: 150px;
+  min-width: 20px; }
 
-.text-field_date {
-  width: inherit;
-  background: url(/assets/img/text-field/expand_more.svg) no-repeat 121px 19px; }
+.text-field_date::placeholder {
+  color: rgba(31, 32, 65, 0.5); }
 
 .text-field_filter-date {
   width: 100%;
@@ -628,18 +637,19 @@ section,
   height: 44px; }
   .text-field__input:hover {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
   .text-field__input:focus {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field__input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 .text-field__submit {
   float: right;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
-  cursor: pointer;
-  background: url(/blocksPath/text-field/images/arrow_forward.svg) no-repeat 10px 14px; }
+  cursor: pointer; }
 
 .text-field__title {
   padding-bottom: 5px; }
@@ -655,17 +665,17 @@ section,
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .text-field__date {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .text-field__date__item {
-  width: 100%;
-  max-width: 150px; }
+  max-width: 150px;
+  min-width: 20px; }
 
-.text-field_date {
-  width: inherit;
-  background: url(/assets/img/text-field/expand_more.svg) no-repeat 121px 19px; }
+.text-field_date::placeholder {
+  color: rgba(31, 32, 65, 0.5); }
 
 .text-field_filter-date {
   width: 100%;
@@ -696,18 +706,19 @@ section,
   height: 44px; }
   .text-field__input:hover {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
   .text-field__input:focus {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field__input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 .text-field__submit {
   float: right;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
-  cursor: pointer;
-  background: url(/blocksPath/text-field/images/arrow_forward.svg) no-repeat 10px 14px; }
+  cursor: pointer; }
 
 .text-field__title {
   padding-bottom: 5px; }
@@ -723,17 +734,17 @@ section,
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .text-field__date {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .text-field__date__item {
-  width: 100%;
-  max-width: 150px; }
+  max-width: 150px;
+  min-width: 20px; }
 
-.text-field_date {
-  width: inherit;
-  background: url(/assets/img/text-field/expand_more.svg) no-repeat 121px 19px; }
+.text-field_date::placeholder {
+  color: rgba(31, 32, 65, 0.5); }
 
 .text-field_filter-date {
   width: 100%;
@@ -1005,18 +1016,19 @@ input:checked + .toggle__slider:before {
   height: 44px; }
   .text-field__input:hover {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
   .text-field__input:focus {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field__input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 .text-field__submit {
   float: right;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
-  cursor: pointer;
-  background: url(/blocksPath/text-field/images/arrow_forward.svg) no-repeat 10px 14px; }
+  cursor: pointer; }
 
 .text-field__title {
   padding-bottom: 5px; }
@@ -1032,17 +1044,17 @@ input:checked + .toggle__slider:before {
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .text-field__date {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .text-field__date__item {
-  width: 100%;
-  max-width: 150px; }
+  max-width: 150px;
+  min-width: 20px; }
 
-.text-field_date {
-  width: inherit;
-  background: url(/assets/img/text-field/expand_more.svg) no-repeat 121px 19px; }
+.text-field_date::placeholder {
+  color: rgba(31, 32, 65, 0.5); }
 
 .text-field_filter-date {
   width: 100%;
@@ -1251,18 +1263,19 @@ input:checked + .toggle__slider:before {
   height: 44px; }
   .text-field__input:hover {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
   .text-field__input:focus {
     outline: none;
-    border: 1px solid gba(31, 32, 65, 0.5); }
+    border: 1px solid rgba(31, 32, 65, 0.5); }
+  .text-field__input::placeholder {
+    color: rgba(31, 32, 65, 0.25); }
 
 .text-field__submit {
   float: right;
   width: 44px;
   height: 44px;
   background-color: #ffffff;
-  cursor: pointer;
-  background: url(/blocksPath/text-field/images/arrow_forward.svg) no-repeat 10px 14px; }
+  cursor: pointer; }
 
 .text-field__title {
   padding-bottom: 5px; }
@@ -1278,17 +1291,17 @@ input:checked + .toggle__slider:before {
     border: 1px solid rgba(31, 32, 65, 0.5); }
 
 .text-field__date {
+  max-width: 320px;
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between; }
 
 .text-field__date__item {
-  width: 100%;
-  max-width: 150px; }
+  max-width: 150px;
+  min-width: 20px; }
 
-.text-field_date {
-  width: inherit;
-  background: url(/assets/img/text-field/expand_more.svg) no-repeat 121px 19px; }
+.text-field_date::placeholder {
+  color: rgba(31, 32, 65, 0.5); }
 
 .text-field_filter-date {
   width: 100%;

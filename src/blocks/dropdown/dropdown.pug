@@ -23,7 +23,7 @@ mixin dropdown(name="Dropdown", type="guests", paramsCount = [2,1,1], menuOpen=f
     .dropdown__label
       .dropdown__label__text
       .dropdown__label__arrow
-        i.material-icons.md-24 expand_more
+        i.material-icons.md-24.md-dark-shade-50 expand_more
     div(style=menuOpen ? "display:block;" : "display:none;").dropdown__menu
       -for(let i = 0;i<3;i++)
         .dropdown__item

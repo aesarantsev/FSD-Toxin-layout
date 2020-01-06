@@ -72,4 +72,3 @@ $(".start_one").datepicker({
 $(".end_one").click(function() {
   myDatepicker.show();
 });
-
