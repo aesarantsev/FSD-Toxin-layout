@@ -1,6 +1,6 @@
 //- types: guests, roomAmenities
 
-mixin dropdown(name="Dropdown", type="guests", paramsCount = [2,1,1])
+mixin dropdown(name="Dropdown", type="guests", paramsCount = [2,1,1], menuOpen=false)
   -
     let titles_1 = ['Взрослые', 'Дети', 'Младенцы'];
     let titles_2 = ['Спальни', 'Кровати', 'Ванные комнаты'];
@@ -24,7 +24,7 @@ mixin dropdown(name="Dropdown", type="guests", paramsCount = [2,1,1])
       .dropdown__label__text
       .dropdown__label__arrow
         i.material-icons.md-24 expand_more
-    .dropdown__menu
+    div(style=menuOpen ? "display:block;" : "display:none;").dropdown__menu
       -for(let i = 0;i<3;i++)
         .dropdown__item
           .dropdown__item__label=titles[i]

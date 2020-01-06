@@ -22,13 +22,19 @@
 @import "../../blocks/btn/btn";
 @import "../../blocks/pagination/pagination";
 @import "../../blocks/datepicker/datepicker.scss";
-@import '../../blocks/comment/comment';
-@import '../../blocks/positive-room/positive-room';
+@import "../../blocks/comment/comment";
+@import "../../blocks/positive-room/positive-room";
+@import "../../blocks/checkbox-list-rich/checkbox-list-rich";
+@import "../../blocks/bullet-list/bullet-list";
 
 .form-elements {
-  display: flex;
-  //justify-content: space-between;
-  flex-wrap: wrap;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "form-elements__column_1 form-elements__column_2 form-elements__column_3"
+    "form-elements__column_4 form-elements__column_5 form-elements__column_6"
+    "form-elements__column_7 form-elements__column_8 form-elements__column_8";
+  //grid-row-gap: 120px;
 }
 
 // .form-elements__items__item_tittle {
@@ -54,5 +60,4 @@
 //   }
 // }
 
-@import "./__items/form-elements__items.scss";
-
+@import "./__column/form-elements__column.scss";

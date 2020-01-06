@@ -1,0 +1,12 @@
+.form-elements__column_5 {
+  grid-area: form-elements__column_5;
+}
+
+.form-elements__column_5 .form-elements__column__item {
+  &:nth-child(1) {
+    margin-bottom: 256px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 0px;
+  }
+}

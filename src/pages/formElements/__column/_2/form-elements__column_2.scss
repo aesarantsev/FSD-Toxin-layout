@@ -1,0 +1,22 @@
+.form-elements__column_2{
+  grid-area: form-elements__column_2;
+}
+
+.form-elements__column_2 .form-elements__column__item {
+  &:nth-child(1) {
+    margin-bottom: 40px;
+  }
+  &:nth-child(2) {
+    margin-bottom: 40px;
+  }
+  &:nth-child(3) {
+    margin-bottom: 44px;
+  }
+  &:nth-child(4) {
+    margin-bottom: 40px;
+  }
+  &:nth-child(5) {
+    margin-bottom: 0px;
+  }
+  
+}

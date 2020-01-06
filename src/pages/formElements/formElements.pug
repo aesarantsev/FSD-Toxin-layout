@@ -10,6 +10,8 @@ include ../../blocks/btn/btn
 include ../../blocks/pagination/pagination
 include ../../blocks/comment/comment
 include ../../blocks/positive-room/positive-room
+include ../../blocks/checkbox-list-rich/checkbox-list-rich
+include ../../blocks/bullet-list/bullet-list
 
 html
   head
@@ -19,38 +21,41 @@ html
       img(src=require("./images/Logo.svg"))
     .container
       .form-elements
-        .form-elements__items
-          .form-elements__items__item_text-field
+
+        //- Column 1
+        .form-elements__column_1
+          .form-elements__column__item
             +textField(["Text Field"],"Email")
-          .form-elements__items__item_text-field
+          .form-elements__column__item
             +textField(["Text Field"],"Email","","This is pretty awesome")
-          .form-elements__items__item_text-field
+          .form-elements__column__item
             +dropdown("Dropdown","guests",[0,0,0])
-          .form-elements__items__item_text-field
+          .form-elements__column__item
             +textField(["Masked text field"],"ДД.ММ.ГГГГ")
-          .form-elements__items__item_date-dropdown
+          .form-elements__column__item
             +textField(["date Dropdown","date Dropdown"],"ДД.ММ.ГГГГ", "date")
-          .form-elements__items__item_filter-date-dropdown
+          .form-elements__column__item
             +textField(["filter date dropdown"],"filterDate", "filterDate")
-          .form-elements__items__item_sub-text-field
+          .form-elements__column__item
             h3.form-elements__items__item_tittle subscription text field
             +textField(["subscription"],"subscription", "subscription")
 
-        .form-elements__items
-          .form-elements__items__item_check-box-buttons
+        //- Column 2
+        .form-elements__column_2
+          .form-elements__column__item
             +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], [1,2], false)
-          .form-elements__items__item_radio-buttons
+          .form-elements__column__item
             h3 Radio Buttons
             +radioButtons(["Мужчина","Женщина"])
-          .form-elements__items__item_toggle
+          .form-elements__column__item
             h3 toggle
             +toggle("Получать спецпредложения")
             +toggle("Получать спецпредложения")
-          .form-elements__items__item_like-button
+          .form-elements__column__item
             h3 like button
             +likeButton(2,false)
             +likeButton(12,true)
-          .form-elements__items__item_rate-button
+          .form-elements__column__item
             h3 rate button
             .form-elements__items__item_rate-button__block
               .form-elements__items__item_rate-button__block__item
@@ -58,38 +63,59 @@ html
               .form-elements__items__item_rate-button__block__item
                 +rateButton(5)
 
-        .form-elements__items
-          .form-elements__items__item_range-slider
+        //- Column 3
+        .form-elements__column_3
+          .form-elements__column__item
             +rangeSlider()
-          .form-elements__items__item_buttons
+          .form-elements__column__item
             h3 Buttons
             .buttons
               +btn()
               +btn("Click me", "borderButton")
               +btn("Click me", "labelButton")
               +btn("Click me", "arrowButton")
-            .form-elements__items__item_pagination
-              h3 pagination
-              +pagination()
-        .form-elements__items
-          .form-elements__items__item_dropdown-amenities
+          .form-elements__column__item
+            h3 pagination
+            +pagination()
+
+        //- Column 4
+        .form-elements__column_4
+          .form-elements__column__item
             +dropdown("Dropdown","roomAmenities",[2,2,2])
-          .form-elements__items__item_dropdown-amenities-expanded
-            +dropdown("Dropdown","roomAmenities",[2,2,2])
-          .form-elements__items__item_expandable_ch-list
+          .form-elements__column__item
+            +dropdown("Dropdown","roomAmenities",[2,2,2], true)
+          .form-elements__column__item
             +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], [1,2], true, false )
-          .form-elements__items__item_expandable_ch-list-expanded
+          .form-elements__column__item
             +checkBoxList("expandable checkbox list", ["Завтрак","Письменный стол","Стул для кормления", "Кроватка", "Телевизор", "Шампунь", "Телевизор", "Шампунь"], [2,3,4], true, true)
-          .form-elements__items__item_positive-room-emoticon
+          
+
+        //- Column 5
+        .form-elements__column_5
+          .form-elements__column__item
+            +dropdown("Dropdown","guests",[0,0,0], true)
+          .form-elements__column__item
+            +checkboxListRich("rich Checkbox Buttons", [{title:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},{title:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист  и проводит до номера."}], [])
+
+
+        //- Column 6
+        .form-elements__column_6
+          .form-elements__column__item
+            +dropdown("Dropdown","guests",[2,1,0], true)
+          .form-elements__column__item
+            +bulletList("bullet list", ["Нельзя с питомцами", "Без вечеринок и мероприятий", "Время прибытия — после 13:00,а выезд до 12:00"])
+
+        //- Column 7
+        .form-elements__column_7
+          .form-elements__column__item
             +positiveRoom("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
-          .form-elements__items__item_positive-room-city
+          .form-elements__column__item
             +positiveRoom("location_city", "Удобство", "Окно в каждой из спален")
-          //- +dropdown("Dropdown","guests",[0,0,0])
-        .form-elements__items
-        .form-elements__items
-        .form-elements__items
         
-          +comment()
+        //- Column 8
+        .form-elements__column_8
+          .form-elements__column__item
+            +comment()
 
 
 
