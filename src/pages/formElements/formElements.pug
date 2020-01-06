@@ -9,6 +9,7 @@ include ../../blocks/range-slider/range-slider
 include ../../blocks/btn/btn
 include ../../blocks/pagination/pagination
 include ../../blocks/comment/comment
+include ../../blocks/positive-room/positive-room
 
 html
   head
@@ -75,10 +76,13 @@ html
           +dropdown("Dropdown","roomAmenities",[2,2,2])
           +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
           +checkBoxList("expandable checkbox list", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], true, [1,2])
+          +positiveRoom("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+          +positiveRoom("location_city", "Удобство", "Окно в каждой из спален")
           //- +dropdown("Dropdown","guests",[0,0,0])
         .form-elements__items
         .form-elements__items
         .form-elements__items
+        
           +comment()
 
 

@@ -1,7 +1,7 @@
 include ../like-button/like-button
 include ../avatar/avatar
 
-mixin comment(avatarSrc="#", personName="Jake Sully", wasOnlineText="5 дней назад", likeCount=11, isLike=false, text="Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
+mixin comment(avatarSrc="#", personName="Jake Sully", wasOnlineText="5 дней назад", likeCount=11, isLike=true, text="Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей.")
   .comment
     .comment__person
       .comment__person__avatar
@@ -11,6 +11,6 @@ mixin comment(avatarSrc="#", personName="Jake Sully", wasOnlineText="5 дней 
         span.comment__person__info__was-online=wasOnlineText
     .comment__content
       .comment__content__like-button
-        +likeButton(12, true)
+        +likeButton(12, isLike)
       .comment__content__text
         span=text

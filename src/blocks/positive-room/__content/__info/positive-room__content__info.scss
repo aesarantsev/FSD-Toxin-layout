@@ -1,0 +1,8 @@
+.positive-room__content__info {
+  display: inline-block;
+  vertical-align: top;
+  margin-left: 10px;
+}
+
+@import "./__title/positive-room__content__info__title.scss";
+@import "./__description/positive-room__content__info__description.scss";
