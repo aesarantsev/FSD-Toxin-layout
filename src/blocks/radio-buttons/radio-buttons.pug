@@ -1,11 +1,11 @@
-mixin radioButtons(values = ["Мужчина", "Женщина"])
-  -var name = "11111"
+mixin radioButtons(values = ["Мужчина", "Женщина"],  checked = 0)
+  -var randomName = Math.random().toString(36).substr(2, 9)
   .radio-buttons
     form
       -for(let i=0;i<values.length;i++)
-        label.radio_item=values[i]
-          if(i==0)
-            input(type="radio" name = name)
+        label.radio-buttons__item=values[i]
+          if(i==checked)
+            input(type="radio" name = randomName checked="checked")
           else
-            input(type="radio" name = name)
-          span.checkmark
+            input(type="radio" name = randomName )
+          span.radio-buttons__checkmark
