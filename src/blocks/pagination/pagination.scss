@@ -1,6 +1,107 @@
 .pagination {
-  display: inline-block;
+  width: fit-content;
 }
 
-@import "./__label/pagination__label.scss";
-@import "./__nav/pagination__nav.scss";
+.pagination__content {
+}
+
+.pagination__description {
+  text-align: center;
+  margin-top: 10px;
+}
+
+ul.simple-pagination {
+  list-style: none;
+}
+
+.simple-pagination {
+  // display: inline-block;
+  //overflow: hidden;
+  width: 100%;
+  //max-width: 400px;
+  //padding: 0 5px 5px 0;
+  margin: 0;
+}
+
+.simple-pagination ul {
+  list-style: none;
+  display: block;
+
+  // padding: 0;
+  // margin: 0;
+}
+
+.simple-pagination li {
+  display: inline-block;
+  list-style: none;
+
+  // padding: 0;
+  // margin: 0;
+  //float: left;
+}
+span.ellipse.clickable {
+  cursor: pointer;
+  color: rgba(31, 32, 65, 0.5);
+}
+
+.ellipse input {
+  width: 3em;
+}
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.pagination__theme span {
+  cursor: pointer;
+}
+
+.pagination__theme a,
+.pagination__theme span {
+  float: left;
+  color: #666;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: normal;
+  text-align: center;
+  min-width: 25px;
+  max-width: 40px;
+  width: 40px;
+  // padding: 0 7px;
+  // margin: 0 5px 0 0;
+}
+
+// .pagination__theme a:hover,
+// .pagination__theme li:not(.disabled):not(.active) span:hover {
+//   text-decoration: none;
+//   background: #fcfcfc;
+// }
+
+.pagination__theme .current {
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  color: #fff;
+  border-radius: 22px;
+  cursor: default;
+}
+
+.pagination__theme .ellipse {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: bold;
+  cursor: default;
+}
+
+.pagination__theme .page-link.next {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  text-align: center;
+  & i {
+    line-height: 40px;
+  }
+  &:hover {
+    background: linear-gradient(180deg, #5dad7e 0%, #66d2ea 100%);
+  }
+}
+
+
