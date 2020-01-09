@@ -299,10 +299,10 @@ section,
 
 .container {
   border: 1px solid red;
-  max-width: 1161px;
+  max-width: 1160px;
   width: 100%;
   min-width: $smPhoneWidth;
-  flex: 0 0 auto;
+  //flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
   height: inherit;

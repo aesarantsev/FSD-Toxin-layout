@@ -19,9 +19,10 @@
   padding: 10px;
 }
 
-@media screen and (max-width: $tableWidth) {
- 
-
+@media screen and (max-width: $smDesktopWidth) {
+  .filter-panel {
+    display: none;
+  }
   .filter-panel__content {
     display: none;
     position: absolute;
