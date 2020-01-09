@@ -2068,12 +2068,14 @@ section,
   min-height: 100vh; }
 
 .container {
+  border: 1px solid red;
+  max-width: 1161px;
   width: 100%;
+  min-width: 320px;
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  padding: 0px 100px;
-  max-width: 1440px; }
+  height: inherit; }
   @media screen and (max-width: 980px) {
     .container {
       max-width: tableWidth; } }
@@ -2148,6 +2150,9 @@ section,
 
 .material-icons.md-dark-shade-50 {
   color: rgba(31, 32, 65, 0.5); }
+
+.material-icons.md-white {
+  color: white; }
 
 .uikit-logo img {
   padding-top: 40px;
@@ -2268,7 +2273,8 @@ section,
   font-style: normal;
   font-weight: bold;
   font-size: 12px;
-  line-height: 15px; }
+  line-height: 15px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05); }
 
 .dropdown__item, .dropdown__item_btn {
   display: flex;
@@ -2438,7 +2444,7 @@ section,
     padding-bottom: 0px; }
 
 /* Customize the label (the radio_item) */
-.radio_item {
+.radio-buttons__item {
   display: inline-block;
   position: relative;
   padding-left: 28px;
@@ -2449,18 +2455,35 @@ section,
   -ms-user-select: none;
   user-select: none;
   color: rgba(31, 32, 65, 0.5);
-  font-size: 14px; }
-
-/* Hide the browser's default radio button */
-.radio_item input {
-  position: absolute;
-  opacity: 0;
-  cursor: pointer;
-  height: 0;
-  width: 0; }
+  font-size: 14px;
+  /* On mouse-over, add a grey background color */
+  /* When the radio button is checked, add a blue background */
+  /* Hide the browser's default radio button */
+  /* Show the indicator (dot/circle) when checked */
+  /* Style the indicator (dot/circle) */ }
+  .radio-buttons__item:hover input ~ .radio-buttons__checkmark {
+    background-color: #ccc; }
+  .radio-buttons__item input:checked ~ .radio-buttons__checkmark {
+    background-color: #ffffff;
+    border: 1px solid #bc9cff; }
+  .radio-buttons__item input {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0; }
+  .radio-buttons__item input:checked ~ .radio-buttons__checkmark:after {
+    display: block; }
+  .radio-buttons__item .radio-buttons__checkmark:after {
+    top: 3px;
+    left: 3px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); }
 
 /* Create a custom radio button */
-.checkmark {
+.radio-buttons__checkmark {
   position: absolute;
   top: 0;
   left: 0;
@@ -2468,35 +2491,12 @@ section,
   width: 20px;
   background-color: #ffffff;
   border: 1px solid rgba(31, 32, 65, 0.25);
-  border-radius: 50%; }
-
-/* On mouse-over, add a grey background color */
-.radio_item:hover input ~ .checkmark {
-  background-color: #ccc; }
-
-/* When the radio button is checked, add a blue background */
-.radio_item input:checked ~ .checkmark {
-  background-color: #ffffff;
-  border: 1px solid #bc9cff; }
-
-/* Create the indicator (the dot/circle - hidden when not checked) */
-.checkmark:after {
-  content: "";
-  position: absolute;
-  display: none; }
-
-/* Show the indicator (dot/circle) when checked */
-.radio_item input:checked ~ .checkmark:after {
-  display: block; }
-
-/* Style the indicator (dot/circle) */
-.radio_item .checkmark:after {
-  top: 3px;
-  left: 3px;
-  width: 12px;
-  height: 12px;
   border-radius: 50%;
-  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); }
+  /* Create the indicator (the dot/circle - hidden when not checked) */ }
+  .radio-buttons__checkmark:after {
+    content: "";
+    position: absolute;
+    display: none; }
 
 /* The slider */
 .toggle__slider {
@@ -2508,18 +2508,22 @@ section,
   bottom: 0;
   border: 1px solid rgba(31, 32, 65, 0.25);
   -webkit-transition: 0.4s;
-  transition: 0.4s; }
-
-.toggle__slider:before {
-  position: absolute;
-  content: "";
-  height: 12px;
-  width: 12px;
-  left: 4px;
-  bottom: 3px;
-  background: linear-gradient(180deg, rgba(31, 32, 65, 0.25) 0%, rgba(31, 32, 65, 0.25) 100%);
-  -webkit-transition: 0.4s;
-  transition: 0.4s; }
+  transition: 0.4s;
+  /* Rounded sliders */ }
+  .toggle__slider:before {
+    position: absolute;
+    content: "";
+    height: 12px;
+    width: 12px;
+    left: 4px;
+    bottom: 3px;
+    background: linear-gradient(180deg, rgba(31, 32, 65, 0.25) 0%, rgba(31, 32, 65, 0.25) 100%);
+    -webkit-transition: 0.4s;
+    transition: 0.4s; }
+  .toggle__slider.toggle__slider_round {
+    border-radius: 10px; }
+  .toggle__slider.toggle__slider_round:before {
+    border-radius: 50%; }
 
 input:checked + .toggle__slider {
   background: white;
@@ -2531,28 +2535,19 @@ input:checked + .toggle__slider:before {
   transform: translateX(17px);
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%); }
 
-/* Rounded sliders */
-.toggle__slider.toggle__slider_round {
-  border-radius: 10px; }
-
-.toggle__slider.toggle__slider_round:before {
-  border-radius: 50%; }
-
 .toggle__switch {
   position: relative;
   display: inline-block;
   width: 40px;
   height: 20px;
   vertical-align: middle; }
-
-.toggle__switch input {
-  opacity: 0;
-  width: 0;
-  height: 0; }
+  .toggle__switch input {
+    opacity: 0;
+    width: 0;
+    height: 0; }
 
 .toggle__title {
-  padding-left: 10px;
-  vertical-align: middle; }
+  padding-left: 10px; }
 
 .like-button, .like-button_liked {
   cursor: pointer;
@@ -2687,32 +2682,74 @@ input:checked + .toggle__slider:before {
   height: 34px; }
 
 .pagination {
-  display: inline-block; }
+  width: fit-content; }
 
-.pagination__label {
-  padding-top: 10px;
-  text-align: center; }
+.pagination__description {
+  text-align: center;
+  margin-top: 10px; }
 
-.pagination__nav {
-  display: flex; }
+ul.simple-pagination {
+  list-style: none; }
 
-.pagination__nav__item, .pagination__nav__item_selected, .pagination__nav__next-button {
-  height: 40px;
-  width: 40px;
+.simple-pagination {
+  width: 100%;
+  margin: 0; }
+
+.simple-pagination ul {
+  list-style: none;
+  display: block; }
+
+.simple-pagination li {
+  display: inline-block;
+  list-style: none; }
+
+span.ellipse.clickable {
   cursor: pointer;
-  padding-top: 8px;
-  color: rgba(31, 32, 65, 0.5);
-  font-size: 12px;
-  text-align: center; }
+  color: rgba(31, 32, 65, 0.5); }
 
-.pagination__nav__item_selected, .pagination__nav__next-button {
-  border-radius: 50%;
+.ellipse input {
+  width: 3em; }
+
+/*------------------------------------*\
+	Light Theme Styles
+\*------------------------------------*/
+.pagination__theme span {
+  cursor: pointer; }
+
+.pagination__theme a,
+.pagination__theme span {
+  float: left;
+  color: #666;
+  font-size: 14px;
+  line-height: 40px;
+  font-weight: normal;
+  text-align: center;
+  min-width: 25px;
+  max-width: 40px;
+  width: 40px; }
+
+.pagination__theme .current {
   background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
-  color: #ffffff;
-  font-weight: bold; }
+  color: #fff;
+  border-radius: 22px;
+  cursor: default; }
 
-.pagination__nav__next-button {
-  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%); }
+.pagination__theme .ellipse {
+  background: none;
+  border: none;
+  border-radius: 0;
+  box-shadow: none;
+  font-weight: bold;
+  cursor: default; }
+
+.pagination__theme .page-link.next {
+  background: linear-gradient(180deg, #6fcf97 0%, #66d2ea 100%);
+  border-radius: 22px;
+  text-align: center; }
+  .pagination__theme .page-link.next i {
+    line-height: 40px; }
+  .pagination__theme .page-link.next:hover {
+    background: linear-gradient(180deg, #5dad7e 0%, #66d2ea 100%); }
 
 .my-custom-datepicker {
   padding-top: 19px; }

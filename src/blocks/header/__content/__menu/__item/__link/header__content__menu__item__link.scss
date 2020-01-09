@@ -1,0 +1,8 @@
+.header__content__menu__item__link {
+  text-decoration: none;
+  color: $color_Dark_Shade_50;
+  vertical-align: top;
+}
+
+@import "./_bold/header__content__menu__item__link_bold.scss";
+@import "./__arrow/header__content__menu__item__link__arrow.scss";

@@ -1,13 +1,70 @@
 .header {
   position: relative;
-  z-index: 2;
+  z-index: 99;
   background-color: #fff;
-  height: 70px;
   width: 100%;
-  min-width: 900px;
   box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.05);
+  & input {
+    display: none;
+  }
 }
 
-@import "./__content/header__content.scss";
+@import './__content/header__content.scss';
+@import './__toggle/header__toggle.scss';
+
+
+@media screen and (max-width: $smDesktopWidth) {
+  .header__content__menu__logo {
+    padding-right: 0px;
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .header__toggle {
+    clear: both;
+    display: block;
+    text-align: center;
+    font-size: 18px;
+    line-height: 40px;
+    width: 100%;
+    background: white;
+    color:black;
+  }
+
+  .header__content__menu_touch {
+    background: white;
+    z-index: 22;
+  }
+
+
+  #checkbox-menu:checked + .header__content .header__content__menu_touch li {
+    opacity: 1;
+    visibility: visible;
+    transition: all 0.7s linear;
+  }
+
+  #checkbox-menu:checked + .header__content .header__content__menu_touch {
+    height: 350px;
+  }
+
+  .header__content__menu {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    text-align: center;
+    height: 0px;
+    transition: height 0.3s linear;
+  }
+
+  .header__content__menu li {
+    display: flex;
+    align-self: center;
+    width: 95%;
+    opacity: 0;
+    visibility: hidden;
+  }
+
+}
 
 @import "../btn/btn";

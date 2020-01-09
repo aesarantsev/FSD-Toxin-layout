@@ -1,4 +1,5 @@
 include ../btn/btn
+
 -
   let links_default = [
     {title:"Home", link:"#", isActive:true, subLinks:[]},
@@ -12,29 +13,52 @@ include ../btn/btn
 mixin header(links = links_default, auth=false, userName = "Cosmin Negoita", authButtons= ["Login", "Register"])
   header.header
       .container
-        .header__content
-          .header__content__logo
-            a(href="/"): include ./images/Logo.svg
-          nav.header__content__navigation
-            ul
-              each item in links
-                li
-                  span
-                    if(item.isActive)
-                      a.header__content__navigation__link_bold(href=item.link)=item.title
-                    else
-                      a.header__content__navigation__link(href=item.link)=item.title
-                        if(item.subLinks.length!=0)
-                          i.material-icons.md-24="expand_more"
+        input(type="checkbox" id="checkbox-menu")
+        label(for="checkbox-menu").header__content
+          ul.header__content__menu.header__content__menu_touch
+            li.header__content__menu__logo
+              a(href="/"): include ./images/Logo.svg
+            each item in links
+              li.header__content__menu__item
+                if(item.isActive)
+                  a.header__content__menu__item__link_bold(href=item.link)=item.title
+                else
+                  a.header__content__menu__item__link(href=item.link)=item.title
+                  if(item.subLinks.length!=0)
+                    i.header__content__menu__item__link__arrow.material-icons.md-24="expand_more"
             if(!auth)
-              .header__content__navigation__auth
-                .header__content__navigation__auth__btn
-                  +btn(authButtons[0], "borderButton", "/autorization.html",true)
-                .header__content__navigation__auth__btn
-                  +btn(authButtons[1], "fillButton", "/registration.html",true)
-            else
-              .header__content__navigation__profile
-                a(href="#")=userName
+              li.header__content__menu__item
+                +btn(authButtons[0], "borderButton", "/autorization.html",true)
+              li.header__content__menu__item
+                +btn(authButtons[1], "fillButton", "/registration.html",true)
+              
+          span.header__toggle ☰
+
+
+          //- .header__content.header__touch
+          //-   .header__content__logo
+          //-     a(href="/"): include ./images/Logo.svg
+          //-   nav.header__content__navigation
+          //-     ul
+          //-       each item in links
+          //-         li
+          //-           span
+          //-             if(item.isActive)
+          //-               a.header__content__navigation__link_bold(href=item.link)=item.title
+          //-             else
+          //-               a.header__content__navigation__link(href=item.link)=item.title
+          //-                 if(item.subLinks.length!=0)
+          //-                   i.material-icons.md-24="expand_more"
+          //-     if(!auth)
+          //-       .header__content__navigation__auth
+          //-         .header__content__navigation__auth__btn
+          //-           +btn(authButtons[0], "borderButton", "/autorization.html",true)
+          //-         .header__content__navigation__auth__btn
+          //-           +btn(authButtons[1], "fillButton", "/registration.html",true)
+          //-     else
+          //-       .header__content__navigation__profile
+          //-         a(href="#")=userName
+          //- span.header__content__navigation__toggle ☰
               
 
 

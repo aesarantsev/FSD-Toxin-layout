@@ -1,7 +1,4 @@
 .header__content {
-  display: flex;
-  justify-content: space-between;
+  height: inherit;
 }
-
-@import "./__logo/header__content__logo.scss";
-@import "./__navigation/header__content__navigation.scss";
+@import "./__menu/header__content__menu.scss";

@@ -298,12 +298,16 @@ section,
 }
 
 .container {
+  //border: 1px solid red;
+  max-width: 1161px;
   width: 100%;
+  min-width: $smPhoneWidth;
   flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
-  padding: 0px 100px;
-  max-width: $desktopWidth;
+  height: inherit;
+  //padding: 0px 100px;
+  
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
   }
