@@ -1,4 +1,16 @@
+@import "../../blocks/header/header";
+@import "../../blocks/footer/footer";
+@import '../../blocks/footer-company-info/footer-company-info';
 
+.footer-company-info {
+  display: none;
+}
+@media screen and (max-width: $smDesktopWidth) {
+  .footer {
+    display: none;
+  }
 
-@import '../../blocks/header/header';
-@import '../../blocks/footer/footer';
+  .footer-company-info {
+    display: block;
+  }
+}

@@ -1,5 +1,6 @@
 include ../../blocks/header/header
 include ../../blocks/footer/footer
+include ../../blocks/footer-company-info/footer-company-info
 
 block variables
 -
@@ -20,6 +21,7 @@ html(lang="en")
       +header(header_links, false, "", ["войти", "зарегистрироваться"])
       .content-wrapper
         block content
-      //- +footer()
+      +footer()
+      +footerCompanyInfo()
       
 

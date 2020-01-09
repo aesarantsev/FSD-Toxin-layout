@@ -298,7 +298,7 @@ section,
 }
 
 .container {
-  //border: 1px solid red;
+  border: 1px solid red;
   max-width: 1161px;
   width: 100%;
   min-width: $smPhoneWidth;
@@ -306,7 +306,7 @@ section,
   position: relative;
   margin: 0 auto;
   height: inherit;
-  //padding: 0px 100px;
+  //margin: 0px 100px;
   
   @media screen and (max-width: $smDesktopWidth) {
     max-width: tableWidth;
