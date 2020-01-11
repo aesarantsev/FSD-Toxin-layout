@@ -1,4 +1,5 @@
 .filter-panel__content {
+  display:block;
   max-width: 266px;
 }
 
@@ -9,3 +10,4 @@
 @import "./__availability/filter-panel__content__availability.scss";
 @import "./__room-amenities/filter-panel__content__room-amenities.scss";
 @import "./__additional-amenities/filter-panel__content__additional-amenities.scss";
+ 

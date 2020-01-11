@@ -6,6 +6,8 @@ include ../checkbox-list-rich/checkbox-list-rich
 
 mixin filterPanel()
   .filter-panel
+    span.filter-panel__toggle
+      i.material-icons.md-24.md-dark-shade-50 filter_list
     .filter-panel__content
       .filter-panel__content__date
         +textField(["даты пребывания в отеле"],"Выберите даты","filterDate")
@@ -17,7 +19,6 @@ mixin filterPanel()
         +checkBoxList("Условия",['Можно курить','Можно с питомцами', 'Можно пригласить гостей (до 10 человек)'], [1,2], false)
       .filter-panel__content__availability
         +checkboxListRich("доступность",[{title:"Широкий коридор", desc:"Ширина коридоров в номере не менее 91 см."},{title:"Помощник для инвалидов", desc:"На 1 этаже вас встретит специалист  и проводит до номера."}],[])
-        //- +checkBoxList("доступность",['Широкий коридор','Помощник для инвалидов'], false)
       .filter-panel__content__room-amenities
         +dropdown("удобства номера","roomAmenities", [2,2,1])
       .filter-panel__content__additional-amenities

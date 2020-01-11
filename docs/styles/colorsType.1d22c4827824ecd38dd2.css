@@ -253,11 +253,9 @@ section,
   min-height: 100vh; }
 
 .container {
-  border: 1px solid red;
-  max-width: 1161px;
+  max-width: 1160px;
   width: 100%;
   min-width: 320px;
-  flex: 0 0 auto;
   position: relative;
   margin: 0 auto;
   height: inherit; }
