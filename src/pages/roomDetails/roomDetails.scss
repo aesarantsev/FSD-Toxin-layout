@@ -1,0 +1,22 @@
+//
+//  Global SCSS
+//
+@import "../../theme/global.scss";
+
+//
+//  Import components SCSS
+//
+@import "../../layouts/main/main";
+@import "../../blocks/room-details-img/room-details-img";
+@import "../../blocks/positive-room/positive-room";
+@import "../../blocks/feedback-chart/feedback-chart";
+@import "../../blocks/comment-list/comment-list";
+@import "../../blocks/bullet-list/bullet-list";
+@import "../../blocks/book-room-panel/book-room-panel";
+
+.room-details__content {
+  margin-top: 70px;
+}
+
+@import "./__images/room-details__images.scss";
+@import "./__content/room-details__content.scss";

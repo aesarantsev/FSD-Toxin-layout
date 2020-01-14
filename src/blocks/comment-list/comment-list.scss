@@ -1,0 +1,9 @@
+@import "../comment/comment";
+
+.comment-list {
+  max-width: 712px;
+  padding-right: 20px;
+}
+
+@import "./__header/comment-list__header.scss";
+@import "./__content/comment-list__content.scss";

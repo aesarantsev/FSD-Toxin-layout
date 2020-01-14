@@ -89,7 +89,9 @@ const types = [".js", ".scss"];
   "formElements",
   "headersAndFooters",
   "landing",
-  "searchRoom"
+  "searchRoom",
+  "roomDetails",
+  "test"
 ].forEach(entryName => {
   const entryFiles = [];
   const dashedName = entryName;

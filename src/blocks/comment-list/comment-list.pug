@@ -1,0 +1,12 @@
+include ../comment/comment
+
+mixin commentList(title = "Отзывы посетителей номера", comments=[{avatarSrc: "#", personName: "Мурад Сарафанов", wasOnlineText: "5 дней назад", likeCount: 12, isLike: true, text: "Великолепный матрас на кровати в основной спальне! А пуфик вообще потрясающий. И стены, действительно, шумоподавляющие. Выкрикивал комплименты повару — никто не жаловался из соседей."},{avatarSrc: "#", personName: "Патрисия Стёклышкова", wasOnlineText: "неделю назад", likeCount: 2, isLike: false, text: "Обслуживание на высоте! Всё аккуратно, чисто. Завтраки в номер советую заказать, каждый день новое блюдо и десерт как комплимент"} ])
+  
+  .comment-list
+    .comment-list__header
+      h2.comment-list__header__title=title
+      span.comment-list__header__reviews-count=comments.length + " отзыва"
+    .comment-list__content
+      each item in comments
+        .comment-list__content__item
+          +comment(item.avatarSrc, item.personName, item.wasOnlineText, item.likeCount, item.isLike, item.text )

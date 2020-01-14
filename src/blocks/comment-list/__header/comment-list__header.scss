@@ -1,0 +1,8 @@
+.comment-list__header {
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 22px;
+}
+
+@import "./__title/comment-list__header__title.scss";
+@import "./__reviews-count/comment-list__header__reviews-count.scss";

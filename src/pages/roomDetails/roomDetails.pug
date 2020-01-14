@@ -1,0 +1,49 @@
+extends ../../layouts/main/main
+
+include ../../blocks/room-details-img/room-details-img
+include ../../blocks/positive-room/positive-room
+include ../../blocks/feedback-chart/feedback-chart
+include ../../blocks/comment-list/comment-list
+include ../../blocks/bullet-list/bullet-list
+include ../../blocks/book-room-panel/book-room-panel 
+
+block variables
+  -
+    var title = 'Toxin - Бронирование номеров'
+    var desc = 'Webpack + Pug'
+    var pageClass = 'index-page'
+    let imgLinks = [require("./images/room/image1.png"), require("./images/room/image2.png"), require("./images/room/image3.png")];
+
+
+block content
+  section
+    .room-details
+      .room-details__images
+        +roomDetailsImg(imgLinks)
+      .container
+        .room-details__content
+
+          .room-details__content__positive-room
+            h2.room-details__content__positive-room__header Сведения о номере
+            +positiveRoom("insert_emoticon", "Комфорт", "Шумопоглощающие стены")
+            +positiveRoom("location_city", "Удобство", "Окно в каждой из спален" )
+            +positiveRoom("whatshot", "Уют", "Номер оснащен камином")
+
+          .room-details__content__feedback-chart
+            h2.room-details__content__feedback-chart__header Впечатления от номера
+            +feedbackChart()
+
+          .room-details__content__reviews
+            .room-details__content__reviews__item
+              +commentList()           
+          .room-details__content__regulations
+            h2.room-details__content__regulations__header Правила
+            +bulletList("")
+
+          .room-details__content__cancellation
+            h2.room-details__content__cancellation__header Отмена
+            span.room-details__content__cancellation__item Бесплатная отмена в течение 48 ч. После этого при отмене не позднее чем за 5 дн. до прибытия вы получите полный возврат за вычетом сбора за услуги.
+
+          .room-details__content__book-room-panel
+            +bookRoomPanel()
+          

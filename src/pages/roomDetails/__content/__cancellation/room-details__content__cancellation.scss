@@ -1,0 +1,6 @@
+.room-details__content__cancellation {
+  grid-area: cancellation;
+}
+
+@import "./__header/room-details__content__cancellation__header.scss";
+@import "./__item/room-details__content__cancellation__item.scss";

@@ -1,0 +1,41 @@
+.room-details__content {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "positive-room  feedback-chart  book-room-panel"
+    "reviews        reviews         book-room-panel"
+    "regulations    cancellation    book-room-panel";
+}
+
+@import "./__positive-room/room-details__content__positive-room.scss";
+@import "./__feedback-chart/room-details__content__feedback-chart.scss";
+@import "./__reviews/room-details__content__reviews.scss";
+@import "./__regulations/room-details__content__regulations.scss";
+@import "./__cancellation/room-details__content__cancellation.scss";
+@import "./__book-room-panel/room-details__content__book-room-panel.scss";
+
+@media screen and (max-width: $smDesktopWidth) {
+  .room-details__content {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-template-areas:
+      "positive-room  book-room-panel"
+      "feedback-chart book-room-panel"
+      "reviews reviews "
+      "regulations cancellation ";
+  }
+}
+
+@media screen and (max-width: $tableWidth) {
+  .room-details__content {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    grid-template-areas:
+      "positive-room "
+      "feedback-chart"
+      "reviews"
+      "regulations"
+      "cancellation"
+      "book-room-panel";
+  }
+}

@@ -1,0 +1,21 @@
+.room-details-img {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas:
+    "first first second"
+    "first first third";
+}
+
+.room-details-img__item:nth-child(1) {
+  grid-area: first;
+  height: 100%;
+}
+
+.room-details-img__item:nth-child(2) {
+  grid-area: second;
+
+}
+
+.room-details-img__item:nth-child(3) {
+  grid-area: third;
+}

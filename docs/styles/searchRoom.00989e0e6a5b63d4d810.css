@@ -2157,6 +2157,15 @@ section,
   padding-left: 40px;
   padding-bottom: 65px; }
 
+.base-cards {
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  box-sizing: border-box;
+  box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
+  border-radius: 4px;
+  width: 380px;
+  background: #ffffff;
+  padding: 40px 30px 30px; }
+
 .header {
   position: relative;
   z-index: 99;
@@ -2465,6 +2474,17 @@ section,
 
 .filter-panel__content__room-amenities {
   margin-bottom: 30px; }
+
+.filter-panel__toggle {
+  display: none;
+  font-size: 18px;
+  border: 1px solid rgba(31, 32, 65, 0.25);
+  padding: 4px;
+  border-radius: 4px;
+  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
+  margin-left: 10px;
+  position: fixed;
+  cursor: pointer; }
 
 .text-field__input {
   font-family: Montserrat;
@@ -2899,17 +2919,6 @@ section,
 
 .checkbox-item__mark_check {
   border: 1px solid #bc9cff; }
-
-.filter-panel__toggle {
-  display: none;
-  font-size: 18px;
-  border: 1px solid rgba(31, 32, 65, 0.25);
-  padding: 4px;
-  border-radius: 4px;
-  box-shadow: 0px 10px 20px rgba(31, 32, 65, 0.1);
-  margin-left: 10px;
-  position: fixed;
-  cursor: pointer; }
 
 @media screen and (max-width: 980px) {
   .filter-panel__content {
