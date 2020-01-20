@@ -1,0 +1,16 @@
+.headers__content {
+  display: grid;
+  grid-template-columns: minmax(30px,35px) minmax(250px, 340px);
+  grid-template-areas:
+    "title-h1 body-h1"
+    "title-h2 body-h2"
+    "title-h3 body-h3"
+    "title-body body-body";
+  grid-column-gap: 30px;
+  grid-row-gap: 50px;
+}
+
+
+@import "./__title/headers__content__title.scss";
+@import "./__body/headers__content__body.scss";
+

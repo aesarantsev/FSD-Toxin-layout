@@ -1,9 +1,8 @@
 .room-list__content {
-  // display: flex;
-  // flex-wrap: wrap;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(250px,1fr));
-  grid-gap: 12px;
+  grid-row-gap: 20px;
+  grid-column-gap: 12px;
 }
 
 @import "./__room-item/room-list__content__room-item.scss";

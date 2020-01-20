@@ -1,0 +1,19 @@
+.colors-type__content {
+  display: grid;
+  grid-template-columns: 1.6fr 1fr;
+  grid-template-areas: "colors headers";
+}
+
+@media screen and (max-width: 500px) {
+  .colors-type__content {
+    display: grid;
+    grid-template-columns: 1.6fr 1fr;
+    grid-row-gap: 50px;
+    grid-template-areas:
+      "colors"
+      "headers";
+  }
+}
+
+@import "./__colors/colors-type__content__colors.scss";
+@import "./__headers/colors-type__content__headers.scss";

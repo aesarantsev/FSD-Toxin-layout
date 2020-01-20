@@ -1,11 +1,15 @@
 include ../../blocks/colors/colors
 include ../../blocks/headers/headers
 html
+  head
+    meta(name="viewport" content="width=device-width")
   body
     header.uikit-logo
       img(src=require("./images/Logo.svg"))
     .container
-      .colors-type__wrapper
-        +colors()
-        +headers()
+      .colors-type__content
+        .colors-type__content__colors
+          +colors()
+        .colors-type__content__headers
+          +headers()
     

@@ -1,5 +1,12 @@
 .intro__panel {
   position: absolute;
-  margin-top: 70px;
-  margin-left: 140px;
+  //margin-top: 70px;
+  //padding-left: 20px;
+  //margin-left: 140px;
+}
+
+@media screen and (max-width: $tableWidth) {
+  .intro__panel {
+    //margin: 0 20px;
+  }
 }

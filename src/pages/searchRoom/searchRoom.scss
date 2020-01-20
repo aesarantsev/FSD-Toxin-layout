@@ -14,13 +14,12 @@
 @import "../../layouts/main/main";
 @import "../../blocks/filter-panel/filter-panel";
 @import "../../blocks/room-list/room-list";
-@import '../../blocks/datepicker/datepicker.scss';
-
+@import "../../blocks/datepicker/datepicker.scss";
+@import "../../blocks/pagination/pagination";
 .search-room {
 }
 
 @import "./__content/search-room__content.scss";
-
 
 // @media screen and (max-width: $smDesktopWidth) {
 

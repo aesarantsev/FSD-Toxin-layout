@@ -2,6 +2,7 @@ extends ../../layouts/main/main
 
 include ../../blocks/filter-panel/filter-panel
 include ../../blocks/room-list/room-list
+include ../../blocks/pagination/pagination
 
 block variables
   -
@@ -116,3 +117,6 @@ block content
           +filterPanel()
         .search-room__content__room-list
           +roomList(roomItems)
+          .search-room__content__room-list__pagination
+            +pagination()
+          

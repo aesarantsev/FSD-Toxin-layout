@@ -1,0 +1,12 @@
+.headers__content__title {
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 29px;
+  text-align: right;
+  color: $color_Dark_Shade_25;
+}
+@import "./_h1/headers__content__title_h1.scss";
+@import "./_h2/headers__content__title_h2.scss";
+@import "./_h3/headers__content__title_h3.scss";
+@import "./_body/headers__content__title_body.scss";
