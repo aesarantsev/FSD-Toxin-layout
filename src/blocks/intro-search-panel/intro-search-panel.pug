@@ -1,18 +1,17 @@
-
-//- include ../primitive-modules/dropdown/dropdown
-//- include ../primitive-modules/button/button
 include ../text-field/text-field
 include ../dropdown/dropdown
 include ../btn/btn
+
 mixin introSearchPanel()
   .search__panel
     .search__panel__content
-      .search__panel__title
+      .search__panel__content__title
         h1 Найдем номера под ваши пожелания
-      .search__panel__datepicker
-        +textField({title: ["Прибытие","Выезд"], placeholder:"ДД.ММ.ГГГГ", type:"date"})
-      .search__panel__guests
-        +dropdown("Гости","guests",[0,0,0])
-      .search__panel__button
-        +btn({text:"Подобрать номер", type:"arrowButton"})
+      form
+        .search__panel__content__datepicker
+          +textField({title: ["Прибытие","Выезд"], placeholder:"ДД.ММ.ГГГГ", type:"date"})
+        .search__panel__content__guests
+          +dropdown("Гости","guests",[0,0,0])
+        .search__panel__content__button
+          +btn({text:"Подобрать номер", type:"arrowButton", buttonType:"submit"})
 

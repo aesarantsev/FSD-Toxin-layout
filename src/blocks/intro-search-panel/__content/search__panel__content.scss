@@ -1,0 +1,7 @@
+.search__panel__content {
+  width: 100%;
+}
+
+@import "./__title/search__panel__content__title.scss";
+@import "./__datepicker/search__panel__content__datepicker.scss";
+@import "./__guests/search__panel__content__guests.scss";
