@@ -8,22 +8,23 @@ mixin registrationPanel()
     .registration-panel__content
       .registration-panel__content__title
         h1 Регистрация аккаунта
-      .registration-panel__content__first-name
-        +textField({title:[],placeholder:"Имя"})
-      .registration-panel__content__last-name
-        +textField({title:[],placeholder:"Фамилия"})
-      .registration-panel__content__gender
-        +radioButtons()
-      .registration-panel__content__date-birth
-        +textField({title:["дата рождения"],placeholder:"ДД.ММ.ГГГГ"})
-      .registration-panel__content__email
-        +textField({title:["данные для входа в сервис"],placeholder:"Email"})
-      .registration-panel__content__password
-        +textField({title:[],placeholder:"Пароль"})
-      .registration-panel__content__toggle
-        +toggle("Получать спецпредложения")
-      .registration-panel__content__btn-pay
-        +btn({text: "перейти к оплате", type: "arrowButton"})
+      form
+        .registration-panel__content__first-name
+          +textField({title:[],placeholder:"Имя"})
+        .registration-panel__content__last-name
+          +textField({title:[],placeholder:"Фамилия"})
+        .registration-panel__content__gender
+          +radioButtons()
+        .registration-panel__content__date-birth
+          +textField({title:["дата рождения"],placeholder:"ДД.ММ.ГГГГ"})
+        .registration-panel__content__email
+          +textField({title:["данные для входа в сервис"],placeholder:"Email", inputType:"email"})
+        .registration-panel__content__password
+          +textField({title:[],placeholder:"Пароль", inputType:"password"})
+        .registration-panel__content__toggle
+          +toggle("Получать спецпредложения")
+        .registration-panel__content__btn-pay
+          +btn({text: "перейти к оплате", type: "arrowButton", buttonType: "submit"})
       .registration-panel__content__login
         .registration-panel__content__login__label
           span Уже есть аккаунт на Toxin
