@@ -1,21 +1,12 @@
-//- Типы TextField:
-    -'subscription'
-    -'date'
-    -'filterDate'
-    -''
-//- Пример исопльзования:
-    +textField(["Email"],"Placeholder") - text Field
-    +textField(["Email"],"Placeholder", "subscription") - subscription text field
-    +textField(["Email"],"Placeholder", "subscription")
-
-mixin textField(title=[], placeholder="textField", type="", textValue = "")
+mixin textField(params={title: [], placeholder: "textField", type: "", textValue: "", inputType:"text"})
+  -let {title, placeholder, type, textValue, inputType} = params;
   .text-field
 
     if type=="subscription"
       if title[0] != null
         h3.text-field__title=title[0]
       .text-field__subscription
-        input(type="text" class="text-field__input text-field_subscription"  placeholder=placeholder)
+        input(type=inputType class="text-field__input text-field_subscription"  placeholder=placeholder)
         input(type="submit" value="arrow_forward" class = "text-field__submit material-icons md-purple")
           //- i.material-icons.md-24 expand_more
       
@@ -24,21 +15,21 @@ mixin textField(title=[], placeholder="textField", type="", textValue = "")
         .text-field__date__item
           if title[0] != null
             h3.text-field__title=title[0]
-          input(type="text" class="text-field__input text-field_date datepicker-here start_one" data-range="true" placeholder=placeholder)
+          input(type=inputType class="text-field__input text-field_date datepicker-here start_one" data-range="true" placeholder=placeholder)
         .text-field__date__item
           if title[1] != null
             h3.text-field__title=title[1]
-          input(type="text" class="text-field__input text-field_date end_one"  placeholder=placeholder)
+          input(type=inputType class="text-field__input text-field_date end_one"  placeholder=placeholder)
       
     else if type=="filterDate"
       if title[0] != null
         h3.text-field__title=title[0]
-      input(type="text" class="text-field__input text-field_filter-date datepicker-here" data-range="true" placeholder=placeholder )
+      input(type=inputType class="text-field__input text-field_filter-date datepicker-here" data-range="true" placeholder=placeholder )
       
     else
       if title[0] != null
         h3.text-field__title=title[0]
-      input(type="text" class="text-field__input"  placeholder=placeholder value=textValue)
+      input(type=inputType class="text-field__input"  placeholder=placeholder value=textValue)
 
       
 

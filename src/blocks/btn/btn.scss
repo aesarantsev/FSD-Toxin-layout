@@ -9,14 +9,15 @@
   text-decoration: none;
   text-transform: uppercase;
   color: $color_Purple;
-  padding: 15px 20px;
+  //padding: 15px 20px;
+  min-width: 99px;
   position: relative;
   height: 44px;
-  width: fit-content;
+  width: 100%;
 }
 
 @import "./_label/btn_label.scss";
 @import "./_border/btn_border.scss";
 @import "./_fill/btn_fill.scss";
 @import "./_arrow/btn_arrow.scss";
-@import './_small/btn_small.scss';
+@import "./_small/btn_small.scss";

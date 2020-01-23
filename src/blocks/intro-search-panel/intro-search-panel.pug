@@ -10,9 +10,9 @@ mixin introSearchPanel()
       .search__panel__title
         h1 Найдем номера под ваши пожелания
       .search__panel__datepicker
-        +textField(["Прибытие","Выезд"],"ДД.ММ.ГГГГ", "date")
+        +textField({title: ["Прибытие","Выезд"], placeholder:"ДД.ММ.ГГГГ", type:"date"})
       .search__panel__guests
         +dropdown("Гости","guests",[0,0,0])
       .search__panel__button
-        +btn("Подобрать номер", "arrowButton")
+        +btn({text:"Подобрать номер", type:"arrowButton"})
 

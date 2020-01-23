@@ -18,7 +18,7 @@ mixin bookRoomPanel(numberRoom="888", isLuxe = true, cost = "9 900")
             strong= cost + "₽ "
           span="в сутки"
       .book-room-panel__content__date
-        +textField(["прибытие","выезд"], "ДД.ММ.ГГГГ", "date")
+        +textField({title: ["прибытие","выезд"], placeholder: "ДД.ММ.ГГГГ", type: "date"})
       .book-room-panel__content__guests
         +dropdown("гости")
       .book-room-panel__content__pay-info
@@ -36,6 +36,6 @@ mixin bookRoomPanel(numberRoom="888", isLuxe = true, cost = "9 900")
         .book-room-panel__content__total__tab
         h2="38 081₽"
       .book-room-panel__content__btn
-        +btn("забронировать", "arrowButton")
+        +btn({text: "забронировать", type: "arrowButton"})
 
       

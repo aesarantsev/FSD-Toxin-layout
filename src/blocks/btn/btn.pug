@@ -1,22 +1,23 @@
-mixin btn (text = "Click Me", type = "fillButton",link="#", small=false)
+mixin btn (params={text: "Click Me", type: "fillButton", link: "#", small: false, buttonType:"button"})
+  -let {text, type, link, small, buttonType}=params
   case type
     when "labelButton"
-      button.btn.btn_label(href=link)
+      button.btn.btn_label(href=link type=buttonType)
         span=text
     when "borderButton"
       if(small)
-        button.btn.btn_border.btn_small(href=link)
+        button.btn.btn_border.btn_small(href=link type=buttonType)
           span=text
       else
-        button.btn.btn_border(href=link)
+        button.btn.btn_border(href=link type=buttonType)
           span=text
     when "fillButton"
       if(small)
-        button.btn.btn_fill.btn_small(href=link)
+        button.btn.btn_fill.btn_small(href=link type=buttonType)
           span=text
       else
-        button.btn.btn_fill(href=link)
+        button.btn.btn_fill(href=link type=buttonType)
           span=text
     when "arrowButton"
-      button.btn.btn_fill.bnt_arrow(href=link)
+      button.btn.btn_fill.bnt_arrow(href=link type=buttonType)
         span=text

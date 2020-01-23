@@ -6,17 +6,18 @@ mixin authorizationPanel()
     .authorization-panel__content
       .authorization-panel__content__tittle
         h1 Войти
-      .authorization-panel__content__email
-        +textField("","Email")
-      .authorization-panel__content__password
-        +textField("","Password")
-      .authorization-panel__content__btn-auth
-        +btn("войти","arrowButton")
+      form
+        .authorization-panel__content__email
+          +textField({title:"", placeholder:"Email", inputType:"email"})
+        .authorization-panel__content__password
+          +textField({title:"", placeholder:"Password", inputType:"password"})
+        .authorization-panel__content__btn-auth
+          +btn({text: "войти",type: "arrowButton", buttonType:"submit"})
       .authorization-panel__content__register
         .authorization-panel__content__register__label
           label Нет аккаунта на Toxin?
         .authorization-panel__content__register__btn-register
-          +btn("создать", "borderButton")
+          +btn({text: "создать", type: "borderButton"})
 
 
       
