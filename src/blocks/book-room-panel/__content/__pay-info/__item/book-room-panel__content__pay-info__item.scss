@@ -1,10 +1,12 @@
 .book-room-panel__content__pay-info__item {
   display: flex;
   justify-content: space-between;
-
   margin-bottom: 10px;
 
   &:last-child {
-    margin-bottom: 30px;
+    margin-bottom: 32px;
   }
 }
+
+@import "./__service/book-room-panel__content__pay-info__item__service.scss";
+@import "./__cost/book-room-panel__content__pay-info__item__cost.scss";
