@@ -21,18 +21,11 @@
 
 .cards {
   display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-}
+  grid-template-columns: repeat(2, minmax(320px, 380px)) minmax(320px, 320px);
+  grid-auto-columns: min-content;
+  grid-column-gap: 40px;
 
-// .base-cards {
-//   border: 1px solid rgba(0, 0, 0, 0.12);
-//   box-sizing: border-box;
-//   box-shadow: 0px 0px 25px rgba(0, 0, 0, 0.2);
-//   border-radius: 4px;
-//   width: 380px;
-//   background: #ffffff;
-//   padding: 40px 30px 30px;
-// }
+}
 
 //
 //  Block-elements

@@ -1,10 +1,10 @@
 mixin imgSlider(imgLinks = [])
-  .img-slider
+  .img-slider.js-img-slider
     - for(let i=0;i<imgLinks.length;i++)
-        .img-slider__item
+        .img-slider__item.js-img-slider__item
           img(src=imgLinks[i])
-    a.img-slider__toggle_prev &#10094
-    a.img-slider__toggle_next &#10094
-    .img-slider__buttons
+    a.img-slider__toggle_prev.js-img-slider__toggle_prev &#10094
+    a.img-slider__toggle_next.js-img-slider__toggle_next &#10094
+    .img-slider__buttons.js-img-slider__buttons
       - for(let i=0;i<imgLinks.length;i++)
-        span.img-slider__buttons__dot
+        span.img-slider__buttons__dot.js-img-slider__buttons__dot

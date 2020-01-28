@@ -85,9 +85,9 @@ const types = [".js", ".scss"];
 
 [
   "cards"
-  // ,
-  // "colorsType",
-  // "formElements",
+  ,
+  "colorsType",
+  "formElements",
   // "headersAndFooters",
   // "landing",
   // "searchRoom",

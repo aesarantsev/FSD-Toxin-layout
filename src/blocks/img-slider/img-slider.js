@@ -1,10 +1,10 @@
 jQuery(document).ready(function(e) {
   //Classes
-  let sliderClass = ".img-slider";
-  let prevButtonClass = ".img-slider__toggle_prev";
-  let nextButtonClass = ".img-slider__toggle_next";
-  let sliderItemClass = ".img-slider__item";
-  let sliderButtonDotClass = ".img-slider__buttons__dot";
+  let sliderClass = ".js-img-slider";
+  let prevButtonClass = ".js-img-slider__toggle_prev";
+  let nextButtonClass = ".js-img-slider__toggle_next";
+  let sliderItemClass = ".js-img-slider__item";
+  let sliderButtonDotClass = ".js-img-slider__buttons__dot";
 
   let slideIndex = 1;
 

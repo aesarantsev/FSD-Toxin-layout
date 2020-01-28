@@ -25,20 +25,21 @@ html
         //- Column 1
         .form-elements__column_1
           .form-elements__column__item
-            +textField(["Text Field"],"Email")
+            +textField({title: ["Text Field"], placeholder: "Email"})
           .form-elements__column__item
-            +textField(["Text Field"],"Email","","This is pretty awesome")
+            +textField({title: ["Text Field"], placeholder: "Email", type: "", textValue: "This is pretty awesome"})
           .form-elements__column__item
             +dropdown("Dropdown","guests",[0,0,0])
           .form-elements__column__item
-            +textField(["Masked text field"],"ДД.ММ.ГГГГ")
+            +textField({title: ["Masked text field"], placeholder: "ДД.ММ.ГГГГ"})
           .form-elements__column__item
-            +textField(["date Dropdown","date Dropdown"],"ДД.ММ.ГГГГ", "date")
+            +textField({title: ["date Dropdown","date Dropdown"], placeholder: "ДД.ММ.ГГГГ", type: "date"})
           .form-elements__column__item
-            +textField(["filter date dropdown"],"filterDate", "filterDate")
+            +textField({title: ["filter date dropdown"], placeholder: "filterDate", type: "filterDate"})
+            +textField({title: ["filter date dropdown"], placeholder: "filterDate", type: "filterDate"})
           .form-elements__column__item
             //- h3.form-elements__items__item_tittle 
-            +textField(["subscription text field"],"Email", "subscription")
+            +textField({title: ["subscription text field"],placeholder: "Email", type: "subscription"})
 
         //- Column 2
         .form-elements__column_2
@@ -71,9 +72,9 @@ html
             h3 Buttons
             .buttons
               +btn()
-              +btn("Click me", "borderButton")
-              +btn("Click me", "labelButton")
-              +btn("Click me", "arrowButton")
+              +btn({text: "Click me", type: "borderButton"})
+              +btn({text: "Click me", type: "labelButton"})
+              +btn({text: "Click me", type: "arrowButton"})
           .form-elements__column__item
             h3 pagination
             +pagination()

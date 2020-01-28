@@ -297,23 +297,4 @@ section,
   // min-height: 100vh;
 }
 
-.container {
-  //border: 1px solid red;
-  max-width: 1160px;
-  width: 100%;
-  min-width: $smPhoneWidth;
-  //flex: 0 0 auto;
-  //position: relative;
-  margin: 0 auto;
-  //padding: 0 20px;
-  //height: inherit;
-  @media screen and (max-width: $smDesktopWidth) {
-    max-width: tableWidth;
-  }
-  @media screen and (max-width: $tableWidth) {
-    max-width: phoneWidth;
-  }
-  @media screen and (max-width: $phoneWidth) {
-    max-width: smPhoneWidth;
-  }
-}
+

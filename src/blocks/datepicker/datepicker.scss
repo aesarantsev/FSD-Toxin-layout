@@ -74,6 +74,14 @@
 }
 
 //Первая выбранная дата
+.datepicker--cell.datepicker--cell-day.-selected- {
+  color: #ffffff;
+  font-weight: bold;
+  background: linear-gradient(180deg, #bc9cff 0%, #8ba4f9 100%);
+  border-radius: 22px;
+}
+
+//Первая выбранная дата
 .datepicker--cell.datepicker--cell-day.-range-from-.-selected- {
   &::before {
     content: "";
@@ -127,7 +135,7 @@
 }
 
 .datepicker--content--buttons {
-  padding: 20px 0 15px;
+  padding: 20px 0 20px;
 
   button {
     font-family: Montserrat;

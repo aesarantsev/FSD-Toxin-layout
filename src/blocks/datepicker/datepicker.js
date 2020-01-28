@@ -37,6 +37,7 @@ $(".datepicker-here").datepicker(generalSettings);
 //Настройки датапикера c одним инпутом
 $(".datepicker-here")
   .not(".start_one")
+  .not(".end_one")
   .datepicker(oneInputSettings);
 
 //Вставляем кнопки Очистить и Применить
@@ -63,12 +64,13 @@ $(".datepicker__clear").click(function() {
 });
 
 $(".start_one").datepicker({
-  onSelect: function(fd, d, picker) {
+  onSelect: function(fd, date, picker) {
+    console.log("this", this);
     $(".start_one").val(fd.split(",")[0]);
     $(".end_one").val(fd.split(",")[1]);
   }
 });
 
-$(".end_one").click(function() {
-  myDatepicker.show();
-});
+// $(".end_one").click(function() {
+//   myDatepicker.show();
+// });
