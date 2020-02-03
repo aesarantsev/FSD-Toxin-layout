@@ -1,5 +1,8 @@
 .form-elements__column__item {
-
 }
 
-
+@import "./__header/form-elements__column__item__header.scss";
+@import "./__toggle/form-elements__column__item__toggle.scss";
+@import "./__like-button/form-elements__column__item__like-button.scss";
+@import "./__rate-button/form-elements__column__item__rate-button.scss";
+@import "./__button/form-elements__column__item__button.scss";

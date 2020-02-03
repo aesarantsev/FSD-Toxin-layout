@@ -1,12 +1,17 @@
-$arrowSvg: url(/assets/img/button/arrow_forward.svg);
-
 .bnt_arrow {
   width: 100%;
   max-width: 320px;
   text-align: center;
   line-height: 15px;
-  &:after {
-    content: $arrowSvg;
-    float: right;
-  }
+  padding: 0px;
+}
+
+.bnt_arrow span {
+  margin-left: 30px;
+}
+
+.bnt_arrow .material-icons {
+  float: right;
+  margin-right: 10px;
+  line-height: 15px;
 }

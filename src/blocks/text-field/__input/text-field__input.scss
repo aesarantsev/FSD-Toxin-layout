@@ -1,18 +1,18 @@
-//border
 $borderRadius_text-field: 4px;
 $border_text-field: 1px solid rgba(31, 32, 65, 0.25);
 $borderActive_text-field: 1px solid rgba(31, 32, 65, 0.5);
 
 .text-field__input {
-  font-family: Montserrat;
+  font-family: Montserrat, "Open Sans";
   font-size: 14px;
+  line-height: 18px;
   border-radius: $borderRadius_text-field;
   border: $border_text-field;
   box-sizing: border-box;
-  padding: 13px 15px;
-  width: 100%;
+  padding: 12px 15px;
   max-width: 320px;
-  height: $textFieldHigth;
+  min-width: 100px;
+  width: 100%;
 
   &:hover {
     outline: none;

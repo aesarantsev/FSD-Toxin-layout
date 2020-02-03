@@ -31,14 +31,12 @@ html
           .form-elements__column__item
             +dropdown("Dropdown","guests",[0,0,0])
           .form-elements__column__item
-            +textField({title: ["Masked text field"], placeholder: "ДД.ММ.ГГГГ"})
+            +textField({title: ["Masked text field"], type: "masked-date"})
           .form-elements__column__item
             +textField({title: ["date Dropdown","date Dropdown"], placeholder: "ДД.ММ.ГГГГ", type: "date"})
           .form-elements__column__item
             +textField({title: ["filter date dropdown"], placeholder: "filterDate", type: "filterDate"})
-            +textField({title: ["filter date dropdown"], placeholder: "filterDate", type: "filterDate"})
           .form-elements__column__item
-            //- h3.form-elements__items__item_tittle 
             +textField({title: ["subscription text field"],placeholder: "Email", type: "subscription"})
 
         //- Column 2
@@ -46,22 +44,26 @@ html
           .form-elements__column__item
             +checkBoxList("CHECKBOX BUTTONS", ["Можно курить","Можно с питомцами","Можно пригласить гостей (до 10 человек)"], [1,2], false)
           .form-elements__column__item
-            h3 Radio Buttons
+            h3.form-elements__column__item__header Radio Buttons
             +radioButtons(["Мужчина","Женщина"], 0)
           .form-elements__column__item
-            h3 toggle
-            +toggle("Получать спецпредложения", true)
-            +toggle("Получать спецпредложения")
+            h3.form-elements__column__item__header toggle
+            .form-elements__column__item__toggle
+              +toggle("Получать спецпредложения", true)
+            .form-elements__column__item__toggle
+              +toggle("Получать спецпредложения")
           .form-elements__column__item
-            h3 like button
-            +likeButton(2,false)
-            +likeButton(12,true)
+            h3.form-elements__column__item__header like button
+            .form-elements__column__item__like-button
+              +likeButton(2,false)
+            .form-elements__column__item__like-button
+              +likeButton(12,true)
           .form-elements__column__item
-            h3 rate button
+            h3.form-elements__column__item__header rate button
             .form-elements__items__item_rate-button__block
-              .form-elements__items__item_rate-button__block__item
+              .form-elements__column__item__rate-button
                 +rateButton(4)
-              .form-elements__items__item_rate-button__block__item
+              .form-elements__column__item__rate-button
                 +rateButton(5)
 
         //- Column 3
@@ -69,14 +71,17 @@ html
           .form-elements__column__item
             +rangeSlider()
           .form-elements__column__item
-            h3 Buttons
-            .buttons
+            h3.form-elements__column__item__header Buttons
+            .form-elements__column__item__button
               +btn()
+            .form-elements__column__item__button
               +btn({text: "Click me", type: "borderButton"})
+            .form-elements__column__item__button
               +btn({text: "Click me", type: "labelButton"})
+            .form-elements__column__item__button
               +btn({text: "Click me", type: "arrowButton"})
           .form-elements__column__item
-            h3 pagination
+            h3.form-elements__column__item__header pagination
             +pagination()
 
         //- Column 4

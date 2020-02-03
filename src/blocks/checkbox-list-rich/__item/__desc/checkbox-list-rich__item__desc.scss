@@ -1,4 +1,5 @@
 .checkbox-list-rich__item__desc {
+  display: block;
   margin-left: 30px;
   margin-top: 5px;
   font-family: Montserrat;
@@ -6,6 +7,6 @@
   font-weight: normal;
   font-size: 12px;
   line-height: 14px;
-
+  max-width: 230px;
   color: $color_Dark_Shade_50;
 }

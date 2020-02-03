@@ -28,12 +28,14 @@
 @import "../../blocks/bullet-list/bullet-list";
 
 .form-elements {
+  margin-top: 65px;
   display: grid;
-  grid-template-columns: repeat(3, 1fr);
+  grid-template-columns: minmax(200px, 374px) repeat(2, 1fr);
   grid-template-areas:
     "form-elements__column_1 form-elements__column_2 form-elements__column_3"
     "form-elements__column_4 form-elements__column_5 form-elements__column_6"
     "form-elements__column_7 form-elements__column_8 form-elements__column_8";
+  grid-column-gap: 72px;
   //grid-row-gap: 120px;
 }
 

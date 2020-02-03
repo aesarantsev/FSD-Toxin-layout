@@ -11,5 +11,5 @@ mixin checkboxListRich(title="", items = [], checkedItems = [])
           +checkBoxItem(items[i].title, true, true)
         else
           +checkBoxItem(items[i].title, false, true)
-        .checkbox-list-rich__item__desc
-          span=items[i].desc
+        
+        span.checkbox-list-rich__item__desc=items[i].desc

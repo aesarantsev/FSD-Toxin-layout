@@ -20,6 +20,7 @@
 @import "../../blocks/datepicker/datepicker.scss";
 
 .cards {
+  margin-top: 72px;
   display: grid;
   grid-template-columns: repeat(2, minmax(320px, 380px)) minmax(320px, 320px);
   grid-auto-columns: min-content;
