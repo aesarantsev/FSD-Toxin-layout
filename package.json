@@ -66,7 +66,7 @@
     "air-datepicker": "^2.2.3",
     "bootstrap": "^4.4.1",
     "chart.js": "^2.9.3",
-    "jquery": "^3.4.1",
+    "jquery": "^3.5.0",
     "jquery-mask-plugin": "^1.14.16",
     "jquery-ui": "^1.12.1",
     "popper.js": "^1.16.1",
